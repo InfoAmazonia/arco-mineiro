@@ -1,0 +1,29 @@
+{
+  "name": "arco-mineiro",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aparabolica/arco-mineiro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aparabolica/arco-mineiro/issues"
+  },
+  "homepage": "https://github.com/aparabolica/arco-mineiro#readme",
+  "dependencies": {
+    "leaflet": "^1.2.0",
+    "moment": "^2.18.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-leaflet": "^1.7.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.10.1"
+  }
+}
