@@ -32,6 +32,7 @@ import Header from 'components/Header';
 import Body from 'components/Body';
 import Bottom from 'components/Bottom';
 import Map from 'components/Map';
+import Tools from 'components/Tools';
 import Story from 'components/Story';
 
 ReactDom.render(
@@ -39,8 +40,9 @@ ReactDom.render(
     <Wrapper>
       <Header />
       <Body>
-        <Map />
         <Story />
+        <Tools />
+        <Map />
       </Body>
       {/* <Bottom>
         <p>Test</p>

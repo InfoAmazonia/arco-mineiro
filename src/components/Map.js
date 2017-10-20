@@ -18,9 +18,9 @@ const Wrapper = styled.div`
   height: 100%;
   flex: 1 1 auto;
   position: relative;
-  border-top: 1px solid #ddd;
   box-sizing: border-box;
   ${media.desktop`
+    border-top: 1px solid #ddd;
     box-shadow: .25rem .25rem 1rem #f0f0f0;
     border-radius: 0 10px 0 0;
     border-right: 1px solid #ddd;

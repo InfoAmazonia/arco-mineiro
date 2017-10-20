@@ -9,6 +9,6 @@ export default styled.section`
   overflow-y: auto;
   overflow-x: hidden;
   ${media.desktop`
-    flex-direction: row;
+    flex-direction: row-reverse;
   `}
 `

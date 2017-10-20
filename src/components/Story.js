@@ -15,8 +15,17 @@ const Wrapper = styled.section`
     padding: 2rem 15vw;
   `}
   ${media.desktop`
-    padding: 2rem 10vw;
+    padding: 2rem 15vw 2rem 0;
   `}
+  h1 {
+    margin: 0 0 4rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 2rem;
+  }
+  img {
+    display: block;
+    margin: 2rem auto;
+  }
 `
 
 class Story extends Component {

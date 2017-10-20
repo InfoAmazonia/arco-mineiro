@@ -9,11 +9,14 @@ const Wrapper = styled.header`
   padding: 1rem;
   font-size: .8em;
   ${media.phablet`
-    padding: 1rem 5vw;
+    padding: 1rem 10vw;
     font-size: 1em;
   `}
   ${media.tablet`
-    padding: 5vw;
+    padding: 5vw 15vw;
+  `}
+  ${media.tablet`
+    // padding: 5vw;
   `}
   h1 {
     flex: 1 1 100%;
