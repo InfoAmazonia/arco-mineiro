@@ -15,8 +15,8 @@ const Wrapper = styled.header`
   ${media.tablet`
     padding: 5vw 15vw;
   `}
-  ${media.tablet`
-    // padding: 5vw;
+  ${media.desktop`
+    padding: 5vw 10vw;
   `}
   h1 {
     flex: 1 1 100%;
@@ -45,12 +45,12 @@ const Wrapper = styled.header`
         color: #111;
       }
       .icon-info {
-        background: #fff;
-        border: 1px solid #444;
+        background: red;
+        color: white;
         position: absolute;
-        width: 1rem;
-        height: 1rem;
-        line-height: 1rem;
+        width: 1.1rem;
+        height: 1.1rem;
+        line-height: 1.1rem;
         text-align: center;
         top: -.5rem;
         right: -.5rem;
@@ -58,8 +58,7 @@ const Wrapper = styled.header`
         text-decoration: none;
         font-size: .5em;
         border-radius: 100%;
-        color: #444;
-        font-weight: 600;
+        font-weight: 800;
       }
     }
   }
@@ -77,7 +76,7 @@ class Header extends Component {
         <nav>
           <a href="#" title="Notifications">
             <span className="fa fa-bell-o"></span>
-            <span className="icon-info">2</span>
+            <span className="icon-info">12</span>
           </a>
           <a href="#" title="Share">
             <span className="fa fa-share-alt"></span>

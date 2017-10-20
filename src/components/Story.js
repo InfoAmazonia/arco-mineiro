@@ -15,7 +15,7 @@ const Wrapper = styled.section`
     padding: 2rem 15vw;
   `}
   ${media.desktop`
-    padding: 2rem 15vw 2rem 0;
+    padding: 2rem 10vw 2rem 5vw;
   `}
   h1 {
     margin: 0 0 4rem;

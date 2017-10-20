@@ -20,7 +20,7 @@ const Wrapper = styled.aside`
     display: flex;
     flex-direction: column;
     flex-direction: column;
-    padding: 0 3rem 2rem 2rem;
+    padding: 2rem;
     font-size: 1em;
     text-align: center;
     div {
