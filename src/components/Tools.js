@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media } from 'styles/utils';
 
-const Wrapper = styled.header`
+const Wrapper = styled.aside`
   padding: 1rem;
   text-align: right;
   span {
