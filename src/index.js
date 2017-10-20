@@ -4,6 +4,7 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import styled from 'styled-components';
 import 'normalize.css';
 import 'font-awesome/css/font-awesome.css';
+import 'styles/global.css';
 
 import en from 'react-intl/locale-data/en';
 import pt from 'react-intl/locale-data/pt';
@@ -19,6 +20,14 @@ const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
   ::selection {
     background: #000;
   }
@@ -46,11 +55,22 @@ const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
 // const messages = localeData[language] || localeData[languageWithoutRegionCode] || localeData.en;
 
 import Header from 'components/Header';
+import Body from 'components/Body';
+import Bottom from 'components/Bottom';
+import Map from 'components/Map';
+import StoryList from 'components/StoryList';
 
 ReactDom.render(
   <IntlProvider locale={language}>
     <Wrapper>
       <Header />
+      <Body>
+        <Map />
+        <StoryList />
+      </Body>
+      <Bottom>
+        <p>Test</p>
+      </Bottom>
     </Wrapper>
   </IntlProvider>,
   document.getElementById('app')

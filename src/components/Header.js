@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
-  margin: 4rem auto;
-  width: 50%;
+  flex: 0 0 auto;
+  padding: 0 2rem;
+  img {
+    width: 100px;
+  }
 `
 
 class Header extends Component {
