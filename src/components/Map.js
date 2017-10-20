@@ -16,9 +16,29 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  border-radius: 0 10px 0 0;
+  box-shadow: .5rem .5rem 1rem #f7f7f7;
+  border-top: 1px solid #eee;
+  border-right: 1px solid #eee;
+  box-sizing: border-box;
+  &:after {
+    ${'' /* content: '';
+    pointer-events: none;
+    z-index: 9999;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    box-shadow: 0 0 50px 50px #222 inset;
+    border-radius: inherit; */}
+  }
   .leaflet-container {
     width: 100%;
     height: 100%;
+    background: #fff;
+    border-radius: inherit;
+    overflow: hidden;
   }
 `;
 
@@ -26,16 +46,16 @@ class MainMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [0, 0],
-      zoom: 4
+      center: [4.570868, -74.297333],
+      zoom: 6
     }
   }
   componentDidMount () {
-    setTimeout(() => {
-      this.setState({
-        center: [2,2]
-      });
-    }, 5000);
+    // setTimeout(() => {
+    //   this.setState({
+    //     center: [2,2]
+    //   });
+    // }, 5000);
   }
   render () {
     const { center, zoom } = this.state;
@@ -43,7 +63,7 @@ class MainMap extends Component {
       <Wrapper>
         <Map center={center} zoom={zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"
           />
           <Marker position={center}>
             <Popup>

@@ -4,4 +4,6 @@ import styled from 'styled-components';
 export default styled.footer`
   flex: 0 0 auto;
   padding: 0 2rem;
+  font-size: .8em;
+  text-transform: uppercase;
 `

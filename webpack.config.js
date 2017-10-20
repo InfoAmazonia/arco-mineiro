@@ -42,6 +42,17 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|svg|woff2|woff|eot|ttf|mp4)$/,
         loader: 'file-loader'
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'markdown-loader'
+          }
+        ]
       }
     ]
   }

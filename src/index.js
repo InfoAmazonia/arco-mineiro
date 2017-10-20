@@ -11,15 +11,6 @@ import pt from 'react-intl/locale-data/pt';
 addLocaleData([...en, ...pt]);
 
 const Wrapper = styled.div`
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision;
-  font-smooth: grayscale;
-  font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: grayscale;
   position: fixed;
   top: 0;
   right: 0;
@@ -28,23 +19,6 @@ const Wrapper = styled.div`
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  ::selection {
-    background: #000;
-  }
-  ::-moz-selection {
-    background: #000;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: "Playfair Display", serif;
-    font-weight: normal;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 `;
 
 const language = (navigator.languages && navigator.languages[0]) ||
@@ -58,7 +32,7 @@ import Header from 'components/Header';
 import Body from 'components/Body';
 import Bottom from 'components/Bottom';
 import Map from 'components/Map';
-import StoryList from 'components/StoryList';
+import Story from 'components/Story';
 
 ReactDom.render(
   <IntlProvider locale={language}>
@@ -66,7 +40,7 @@ ReactDom.render(
       <Header />
       <Body>
         <Map />
-        <StoryList />
+        <Story />
       </Body>
       <Bottom>
         <p>Test</p>
