@@ -42,9 +42,9 @@ ReactDom.render(
         <Map />
         <Story />
       </Body>
-      <Bottom>
+      {/* <Bottom>
         <p>Test</p>
-      </Bottom>
+      </Bottom> */}
     </Wrapper>
   </IntlProvider>,
   document.getElementById('app')

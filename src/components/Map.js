@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { media } from 'styles/utils';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -15,24 +16,15 @@ L.Icon.Default.mergeOptions({
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+  flex: 1 1 auto;
   position: relative;
-  border-radius: 0 10px 0 0;
-  box-shadow: .5rem .5rem 1rem #f7f7f7;
-  border-top: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-top: 1px solid #ddd;
   box-sizing: border-box;
-  &:after {
-    ${'' /* content: '';
-    pointer-events: none;
-    z-index: 9999;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    bottom: -2px;
-    right: -2px;
-    box-shadow: 0 0 50px 50px #222 inset;
-    border-radius: inherit; */}
-  }
+  ${media.desktop`
+    box-shadow: .25rem .25rem 1rem #f0f0f0;
+    border-radius: 0 10px 0 0;
+    border-right: 1px solid #ddd;
+  `}
   .leaflet-container {
     width: 100%;
     height: 100%;
@@ -46,7 +38,7 @@ class MainMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [4.570868, -74.297333],
+      center: [3.5, -73],
       zoom: 6
     }
   }
@@ -65,11 +57,11 @@ class MainMap extends Component {
           <TileLayer
             url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"
           />
-          <Marker position={center}>
+          {/* <Marker position={center}>
             <Popup>
               <p>Hello World!</p>
             </Popup>
-          </Marker>
+          </Marker> */}
         </Map>
       </Wrapper>
     );
