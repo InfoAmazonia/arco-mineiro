@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   transition: height .2s ease-in-out;
   ${media.desktop`
+    max-width: 1000px;
     height: auto;
     border-top: 1px solid #ddd;
     box-shadow: .25rem .25rem 1rem #f0f0f0;
