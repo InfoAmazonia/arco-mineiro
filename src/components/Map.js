@@ -15,18 +15,22 @@ L.Icon.Default.mergeOptions({
 });
 
 const Wrapper = styled.div`
-  flex: 1 1 45%;
+  flex: 0 0 45%;
   height: 90px;
   position: relative;
   box-sizing: border-box;
+  z-index: 1;
   transition: height .2s ease-in-out;
   ${media.desktop`
     max-width: 1000px;
     height: auto;
     border-top: 1px solid #ddd;
-    box-shadow: .25rem .25rem 1rem #f0f0f0;
+    box-shadow: .1rem .1rem 1rem rgba(0,0,0,0.05);
     border-radius: 0 10px 0 0;
     border-right: 1px solid #ddd;
+  `}
+  ${media.desktopHD`
+    flex: 0 0 40%;
   `}
   .leaflet-container {
     width: 100%;

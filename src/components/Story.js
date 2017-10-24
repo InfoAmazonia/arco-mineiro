@@ -48,6 +48,9 @@ const Wrapper = styled.section`
     }
   `}
   ${media.desktop`
+    padding: 2rem 2rem 2rem 0;
+  `}
+  ${media.desktopHD`
     padding: 2rem 10vw 2rem 5vw;
   `}
 `

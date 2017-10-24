@@ -29,7 +29,7 @@ const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
 // const messages = localeData[language] || localeData[languageWithoutRegionCode] || localeData.en;
 
 import Header from 'components/Header';
-import Body from 'components/Body';
+import Content from 'components/Content';
 import Bottom from 'components/Bottom';
 import Map from 'components/Map';
 import Tools from 'components/Tools';
@@ -39,11 +39,11 @@ ReactDom.render(
   <IntlProvider locale={language}>
     <Wrapper>
       <Header />
-      <Body>
+      <Content>
         <Story />
         <Tools />
         <Map />
-      </Body>
+      </Content>
       {/* <Bottom>
         <p>Test</p>
       </Bottom> */}
