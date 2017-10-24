@@ -40,7 +40,10 @@ const Wrapper = styled.header`
     flex: 0 0 auto;
     a {
       color: #444;
-      margin: 0 0 0 1.5rem;
+      margin: 0 0 0 1.2rem;
+      ${media.phablet`
+        margin: 0 0 0 2rem;
+      `}
       ${media.desktop`
         margin: 0 0 0 3rem;
       `}

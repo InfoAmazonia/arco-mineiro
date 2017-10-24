@@ -8,6 +8,7 @@ const Wrapper = styled.section`
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 1rem;
+  font-size: .8em;
   h1 {
     font-size: 1.4em;
     margin: 0 0 1rem;
@@ -31,6 +32,7 @@ const Wrapper = styled.section`
   }
   ${media.phablet`
     padding: 2rem 10vw;
+    font-size: 1em;
     h1 {
       font-size: 1.8em;
       padding-bottom: 2rem;
