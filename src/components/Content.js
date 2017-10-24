@@ -6,6 +6,7 @@ export default styled.section`
   display: flex;
   flex-direction: column;
   flex: 1 1 100%;
+  overflow: hidden;
   ${media.desktop`
     flex-direction: row-reverse;
   `}

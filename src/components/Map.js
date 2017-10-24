@@ -15,13 +15,14 @@ L.Icon.Default.mergeOptions({
 });
 
 const Wrapper = styled.div`
-  flex: 0 0 45%;
+  flex: 1 1 auto;
   height: 90px;
   position: relative;
   box-sizing: border-box;
   z-index: 1;
   transition: height .2s ease-in-out;
   ${media.desktop`
+    flex: 0 0 45%;
     max-width: 1000px;
     height: auto;
     border-top: 1px solid #ddd;
