@@ -8,11 +8,15 @@ const Wrapper = styled.header`
   flex-direction: row;
   padding: 1rem;
   font-size: .8em;
+  border-bottom: 1px solid #e7e7e7;
+  box-shadow: 0 0 5px #eee;
   ${media.phablet`
     padding: 1rem 10vw;
     font-size: 1em;
   `}
   ${media.tablet`
+    border-bottom: 0;
+    box-shadow: 0 0 0;
     padding: 5vw 15vw;
   `}
   ${media.desktop`
