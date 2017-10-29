@@ -12,7 +12,7 @@ const Title = styled.h1`
   `}
   img {
     height: 3em;
-    margin-right: 1rem;
+    margin-right: 1em;
     float: left;
     ${media.tablet`
       margin-right: 2vw;
@@ -23,7 +23,7 @@ const Title = styled.h1`
   }
   .title-item {
     display: inline-block;
-    padding-right: .25rem;
+    padding-right: .25em;
     font-size: .8em;
     white-space: nowrap;
     &.title-1,
@@ -31,14 +31,14 @@ const Title = styled.h1`
       color: #999;
     }
     &.title-1 {
-      padding-left: .75rem;
+      padding-left: .75em;
     }
     &.title-2 {
       font-size: .5em;
     }
     &.title-3 {
       display: block;
-      letter-spacing: -.1rem;
+      letter-spacing: -.03em;
       font-size: 1.6em;
       font-weight: 700;
       padding: 0;
