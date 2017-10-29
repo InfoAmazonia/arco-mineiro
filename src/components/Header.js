@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media } from 'styles/utils';
 
+import SiteTitle from './SiteTitle';
+
 const Wrapper = styled.header`
   flex: 0 0 auto;
   display: flex;
@@ -20,24 +22,16 @@ const Wrapper = styled.header`
     padding: 5vw 15vw;
   `}
   ${media.desktop`
-    padding: 5vw 10vw;
+    padding: 4vw 10vw;
   `}
-  h1 {
+  .site-title {
     flex: 1 1 100%;
-    margin: 0;
-    font-size: 1em;
-    text-transform: uppercase;
-    img {
-      height: 1.4em;
-      margin-right: 1rem;
-      float: left;
-      ${media.tablet`
-        margin-right: 2.5vw;
-      `}
-    }
   }
   nav {
     flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     a {
       color: #444;
       margin: 0 0 0 1.2rem;
@@ -75,11 +69,9 @@ class Header extends Component {
   render () {
     return (
       <Wrapper>
-        {/* <h1><img src={require('images/logo.svg')} alt="Arco Minero" /></h1> */}
-        <h1>
-          <img src={require('images/polygons.svg')} />
-          Arco Mineiro
-        </h1>
+        <div className="site-title">
+          <SiteTitle />
+        </div>
         <nav>
           <a href="#" title="Notifications">
             <span className="fa fa-bell-o"></span>

@@ -49,7 +49,7 @@ class MainMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      center: [3.5, -73],
+      center: [6.4, -66.6],
       zoom: 6,
       active: false
     }

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js -p",
     "watch": "webpack --config webpack.config.js --watch",
-    "deploy": "rm public/* && npm run build && gh-pages -d public",
+    "deploy": "rm public/* && npm run build && gh-pages --remove !CNAME -d public",
     "manage:translations": "node ./translationRunner.js"
   },
   "repository": {

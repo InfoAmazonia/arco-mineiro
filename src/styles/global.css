@@ -81,3 +81,14 @@ a:active,
 a:focus {
   color: #ffc37d;
 }
+
+.clear,
+.clearfix:before,
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}

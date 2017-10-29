@@ -28,6 +28,8 @@ const languageWithoutRegionCode = language.toLowerCase().split(/[_-]+/)[0];
 // import localeData from './locales';
 // const messages = localeData[language] || localeData[languageWithoutRegionCode] || localeData.en;
 
+import Landing from 'components/Landing';
+
 import Header from 'components/Header';
 import Content from 'components/Content';
 import Bottom from 'components/Bottom';
@@ -38,15 +40,13 @@ import Story from 'components/Story';
 ReactDom.render(
   <IntlProvider locale={language}>
     <Wrapper>
-      <Header />
+      <Landing />
+      {/* <Header />
       <Content>
         <Story />
         <Tools />
         <Map />
-      </Content>
-      {/* <Bottom>
-        <p>Test</p>
-      </Bottom> */}
+      </Content> */}
     </Wrapper>
   </IntlProvider>,
   document.getElementById('app')
