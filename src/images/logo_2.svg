@@ -5,66 +5,43 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg7497"
    version="1.1"
-   viewBox="0 0 191.73394 125.21166"
-   height="125.21165mm"
-   width="191.73393mm"
-   sodipodi:docname="logo_1.svg"
-   inkscape:version="0.92.1 r15371">
-  <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1012"
-     id="namedview4572"
-     showgrid="false"
-     inkscape:zoom="0.63427917"
-     inkscape:cx="362.33184"
-     inkscape:cy="236.62044"
-     inkscape:window-x="1920"
-     inkscape:window-y="57"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g7451" />
+   viewBox="0 0 372.23997 293.53281"
+   height="293.53278mm"
+   width="372.23996mm">
   <defs
      id="defs7491">
     <filter
-       id="halo_esri.Map_1_labels_0_0_0_1_1"
-       height="871"
-       width="1920"
-       y="-133"
-       x="-89"
-       filterUnits="userSpaceOnUse">
-      <feMorphology
-         id="feMorphology33"
-         result="dilated"
-         radius="1"
-         operator="dilate" />
+       id="filter5004"
+       style="color-interpolation-filters:sRGB">
       <feFlood
-         id="feFlood35"
-         flood-color="rgba(0, 0, 0, 1)" />
+         id="feFlood4994"
+         result="flood"
+         flood-color="rgb(0,0,0)"
+         flood-opacity=".1" />
       <feComposite
-         id="feComposite37"
-         result="composite"
+         id="feComposite4996"
+         result="composite1"
          operator="in"
-         in2="dilated" />
-      <feMerge
-         id="feMerge39">
-        <feMergeNode
-           id="feMergeNode41"
-           in="composite" />
-        <feMergeNode
-           id="feMergeNode43"
-           in="SourceGraphic" />
-      </feMerge>
+         in2="SourceGraphic"
+         in="flood" />
+      <feGaussianBlur
+         id="feGaussianBlur4998"
+         result="blur"
+         stdDeviation="50"
+         in="composite1" />
+      <feOffset
+         id="feOffset5000"
+         result="offset"
+         dy="10"
+         dx="10" />
+      <feComposite
+         id="feComposite5002"
+         result="composite2"
+         operator="over"
+         in2="offset"
+         in="SourceGraphic" />
     </filter>
   </defs>
   <metadata
@@ -80,30 +57,35 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-37.324436,-85.392215)"
+     transform="translate(143.18158,17.303277)"
      id="layer1">
     <g
        id="g7451"
        transform="matrix(0.08466653,0,0,0.08466653,-23.790095,27.249997)">
       <path
-         id="path464"
-         d="m 1392.4219,836.33757 223.1265,26.13172 312.3798,46.58233 21.9344,-39.29623 289.5804,-5.78221 -24.7653,89.3856 197.5909,154.98252 72.2774,120.1923 -83.1196,153.4838 15.8396,243.4166 -252.004,143.7428 -252.5838,-20.1955 28.4772,115.534 91.6143,146.0636 -213.2211,155.0214 -233.066,-35.3675 -88.0806,-193.0974 -33.7825,-207.9983 27.6871,-229.2766 -237.9861,-35.4983 -200.3174,-109.1464 -219.10825,-73.0616 -113.06851,-240.0613 177.78774,-306.27173 15.89683,-2.11121 -32.61459,230.75667 128.95558,36.58537 49.1394,-211.67185 106.3977,-62.16203 19.4895,-23.88165 z"
-         style="font-style:normal;font-weight:400;font-size:37.5px;font-family:'Sans Serif';vector-effect:none;fill:#e4e4e4;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:35.43312836;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <path
          id="path5240"
          d="m 2156.2593,1279.6306 39.3969,-40.4597 36.3884,-27.8373 9.9128,13.8972 17.8238,-15.5573 11.7113,14.7956 8.7863,-16.332 14.0247,22.742 25.7065,-9.497 53.1455,31.3464 -100.1872,179.9422 -81.4734,-29.774 -35.2356,-123.2661 v 0"
          style="fill:#000000;fill-opacity:0;stroke:none;stroke-width:2.73815584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <g
-         style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:10.45277309;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="g5413">
+         style="stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(1.9757766,0,0,1.9757766,-2488.0315,-1626.9457)"
+         id="g6294">
         <path
-           style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:10.45277309;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 1479.257,1440.5567 109.3752,-80.3573 118.3037,2.2321 256.6969,-35.7143 162.9467,-11.1607 64.9154,87.3402 171.6921,-49.3938 38.2394,28.5145 4.1714,132.2001 -193.0807,63.6162 -58.0358,-69.1966 -87.0537,11.1607 -83.1038,-74.765 -70.639,19.5687 -35.3223,-30.8615 -59.3435,1.4702 -40.6544,-7.2804 -79.2802,32.0747 -62.4611,79.8826 -147.3217,-15.625 3.005,-24.4016 -62.1568,-5.7323 z"
-           id="path5385" />
-        <path
-           style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:10.45277309;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 2316.6949,1679.8852 -89.9927,1.5254 -1.5253,53.3854 z"
-           id="path5409" />
+           style="font-style:normal;font-weight:400;font-size:37.5px;font-family:'Sans Serif';vector-effect:none;fill:#ffffff;fill-opacity:0.78138846;fill-rule:evenodd;stroke:#000000;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter5004)"
+           d="m 1392.4219,836.33757 223.1265,26.13172 312.3798,46.58233 21.9344,-39.29623 289.5804,-5.78221 -24.7653,89.3856 197.5909,154.98252 72.2774,120.1923 -83.1196,153.4838 15.8396,243.4166 -252.004,143.7428 -252.5838,-20.1955 28.4772,115.534 91.6143,146.0636 -213.2211,155.0214 -233.066,-35.3675 -88.0806,-193.0974 -33.7825,-207.9983 27.6871,-229.2766 -237.9861,-35.4983 -200.3174,-109.1464 -219.10825,-73.0616 -113.06851,-240.0613 177.78774,-306.27173 15.89683,-2.11121 -32.61459,230.75667 128.95558,36.58537 49.1394,-211.67185 106.3977,-62.16203 19.4895,-23.88165 z"
+           id="path464" />
+        <g
+           id="g5413"
+           style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+          <path
+             id="path5385"
+             d="m 1479.257,1440.5567 109.3752,-80.3573 118.3037,2.2321 256.6969,-35.7143 162.9467,-11.1607 64.9154,87.3402 171.6921,-49.3938 38.2394,28.5145 4.1714,132.2001 -193.0807,63.6162 -58.0358,-69.1966 -87.0537,11.1607 -83.1038,-74.765 -70.639,19.5687 -35.3223,-30.8615 -59.3435,1.4702 -40.6544,-7.2804 -79.2802,32.0747 -62.4611,79.8826 -147.3217,-15.625 3.005,-24.4016 -62.1568,-5.7323 z"
+             style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <path
+             id="path5409"
+             d="m 2316.6949,1679.8852 -89.9927,1.5254 -1.5253,53.3854 z"
+             style="fill:#b13838;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        </g>
       </g>
       <g
          transform="matrix(-1,0,0,1,3899.0026,-94.778103)"

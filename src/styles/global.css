@@ -92,3 +92,18 @@ a:focus {
   clear: both;
   height: 0;
 }
+
+.route-transition-enter {
+  opacity: 0.01;
+}
+.route-transition-enter.route-transition-enter-active {
+  opacity: 1;
+  transition: opacity 800ms ease-in;
+}
+.route-transition-exit {
+  opacity: 1;
+}
+.route-transition-exit.route-transition-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

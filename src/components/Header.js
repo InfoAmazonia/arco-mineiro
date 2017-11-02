@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { media } from 'styles/utils';
+import { media, color } from 'styles/utils';
 
 import SiteTitle from './SiteTitle';
 
@@ -10,7 +10,6 @@ const Wrapper = styled.header`
   flex-direction: row;
   padding: 1rem;
   font-size: .8em;
-  border-bottom: 1px solid #e7e7e7;
   box-shadow: 0 0 5px #eee;
   ${media.phablet`
     padding: 1rem 10vw;
@@ -69,9 +68,7 @@ class Header extends Component {
   render () {
     return (
       <Wrapper>
-        <div className="site-title">
-          <SiteTitle />
-        </div>
+        <SiteTitle />
         <nav>
           <a href="#" title="Notifications">
             <span className="fa fa-bell-o"></span>

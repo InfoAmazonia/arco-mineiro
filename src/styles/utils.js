@@ -36,6 +36,8 @@ export const media = sizes.reduce((acc, size, index) => {
   return acc;
 }, {});
 
+export const color = '#111';
+
 export default {
   sizes,
   media
