@@ -12,26 +12,25 @@ import 'normalize.css';
 import 'font-awesome/css/font-awesome.css';
 import 'styles/global.css';
 
-// class Application extends Component {
-//   render () {
-//     return (
-//     );
-//   }
-// }
+class Application extends Component {
+  render () {
+    const { location, match } = this.props;
+    const key = "/" + location.pathname.split('/')[1];
+    return (
+      <TransitionGroup>
+        <CSSTransition
+          key={key}
+          classNames="route-transition"
+          timeout={800}
+        >
+          <Switch location={location}>
+            <Route exact path="/" component={Landing} />
+            <Route path="/story" component={Story} />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    )
+  }
+}
 
-export default withRouter(({ location }) => (
-  <TransitionGroup>
-    <CSSTransition
-      key={location.key}
-      classNames="route-transition"
-      timeout={800}
-    >
-      <Switch location={location}>
-        <Route exact path="/" component={Landing} />
-        <Route path="/story" component={Story} />
-      </Switch>
-    </CSSTransition>
-  </TransitionGroup>
-))
-
-// export default withRouter(connect()(Application));
+export default withRouter(connect()(Application));

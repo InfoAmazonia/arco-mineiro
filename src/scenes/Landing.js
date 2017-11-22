@@ -190,7 +190,7 @@ class Scene extends Component {
           <p className="description">
             The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela
           </p>
-          <Link to="/story">
+          <Link to="/story/gold-mining">
           Read the Story
         </Link>
         {/* <h3>Developed by <strong>Miguel Peixe</strong>, edited by <strong>Stefano Wrobleski</strong> and advisory by <strong>Oscar Murillo</strong></h3> */}

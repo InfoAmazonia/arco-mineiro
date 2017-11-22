@@ -3,7 +3,6 @@ import ReactDom from 'react-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory'
-import { browserHistory } from 'react-router';
 import { ConnectedRouter as Router } from 'react-router-redux';
 
 import configureStore from 'store';

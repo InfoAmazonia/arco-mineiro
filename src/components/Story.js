@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from 'styles/utils';
+import debounce from 'utils/debounce';
+import { updateContext } from 'actions/context';
 
 const Wrapper = styled.section`
   flex: 1 1 auto;
@@ -9,6 +14,7 @@ const Wrapper = styled.section`
   box-sizing: border-box;
   padding: 1rem;
   font-size: .8em;
+  position: relative;
   h1 {
     font-size: 1.4em;
     margin: 0 0 1rem;
@@ -62,14 +68,51 @@ const Wrapper = styled.section`
 `
 
 class Story extends Component {
+  constructor (props) {
+    super(props);
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentDidMount () {
+    this.node = findDOMNode(this);
+    this.pathname = this.props.location.pathname;
+    this.node.addEventListener('scroll', this.handleScroll);
+  }
+  componentWillReceiveProps (nextProps) {
+    const path = nextProps.location.pathname;
+    const scroll = nextProps.storyScroll[path] || 0;
+    if(this.pathname !== path) {
+      this.node.scrollTop = scroll;
+    }
+  }
+  handleScroll = debounce(function(ev) {
+    const scrollTop = this.node.scrollTop;
+    const height = this.node.scrollHeight - this.node.offsetHeight;
+
+    let scrollState = {};
+    scrollState[this.props.location.pathname] = scrollTop;
+    this.props.updateContext('storyScroll', scrollState);
+
+    let heightState = {};
+    heightState[this.props.location.pathname] = height;
+    this.props.updateContext('storyHeight', heightState);
+  }, 300)
   render () {
     return (
       <Wrapper>
-        <article dangerouslySetInnerHTML={{__html: require('story.md')}}>
-        </article>
+        {this.props.children}
       </Wrapper>
     )
   }
 }
 
-export default Story;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    storyScroll: state.context.storyScroll
+  }
+}
+
+const mapDispatchToProps = {
+  updateContext
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Story));

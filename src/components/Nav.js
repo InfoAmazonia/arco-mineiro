@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { media } from 'styles/utils';
 
 const Wrapper = styled.nav`
@@ -21,20 +23,6 @@ const Wrapper = styled.nav`
       ${'' /* border-left: 1px solid #eee; */}
       line-height: 1;
       position: relative;
-      &:before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        margin-left: -.25rem;
-        bottom: 0;
-        height: .4rem;
-        width: .6rem;
-        background: transparent;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        border-top-left-radius: .6rem;
-        border-top-right-radius: .6rem;
-      }
       a {
         position: relative;
         z-index: 1;
@@ -46,9 +34,34 @@ const Wrapper = styled.nav`
         overflow: hidden;
         text-overflow: ellipsis;
         border-bottom: 1px solid #ddd;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          margin-left: -.25rem;
+          bottom: -1px;
+          height: .4rem;
+          width: .6rem;
+          background: transparent;
+          border: 1px solid #ddd;
+          box-sizing: border-box;
+          border-top-left-radius: .6rem;
+          border-top-right-radius: .6rem;
+        }
         &:hover {
           border-color: #aaa;
           color: #333;
+          &:before {
+            border-color: #aaa;
+          }
+        }
+        &.active {
+          color: #333;
+          border-color: #aaa;
+          &:before {
+            border-color: #aaa;
+          }
         }
       }
       .progress {
@@ -56,23 +69,10 @@ const Wrapper = styled.nav`
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 4px;
-        width: 25%;
+        height: 2px;
         background: rgb(95, 249, 92);
-      }
-      &:hover {
-        &:before {
-          border-color: #aaa;
-        }
-      }
-      &.active {
-        &:before {
-          border-color: #aaa;
-        }
-        a {
-          color: #333;
-          border-color: #aaa;
-        }
+        transition: width .2s linear;
+        z-index: 2;
       }
     }
   }
@@ -92,26 +92,57 @@ const Wrapper = styled.nav`
   `}
 `
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    scrolls: state.context.storyScroll,
+    heights: state.context.storyHeight
+  }
+}
+
+const ProgressBar = connect(mapStateToProps)(({ ...props }) => {
+  const { scrolls, heights, path } = props;
+  if(path) {
+    let progress = 0;
+    if(scrolls[path] && heights[path]) {
+      console.log(scrolls[path])
+      console.log(heights[path])
+      progress = scrolls[path]/heights[path]*100;
+    }
+    console.log(progress);
+    return (
+      <span className="progress" style={{
+        width: progress + '%'
+      }} />
+    )
+  } else {
+    return null;
+  }
+})
+
 class ArticleNav extends Component {
   render () {
     return (
       <Wrapper>
         <ol>
-          <li className="active">
-            <a href="#">Gold Mining</a>
-            <span className="progress"></span>
+          <li>
+            <NavLink to="/story/gold-mining">Gold Mining</NavLink>
+            <ProgressBar path="/story/gold-mining" />
           </li>
           <li>
-            <a href="#">Grip of the Guerrilla</a>
+            <NavLink to="/story/grip-of-the-guerrilla">Grip of the Guerrilla</NavLink>
+            <ProgressBar path="/story/grip-of-the-guerrilla" />
           </li>
           <li>
-            <a href="#">Coltan Country</a>
+            <NavLink to="/story/coltan-country">Coltan Country</NavLink>
+            <ProgressBar path="/story/coltan-country" />
           </li>
           <li>
-            <a href="#">Malaria</a>
+            <NavLink to="/story/malaria">Malaria</NavLink>
+            <ProgressBar path="/story/malaria" />
           </li>
           <li>
-            <a href="#">Gambling</a>
+            <NavLink to="/story/gambling">Gambling</NavLink>
+            <ProgressBar path="/story/gambling" />
           </li>
         </ol>
       </Wrapper>
