@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Header from 'components/Header';
+import ArticleNav from 'components/Nav';
 import Content from 'components/Content';
 import Bottom from 'components/Bottom';
+import Media from 'components/Media';
+import Video from 'components/Video';
 import Map from 'components/Map';
 import Tools from 'components/Tools';
 import Story from 'components/Story';
@@ -24,10 +27,14 @@ class Scene extends Component {
     return (
       <Wrapper className="scene story">
         <Header />
+        <ArticleNav />
         <Content>
           <Story />
-          <Tools />
-          <Map />
+          {/* <Tools /> */}
+          <Media>
+            {/* <Map /> */}
+            <Video />
+          </Media>
         </Content>
       </Wrapper>
     )

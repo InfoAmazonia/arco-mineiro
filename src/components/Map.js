@@ -14,37 +14,6 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png').split(imagePath)[1],
 });
 
-const Wrapper = styled.div`
-  flex: 1 1 auto;
-  height: 90px;
-  position: relative;
-  box-sizing: border-box;
-  z-index: 1;
-  transition: height .2s ease-in-out;
-  ${media.desktop`
-    flex: 0 0 45%;
-    max-width: 1000px;
-    height: auto;
-    border-top: 1px solid #ddd;
-    box-shadow: .1rem .1rem 1rem rgba(0,0,0,0.05);
-    border-radius: 0 10px 0 0;
-    border-right: 1px solid #ddd;
-  `}
-  ${media.desktopHD`
-    flex: 0 0 40%;
-  `}
-  .leaflet-container {
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    border-radius: inherit;
-    overflow: hidden;
-  }
-  ${props => props.active && css`
-    height: 300px;
-  `}
-`;
-
 class MainMap extends Component {
   constructor(props) {
     super(props);
@@ -79,20 +48,18 @@ class MainMap extends Component {
     }
   }
   render () {
-    const { center, zoom, active } = this.state;
+    const { center, zoom } = this.state;
     return (
-      <Wrapper active={active}>
-        <Map ref="map" center={center} zoom={zoom}>
-          <TileLayer
-            url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"
-          />
-          {/* <Marker position={center}>
-            <Popup>
-              <p>Hello World!</p>
-            </Popup>
-          </Marker> */}
-        </Map>
-      </Wrapper>
+      <Map ref="map" center={center} zoom={zoom}>
+        <TileLayer
+          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"
+        />
+        {/* <Marker position={center}>
+          <Popup>
+            <p>Hello World!</p>
+          </Popup>
+        </Marker> */}
+      </Map>
     );
   }
 }

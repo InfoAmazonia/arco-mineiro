@@ -8,6 +8,6 @@ export default styled.section`
   flex: 1 1 100%;
   overflow: hidden;
   ${media.desktop`
-    flex-direction: row-reverse;
+    flex-direction: row;
   `}
 `

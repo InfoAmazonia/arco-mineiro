@@ -23,6 +23,7 @@ const Wrapper = styled.aside`
     padding: 2rem;
     font-size: 1em;
     text-align: center;
+    margin-bottom: 4rem;
     div {
       flex-grow: 1;
     }

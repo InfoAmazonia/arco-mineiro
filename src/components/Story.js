@@ -23,6 +23,12 @@ const Wrapper = styled.section`
     font-size: 1em;
     font-weight: 600;
   }
+  p {
+    margin: 0 0 2rem;
+    strong {
+      text-transform: uppercase;
+    }
+  }
   img {
     display: block;
     margin: 2rem auto;
@@ -48,10 +54,10 @@ const Wrapper = styled.section`
     }
   `}
   ${media.desktop`
-    padding: 2rem 2rem 2rem 0;
+    padding: 2rem 2rem 2rem;
   `}
   ${media.desktopHD`
-    padding: 2rem 10vw 2rem 5vw;
+    padding: 2rem 5vw 2rem 10vw;
   `}
 `
 

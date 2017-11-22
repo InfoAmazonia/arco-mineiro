@@ -18,10 +18,10 @@ const Wrapper = styled.header`
   ${media.tablet`
     border-bottom: 0;
     box-shadow: 0 0 0;
-    padding: 5vw 15vw;
+    padding: 3vw 15vw;
   `}
   ${media.desktop`
-    padding: 4vw 10vw;
+    padding: 3vw 10vw;
   `}
   .site-title {
     flex: 1 1 100%;
@@ -70,10 +70,10 @@ class Header extends Component {
       <Wrapper>
         <SiteTitle />
         <nav>
-          <a href="#" title="Notifications">
+          {/* <a href="#" title="Notifications">
             <span className="fa fa-bell-o"></span>
             <span className="icon-info">12</span>
-          </a>
+          </a> */}
           <a href="#" title="Share">
             <span className="fa fa-share-alt"></span>
           </a>
