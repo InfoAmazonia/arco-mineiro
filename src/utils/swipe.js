@@ -1,7 +1,5 @@
 export default function swipe (el, callback) {
 
-  console.log(el);
-
   let direction,
     startX, startY,
     distX, distY;
