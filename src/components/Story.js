@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from 'styles/utils';
 import debounce from 'utils/debounce';
+import scrollTo from 'utils/scrollTo';
 import { updateContext } from 'actions/context';
 
 const Wrapper = styled.section`
@@ -81,12 +82,14 @@ class Story extends Component {
   componentWillReceiveProps (nextProps) {
     const path = nextProps.location.pathname;
     if(this.pathname !== path) {
-      this.setScroll(nextProps);
       this.pathname = path;
+      setTimeout(() => {
+        this.setScroll(nextProps);
+      }, 100);
     }
   }
   setScroll (props) {
-    this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
+    scrollTo(this.node, props.storyScroll[props.location.pathname] || 0, 200);
   }
   handleScroll = debounce(function(ev) {
     const path = this.props.location.pathname;
