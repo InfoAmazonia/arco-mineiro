@@ -76,13 +76,17 @@ class Story extends Component {
     this.node = findDOMNode(this);
     this.pathname = this.props.location.pathname;
     this.node.addEventListener('scroll', this.handleScroll);
+    this.setScroll(this.props);
   }
   componentWillReceiveProps (nextProps) {
     const path = nextProps.location.pathname;
-    const scroll = nextProps.storyScroll[path] || 0;
     if(this.pathname !== path) {
-      this.node.scrollTop = scroll;
+      this.setScroll(nextProps);
+      this.pathname = path;
     }
+  }
+  setScroll (props) {
+    this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
   handleScroll = debounce(function(ev) {
     const scrollTop = this.node.scrollTop;

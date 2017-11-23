@@ -52,6 +52,7 @@ const TransitionComp = styled.div`
 class Scene extends Component {
   render () {
     const { location, match } = this.props;
+    const story = require('story.md');
     return (
       <Wrapper className="scene story">
         <Header />
@@ -68,19 +69,19 @@ class Scene extends Component {
               >
                 <Switch location={location}>
                   <Route path={`${match.url}/gold-mining`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: require('story.md')}} />
+                    <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
                   <Route path={`${match.url}/grip-of-the-guerrilla`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: require('story.md')}} />
+                    <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
                   <Route path={`${match.url}/coltan-country`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: require('story.md')}} />
+                    <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
                   <Route path={`${match.url}/malaria`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: require('story.md')}} />
+                    <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
                   <Route path={`${match.url}/gambling`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: require('story.md')}} />
+                    <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
                 </Switch>
               </CSSTransition>

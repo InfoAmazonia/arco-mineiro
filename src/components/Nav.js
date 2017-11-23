@@ -70,7 +70,7 @@ const Wrapper = styled.nav`
         left: 0;
         bottom: 0;
         height: 2px;
-        background: rgb(95, 249, 92);
+        background: #333;
         transition: width .2s linear;
         z-index: 2;
       }
