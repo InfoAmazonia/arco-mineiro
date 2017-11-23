@@ -16,5 +16,5 @@ export const updateContext = (context, data) => (dispatch) => {
 export const resetContext = () => (dispatch) => {
   dispatch({
     type: CONTEXT_RESET
-  })
+  });
 };

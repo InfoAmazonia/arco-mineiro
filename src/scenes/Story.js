@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   .articles-transition-enter {
     opacity: 0.01;
-    transform: translate(-1rem, 0);
+    transform: translate(1rem, 0);
     position: absolute;
   }
   .articles-transition-enter.articles-transition-enter-active {
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   .articles-transition-exit.articles-transition-exit-active {
     opacity: 0.01;
     transform: translate(-1rem, 0);
-    transition: all 100ms ease-in-out;
+    transition: all 200ms ease-in-out;
     position: absolute;
   }
 `;
