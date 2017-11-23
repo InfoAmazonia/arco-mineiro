@@ -10,6 +10,9 @@ const Wrapper = styled.nav`
   ${'' /* margin-bottom: 1rem; */}
   text-align: center;
   background: #f7f7f7;
+  box-shadow: 0 3px .5rem rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 10;
   ol {
     display: table;
     table-layout: fixed;
@@ -58,9 +61,10 @@ const Wrapper = styled.nav`
         }
         &.active {
           color: #333;
-          border-color: #aaa;
+          font-weight: 600;
           &:before {
             border-color: #aaa;
+            background: #aaa;
           }
         }
       }
@@ -69,7 +73,7 @@ const Wrapper = styled.nav`
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 2px;
+        height: 1px;
         background: #333;
         transition: width .2s linear;
         z-index: 2;
@@ -104,11 +108,8 @@ const ProgressBar = connect(mapStateToProps)(({ ...props }) => {
   if(path) {
     let progress = 0;
     if(scrolls[path] && heights[path]) {
-      console.log(scrolls[path])
-      console.log(heights[path])
       progress = scrolls[path]/heights[path]*100;
     }
-    console.log(progress);
     return (
       <span className="progress" style={{
         width: progress + '%'

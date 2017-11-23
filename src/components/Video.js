@@ -43,13 +43,30 @@ const Wrapper = styled.div`
 `
 
 class Video extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      playing: false
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  componentWillReceiveProps (nextProps) {
+  }
+  handleClick (ev) {
+    if(!this.state.playing) {
+      this.setState({
+        playing: true
+      });
+    }
+  }
   render () {
+    const { data } = this.props;
     return (
-      <Wrapper>
+      <Wrapper onClick={this.handleClick}>
         <video autoPlay loop muted controls="false">
-          <source
-            src="https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny.ogv"
-          />
+          {data.sources.map((src, i) => (
+            <source key={`src-${i}`} src={src} />
+          ))}
         </video>
         <a href="javascript:void(0);" className="play">
           <span className="fa fa-volume-up"></span>

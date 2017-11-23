@@ -89,16 +89,21 @@ class Story extends Component {
     this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
   handleScroll = debounce(function(ev) {
+    const path = this.props.location.pathname;
     const scrollTop = this.node.scrollTop;
     const height = this.node.scrollHeight - this.node.offsetHeight;
 
-    let scrollState = {};
-    scrollState[this.props.location.pathname] = scrollTop;
-    this.props.updateContext('storyScroll', scrollState);
+    if(this.props.storyScroll[path] !== scrollTop) {
+      let scrollState = {};
+      scrollState[this.props.location.pathname] = scrollTop;
+      this.props.updateContext('storyScroll', scrollState);
+    }
 
-    let heightState = {};
-    heightState[this.props.location.pathname] = height;
-    this.props.updateContext('storyHeight', heightState);
+    if(this.props.storyHeight[path] !== height) {
+      let heightState = {};
+      heightState[this.props.location.pathname] = height;
+      this.props.updateContext('storyHeight', heightState);
+    }
   }, 300)
   render () {
     return (
@@ -111,7 +116,8 @@ class Story extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    storyScroll: state.context.storyScroll
+    storyScroll: state.context.storyScroll,
+    storyHeight: state.context.storyHeight
   }
 }
 

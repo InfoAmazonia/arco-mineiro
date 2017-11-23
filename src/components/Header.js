@@ -18,10 +18,10 @@ const Wrapper = styled.header`
   ${media.tablet`
     border-bottom: 0;
     box-shadow: 0 0 0;
-    padding: 3vw 15vw;
+    padding: 2vw 15vw;
   `}
   ${media.desktop`
-    padding: 3vw 10vw;
+    padding: 2vw 10vw;
   `}
   .site-title {
     flex: 1 1 100%;

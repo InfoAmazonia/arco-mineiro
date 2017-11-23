@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import styled, { css } from 'styled-components';
+import { connect } from 'react-redux';
 import { media } from 'styles/utils';
+
+import Video from './Video';
 
 const Wrapper = styled.div`
   flex: 1 1 auto;
@@ -59,13 +62,27 @@ class Media extends Component {
   }
   render () {
     const { active } = this.state;
-    const { children } = this.props;
-    return (
-      <Wrapper active={active}>
-        {children}
-      </Wrapper>
-    );
+    const { media, children } = this.props;
+    if(media.type == 'video') {
+      return (
+        <Wrapper active={active}>
+          <Video data={media.data} />
+        </Wrapper>
+      )
+    } else {
+      return (
+        <Wrapper active={active}>
+          {children}
+        </Wrapper>
+      );
+    }
   }
 }
 
-export default Media;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    media: state.media
+  }
+};
+
+export default connect(mapStateToProps)(Media);

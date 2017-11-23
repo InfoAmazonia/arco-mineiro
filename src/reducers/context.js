@@ -1,5 +1,6 @@
 import {
-  CONTEXT_UPDATE
+  CONTEXT_UPDATE,
+  CONTEXT_RESET
 } from 'actions/context';
 
 import {
@@ -25,6 +26,9 @@ export default function reducer (state = initialState, action) {
           } : action.data)
       });
       return state;
+    }
+    case CONTEXT_RESET : {
+      return Object.assign({}, initialState);
     }
     case REHYDRATE : {
       const incoming = {...action.payload.context};

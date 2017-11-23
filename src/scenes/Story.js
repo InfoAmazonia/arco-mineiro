@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   .articles-transition-enter.articles-transition-enter-active {
     opacity: 1;
     transform: translate(0, 0);
-    transition: all 800ms ease-in-out;
+    transition: all 600ms ease-in-out;
   }
   .articles-transition-exit {
     opacity: 1;
@@ -65,7 +65,7 @@ class Scene extends Component {
               <CSSTransition
                 key={location.key}
                 classNames="articles-transition"
-                timeout={800}
+                timeout={600}
               >
                 <Switch location={location}>
                   <Route path={`${match.url}/gold-mining`} render={props => (
