@@ -32,7 +32,11 @@ const Wrapper = styled.div`
     transition: all .4s ease-in-out;
     opacity: 0;
     .fa {
-      margin-top: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -1.5rem;
+      margin-left: -1.5rem;
     }
   }
   &:hover {

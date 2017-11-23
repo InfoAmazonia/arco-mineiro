@@ -8,7 +8,7 @@ import debounce from 'utils/debounce';
 import { updateContext } from 'actions/context';
 
 const Wrapper = styled.section`
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;

@@ -51,6 +51,7 @@ const Wrapper = styled.nav`
           box-sizing: border-box;
           border-top-left-radius: .6rem;
           border-top-right-radius: .6rem;
+          transition: all .2s ease-in-out;
         }
         &:hover {
           border-color: #aaa;
@@ -64,7 +65,8 @@ const Wrapper = styled.nav`
           font-weight: 600;
           &:before {
             border-color: #aaa;
-            background: #aaa;
+            background: #f7f7f7;
+            transform: scale(1.5);
           }
         }
       }
