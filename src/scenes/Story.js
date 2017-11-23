@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Redirect, Route, Link, Switch } from 'react-router-dom';
+
+import swipe from 'utils/swipe';
 
 import Header from 'components/Header';
 import ArticleNav from 'components/Nav';
@@ -49,9 +52,48 @@ const TransitionComp = styled.div`
   position: relative;
 `;
 
+const articles = [
+  'gold-mining',
+  'grip-of-the-guerrilla',
+  'coltan-country',
+  'malaria',
+  'gambling'
+];
+
 class Scene extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      redirect: false
+    };
+  }
+  componentDidMount () {
+    this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
+      const { location } = this.props;
+      const idx = articles.findIndex(article => {
+        return location.pathname.indexOf(article) !== -1;
+      });
+      if(direction == 'left' && idx < articles.length-1) {
+        this.setState({
+          redirect: articles[idx+1]
+        });
+      } else if(direction == 'right' && idx > 0) {
+        this.setState({
+          redirect: articles[idx-1]
+        });
+      }
+    });
+  }
+  componentWillUnmount () {
+    if(this.removeSwipeListeners) {
+      this.removeSwipeListeners();
+      this.removeSwipeListeners = undefined;
+    }
+  }
   render () {
+    const { redirect } = this.state;
     const { location, match } = this.props;
+    const go = `${match.url}/${redirect}`;
     const story = require('story.md');
     return (
       <Wrapper className="scene story">
@@ -68,6 +110,9 @@ class Scene extends Component {
                 timeout={600}
               >
                 <Switch location={location}>
+                  <Route exact path={`${match.url}`} render={props => (
+                    <article dangerouslySetInnerHTML={{__html: story}} />
+                  )} />
                   <Route path={`${match.url}/gold-mining`} render={props => (
                     <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
@@ -86,12 +131,12 @@ class Scene extends Component {
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
+            {(redirect && go !== location.pathname) &&
+              <Redirect to={go} />
+            }
           </Story>
           {/* <Tools /> */}
-          <Media>
-            {/* <Map /> */}
-            <Video />
-          </Media>
+          <Media />
         </Content>
       </Wrapper>
     )
