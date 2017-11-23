@@ -31,7 +31,7 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
   p {
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
     strong {
       text-transform: uppercase;
     }
@@ -51,6 +51,9 @@ const Wrapper = styled.section`
       padding-bottom: 2rem;
       margin-bottom: 4rem;
     }
+    p {
+      margin: 0 0 1.5rem;
+    }
   `}
   ${media.tablet`
     padding: 2rem 15vw;
@@ -58,6 +61,9 @@ const Wrapper = styled.section`
       border-width: 2px;
       border-color: #000;
       font-size: 2em;
+    }
+    p {
+      margin: 0 0 2rem;
     }
   `}
   ${media.desktop`
@@ -72,12 +78,19 @@ class Story extends Component {
   constructor (props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.updateScrollHeight = this.updateScrollHeight.bind(this);
   }
   componentDidMount () {
     this.node = findDOMNode(this);
     this.pathname = this.props.location.pathname;
     this.node.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleResize);
     this.setScroll(this.props);
+  }
+  componentWillUnmount () {
+    this.node.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleResize);
   }
   componentWillReceiveProps (nextProps) {
     const path = nextProps.location.pathname;
@@ -91,7 +104,7 @@ class Story extends Component {
   setScroll (props) {
     scrollTo(this.node, props.storyScroll[props.location.pathname] || 0, 200);
   }
-  handleScroll = debounce(function(ev) {
+  updateScrollHeight () {
     const path = this.props.location.pathname;
     const scrollTop = this.node.scrollTop;
     const height = this.node.scrollHeight - this.node.offsetHeight;
@@ -107,7 +120,9 @@ class Story extends Component {
       heightState[this.props.location.pathname] = height;
       this.props.updateContext('storyHeight', heightState);
     }
-  }, 300)
+  }
+  handleScroll = debounce(this.updateScrollHeight, 300)
+  handleResize = debounce(this.updateScrollHeight, 300)
   render () {
     return (
       <Wrapper>
