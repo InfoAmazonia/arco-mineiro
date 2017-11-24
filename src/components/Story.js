@@ -7,6 +7,7 @@ import { media } from 'styles/utils';
 import debounce from 'utils/debounce';
 import scrollTo from 'utils/scrollTo';
 import { updateContext } from 'actions/context';
+import { setMedia } from 'actions/media';
 
 const Wrapper = styled.section`
   flex: 1 1 100%;
@@ -101,6 +102,27 @@ class Story extends Component {
       }, 100);
     }
   }
+  getMediaRatio (position) {
+    const threshold = window.innerHeight / 2;
+    return (threshold / position)*1000;
+  }
+  detectMedia () {
+    const { mediaLibrary, setMedia } = this.props;
+    const mediaArray = Object.values(mediaLibrary);
+    const num = 1000;
+    let media = mediaArray[0];
+    let diff = Math.abs(num - this.getMediaRatio(media.position));
+    for(let val = 0; val < mediaArray.length; val++) {
+      let ratio = this.getMediaRatio(mediaArray[val].position);
+      let newDiff = Math.abs(num - ratio);
+      if(newDiff < diff) {
+        diff = newDiff;
+        media = mediaArray[val];
+      }
+    }
+    if(!this.props.media || this.props.media.id !== media.id)
+      setMedia(media);
+  }
   setScroll (props) {
     scrollTo(this.node, props.storyScroll[props.location.pathname] || 0, 200);
   }
@@ -120,6 +142,8 @@ class Story extends Component {
       heightState[this.props.location.pathname] = height;
       this.props.updateContext('storyHeight', heightState);
     }
+
+    this.detectMedia();
   }
   handleScroll = debounce(this.updateScrollHeight, 300)
   handleResize = debounce(this.updateScrollHeight, 300)
@@ -135,12 +159,15 @@ class Story extends Component {
 const mapStateToProps = (state, ownProps) => {
   return {
     storyScroll: state.context.storyScroll,
-    storyHeight: state.context.storyHeight
+    storyHeight: state.context.storyHeight,
+    media: state.media,
+    mediaLibrary: state.mediaLibrary
   }
 }
 
 const mapDispatchToProps = {
-  updateContext
+  updateContext,
+  setMedia
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Story));

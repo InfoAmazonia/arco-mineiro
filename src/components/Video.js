@@ -67,11 +67,7 @@ class Video extends Component {
     const { data } = this.props;
     return (
       <Wrapper onClick={this.handleClick}>
-        <video autoPlay loop muted controls="false">
-          {data.sources.map((src, i) => (
-            <source key={`src-${i}`} src={src} />
-          ))}
-        </video>
+        <video autoPlay loop muted controls="false" src={data.sources[0]} />
         <a href="javascript:void(0);" className="play">
           <span className="fa fa-volume-up"></span>
         </a>

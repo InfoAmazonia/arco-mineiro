@@ -17,6 +17,8 @@ import Map from 'components/Map';
 import Tools from 'components/Tools';
 import Story from 'components/Story';
 
+import GoldMining from './articles/GoldMining';
+
 const Wrapper = styled.div`
   position: fixed;
   top: 0;
@@ -110,12 +112,8 @@ class Scene extends Component {
                 timeout={600}
               >
                 <Switch location={location}>
-                  <Route exact path={`${match.url}`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: story}} />
-                  )} />
-                  <Route path={`${match.url}/gold-mining`} render={props => (
-                    <article dangerouslySetInnerHTML={{__html: story}} />
-                  )} />
+                  <Route exact path={`${match.url}`} component={GoldMining} />
+                  <Route path={`${match.url}/gold-mining`} component={GoldMining} />
                   <Route path={`${match.url}/grip-of-the-guerrilla`} render={props => (
                     <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />
