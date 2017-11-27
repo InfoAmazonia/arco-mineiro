@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { connect } from 'react-redux';
 import { media } from 'styles/utils';
 
 import Video from './Video';
+import Map from './Map';
 
 const Wrapper = styled.div`
   flex: 1 1 auto;
@@ -36,6 +38,9 @@ const Wrapper = styled.div`
 `;
 
 class Media extends Component {
+  static propTypes = {
+    media: PropTypes.object
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -69,6 +74,12 @@ class Media extends Component {
           <Video data={media.data} />
         </Wrapper>
       )
+    } else if(media.type == 'map') {
+      return (
+        <Wrapper active={active}>
+          <Map {...media.data} />
+        </Wrapper>
+      );
     } else {
       return (
         <Wrapper active={active}>

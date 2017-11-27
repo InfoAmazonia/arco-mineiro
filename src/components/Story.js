@@ -145,8 +145,8 @@ class Story extends Component {
 
     this.detectMedia();
   }
-  handleScroll = debounce(this.updateScrollHeight, 300)
-  handleResize = debounce(this.updateScrollHeight, 300)
+  handleScroll = debounce(this.updateScrollHeight, 200)
+  handleResize = debounce(this.updateScrollHeight, 200)
   render () {
     return (
       <Wrapper>
