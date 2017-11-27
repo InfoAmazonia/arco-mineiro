@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { media } from 'styles/utils';
 import debounce from 'utils/debounce';
-import scrollTo from 'utils/scrollTo';
 import { updateContext } from 'actions/context';
 import { setMedia } from 'actions/media';
 
@@ -88,6 +87,7 @@ class Story extends Component {
     this.node.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.setScroll(this.props);
+    this.detectMedia();
   }
   componentWillUnmount () {
     this.node.removeEventListener('scroll', this.handleScroll);
@@ -99,6 +99,7 @@ class Story extends Component {
       this.pathname = path;
       setTimeout(() => {
         this.setScroll(nextProps);
+        this.detectMedia();
       }, 100);
     }
   }
@@ -109,22 +110,24 @@ class Story extends Component {
   detectMedia () {
     const { mediaLibrary, setMedia } = this.props;
     const mediaArray = Object.values(mediaLibrary);
-    const num = 1000;
-    let media = mediaArray[0];
-    let diff = Math.abs(num - this.getMediaRatio(media.position));
-    for(let val = 0; val < mediaArray.length; val++) {
-      let ratio = this.getMediaRatio(mediaArray[val].position);
-      let newDiff = Math.abs(num - ratio);
-      if(newDiff < diff) {
-        diff = newDiff;
-        media = mediaArray[val];
+    if(mediaArray.length) {
+      const num = 1000;
+      let media = mediaArray[0];
+      let diff = Math.abs(num - this.getMediaRatio(media.position));
+      for(let val = 0; val < mediaArray.length; val++) {
+        let ratio = this.getMediaRatio(mediaArray[val].position);
+        let newDiff = Math.abs(num - ratio);
+        if(newDiff < diff) {
+          diff = newDiff;
+          media = mediaArray[val];
+        }
       }
+      if(!this.props.media || this.props.media.id !== media.id)
+        setMedia(media);
     }
-    if(!this.props.media || this.props.media.id !== media.id)
-      setMedia(media);
   }
   setScroll (props) {
-    scrollTo(this.node, props.storyScroll[props.location.pathname] || 0, 200);
+    this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
   updateScrollHeight () {
     const path = this.props.location.pathname;
