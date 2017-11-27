@@ -1,52 +1,77 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { media } from 'styles/utils';
 import { updateMedia, removeMedia } from 'actions/media';
 
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 const Wrapper = styled.span`
   border-bottom: 2px solid #f0f0f0;
+  transition: all .5s ease-in-out;
+  line-height: 1.5;
+  position: relative;
+  ${media.desktop`
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 2px;
+      right: 0;
+      background: #f0f0f0;
+      transition: all 1s ease-in-out;
+    }
+  `}
+  ${props => props.active && css`
+    border-color: #bbb;
+    background: #f0f0f0;
+    ${media.desktop`
+      &:before {
+        right: -1000px;
+        background: #bbb;
+      }
+    `}
+  `}
 `;
 
 class StoryMedia extends Component {
   constructor (props) {
     super(props);
-    this.scroll = 0;
   }
   componentDidMount () {
     this.node = findDOMNode(this);
-    this.updateMedia(0);
+    this.updateMedia();
   }
   componentWillUnmount () {
     this.props.removeMedia(this.props.media.id);
   }
-  updateMedia (scroll) {
-    const { media, updateMedia } = this.props;
-    const position = this.node.getBoundingClientRect().top;
-    updateMedia({
-      ...media,
-      position: position
-    });
-    this.scroll = scroll;
-  }
   componentWillReceiveProps (nextProps) {
-    const { media } = this.props;
-    const path = nextProps.location.pathname;
-    const scroll = nextProps.storyScroll[path];
-    if(scroll !== this.scroll && media) {
-      this.updateMedia(scroll);
+    this.updateMedia(nextProps);
+  }
+  updateMedia (props) {
+    props = props || this.props;
+    const { media, library, updateMedia } = props;
+    const inLibrary = library[media.id];
+    const position = this.node.getBoundingClientRect().top;
+    if(!inLibrary || Math.floor(position) != Math.floor(inLibrary.position || 0)) {
+      updateMedia({
+        ...media,
+        position: position
+      });
     }
   }
   render () {
-    return <Wrapper>{this.props.children}</Wrapper>;
+    const { activeMedia, media } = this.props;
+    const active = activeMedia.id == media.id;
+    return <Wrapper active={active}>{this.props.children}</Wrapper>;
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    storyScroll: state.context.storyScroll
+    activeMedia: state.media,
+    library: state.mediaLibrary
   }
 };
 
@@ -55,4 +80,4 @@ const mapDispatchToProps = {
   removeMedia
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(StoryMedia));
+export default connect(mapStateToProps, mapDispatchToProps)(StoryMedia);

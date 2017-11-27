@@ -12,18 +12,13 @@ const Wrapper = styled.div`
   overflow: hidden;
   video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
     height: auto;
-    ${props => !props.expanded && css`
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translateX(-50%) translateY(-50%);
-      width: auto;
-    `}
   }
   .play {
     position: absolute;

@@ -14,7 +14,11 @@ const initialState = {
 export default function reducer (state = initialState, action) {
   switch(action.type) {
     case SET_MEDIA : {
-      return Object.assign({}, initialState, state, action.data);
+      if(action.data == null) {
+        return Object.assign({}, initialState);
+      } else {
+        return Object.assign({}, initialState, state, action.data);
+      }
     }
     case EXPAND_MEDIA : {
       return Object.assign({}, initialState, state, {

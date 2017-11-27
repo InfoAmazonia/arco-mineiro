@@ -90,7 +90,6 @@ class Story extends Component {
     this.node.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.setScroll(this.props);
-    this.detectMedia();
 
   }
   componentWillUnmount () {
@@ -105,52 +104,59 @@ class Story extends Component {
         this.setScroll(nextProps);
       }, 100);
     }
-    this.detectMedia();
+    if(Object.keys(nextProps.mediaLibrary).length) {
+      this.detectMedia();
+      setTimeout(() => {
+        this.detectMedia();
+      }, 200);
+    }
   }
   getMediaRatio (position) {
     const threshold = window.innerHeight / 2;
-    return (threshold / position)*1000;
+    return threshold - position;
   }
   detectMedia () {
     const { mediaLibrary, setMedia } = this.props;
     const mediaArray = Object.values(mediaLibrary);
     if(mediaArray.length) {
-      const num = 1000;
       let media = mediaArray[0];
-      let diff = Math.abs(num - this.getMediaRatio(media.position));
-      for(let val = 0; val < mediaArray.length; val++) {
-        let ratio = this.getMediaRatio(mediaArray[val].position);
-        let newDiff = Math.abs(num - ratio);
-        if(newDiff < diff) {
-          diff = newDiff;
-          media = mediaArray[val];
+      if(mediaArray.length > 1) {
+        let diff = Math.abs(this.getMediaRatio(media.position));
+        for(let val = 0; val < mediaArray.length; val++) {
+          let ratio = this.getMediaRatio(mediaArray[val].position);
+          let newDiff = Math.abs(ratio);
+          if(newDiff < diff) {
+            diff = newDiff;
+            media = mediaArray[val];
+          }
         }
       }
       if(!this.props.media || this.props.media.id !== media.id)
         setMedia(media);
+    } else {
+      setMedia();
     }
   }
   setScroll (props) {
     this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
   updateScrollHeight () {
-    const path = this.props.location.pathname;
+    const { location, storyScroll, storyHeight, updateContext } = this.props;
+    const path = location.pathname;
     const scrollTop = this.node.scrollTop;
     const height = this.node.scrollHeight - this.node.offsetHeight;
 
-    if(this.props.storyScroll[path] !== scrollTop) {
+    if(storyScroll[path] !== scrollTop) {
       let scrollState = {};
-      scrollState[this.props.location.pathname] = scrollTop;
-      this.props.updateContext('storyScroll', scrollState);
+      scrollState[location.pathname] = scrollTop;
+      updateContext('storyScroll', scrollState);
     }
 
-    if(this.props.storyHeight[path] !== height) {
+    if(storyHeight[path] !== height) {
       let heightState = {};
-      heightState[this.props.location.pathname] = height;
-      this.props.updateContext('storyHeight', heightState);
+      heightState[location.pathname] = height;
+      updateContext('storyHeight', heightState);
     }
-
-    this.detectMedia();
   }
   handleScroll = debounce(this.updateScrollHeight, 200)
   handleResize = debounce(this.updateScrollHeight, 200)

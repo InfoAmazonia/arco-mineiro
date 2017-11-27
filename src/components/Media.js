@@ -34,14 +34,6 @@ const Wrapper = styled.div`
   ${props => props.active && css`
     height: 300px;
   `}
-  ${props => props.expanded && css`
-    ${media.desktop`
-      flex: 0 0 65%;
-    `}
-    ${media.desktopHD`
-      flex: 0 0 60%;
-    `}
-  `}
 `;
 
 class Media extends Component {
@@ -81,19 +73,19 @@ class Media extends Component {
     const { media, children } = this.props;
     if(media.type == 'video') {
       return (
-        <Wrapper active={active} expanded={media.expanded}>
+        <Wrapper active={active}>
           <Video data={media.data} />
         </Wrapper>
       )
     } else if(media.type == 'map') {
       return (
-        <Wrapper active={active} expanded={media.expanded}>
+        <Wrapper active={active}>
           <Map {...media.data} />
         </Wrapper>
       );
     } else {
       return (
-        <Wrapper active={active} expanded={media.expanded}>
+        <Wrapper active={active}>
           {children}
         </Wrapper>
       );
