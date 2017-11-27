@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/es/integration/react';
 import createHistory from 'history/createBrowserHistory'
 import { ConnectedRouter as Router } from 'react-router-redux';
 
@@ -25,11 +26,13 @@ const history = createHistory();
 
 ReactDom.render(
   <Provider store={store.store}>
-    <IntlProvider locale={language}>
-      <Router history={history}>
-        <Application />
-      </Router>
-    </IntlProvider>
+    <PersistGate persistor={store.persistor} loading={null}>
+      <IntlProvider locale={language}>
+        <Router history={history}>
+          <Application />
+        </Router>
+      </IntlProvider>
+    </PersistGate>
   </Provider>,
   document.getElementById('app')
 );

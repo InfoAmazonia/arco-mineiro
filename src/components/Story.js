@@ -75,6 +75,9 @@ const Wrapper = styled.section`
 `
 
 class Story extends Component {
+  static defaultProps = {
+    mediaLibrary: {}
+  }
   constructor (props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
@@ -88,6 +91,7 @@ class Story extends Component {
     window.addEventListener('resize', this.handleResize);
     this.setScroll(this.props);
     this.detectMedia();
+
   }
   componentWillUnmount () {
     this.node.removeEventListener('scroll', this.handleScroll);
@@ -99,9 +103,9 @@ class Story extends Component {
       this.pathname = path;
       setTimeout(() => {
         this.setScroll(nextProps);
-        this.detectMedia();
       }, 100);
     }
+    this.detectMedia();
   }
   getMediaRatio (position) {
     const threshold = window.innerHeight / 2;

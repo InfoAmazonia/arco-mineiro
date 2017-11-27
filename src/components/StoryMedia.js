@@ -17,21 +17,26 @@ class StoryMedia extends Component {
   }
   componentDidMount () {
     this.node = findDOMNode(this);
+    this.updateMedia(0);
   }
   componentWillUnmount () {
     this.props.removeMedia(this.props.media.id);
   }
+  updateMedia (scroll) {
+    const { media, updateMedia } = this.props;
+    const position = this.node.getBoundingClientRect().top;
+    updateMedia({
+      ...media,
+      position: position
+    });
+    this.scroll = scroll;
+  }
   componentWillReceiveProps (nextProps) {
-    const { media, currentMedia, updateMedia } = this.props;
+    const { media } = this.props;
     const path = nextProps.location.pathname;
     const scroll = nextProps.storyScroll[path];
     if(scroll !== this.scroll && media) {
-      const position = this.node.getBoundingClientRect().top;
-      updateMedia({
-        ...media,
-        position: position
-      });
-      this.scroll = scroll;
+      this.updateMedia(scroll);
     }
   }
   render () {
@@ -41,8 +46,7 @@ class StoryMedia extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    storyScroll: state.context.storyScroll,
-    currentMedia: state.media
+    storyScroll: state.context.storyScroll
   }
 };
 

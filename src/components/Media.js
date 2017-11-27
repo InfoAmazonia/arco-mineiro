@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { connect } from 'react-redux';
 import { media } from 'styles/utils';
 
 import Video from './Video';
@@ -14,7 +13,7 @@ const Wrapper = styled.div`
   position: relative;
   box-sizing: border-box;
   z-index: 1;
-  transition: height .2s ease-in-out;
+  transition: all .2s ease-in-out;
   ${media.desktop`
     flex: 0 0 45%;
     max-width: 1000px;
@@ -35,14 +34,26 @@ const Wrapper = styled.div`
   ${props => props.active && css`
     height: 300px;
   `}
+  ${props => props.expanded && css`
+    ${media.desktop`
+      flex: 0 0 65%;
+    `}
+    ${media.desktopHD`
+      flex: 0 0 60%;
+    `}
+  `}
 `;
 
 class Media extends Component {
   static propTypes = {
     media: PropTypes.object
   }
+  static defaultProps = {
+    media: {}
+  }
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       active: false
     }
@@ -70,19 +81,19 @@ class Media extends Component {
     const { media, children } = this.props;
     if(media.type == 'video') {
       return (
-        <Wrapper active={active}>
+        <Wrapper active={active} expanded={media.expanded}>
           <Video data={media.data} />
         </Wrapper>
       )
     } else if(media.type == 'map') {
       return (
-        <Wrapper active={active}>
+        <Wrapper active={active} expanded={media.expanded}>
           <Map {...media.data} />
         </Wrapper>
       );
     } else {
       return (
-        <Wrapper active={active}>
+        <Wrapper active={active} expanded={media.expanded}>
           {children}
         </Wrapper>
       );
@@ -90,10 +101,4 @@ class Media extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => {
-  return {
-    media: state.media
-  }
-};
-
-export default connect(mapStateToProps)(Media);
+export default Media;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -94,7 +95,7 @@ class Scene extends Component {
   }
   render () {
     const { redirect } = this.state;
-    const { location, match } = this.props;
+    const { location, match, media } = this.props;
     const go = `${match.url}/${redirect}`;
     const story = require('story.md');
     return (
@@ -134,11 +135,17 @@ class Scene extends Component {
             }
           </Story>
           {/* <Tools /> */}
-          <Media />
+          <Media media={media} />
         </Content>
       </Wrapper>
     )
   }
 }
 
-export default Scene;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    media: state.media
+  }
+}
+
+export default connect(mapStateToProps)(Scene);

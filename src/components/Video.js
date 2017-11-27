@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { connect } from 'react-redux';
+import styled, { css } from 'styled-components';
+import { expandMedia } from 'actions/media';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -10,13 +12,18 @@ const Wrapper = styled.div`
   overflow: hidden;
   video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(-50%) translateY(-50%);
-    width: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: auto;
+    ${props => !props.expanded && css`
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translateX(-50%) translateY(-50%);
+      width: auto;
+    `}
   }
   .play {
     position: absolute;
@@ -49,31 +56,38 @@ const Wrapper = styled.div`
 class Video extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      playing: false
-    };
     this.handleClick = this.handleClick.bind(this);
   }
   componentWillReceiveProps (nextProps) {
   }
   handleClick (ev) {
-    if(!this.state.playing) {
-      this.setState({
-        playing: true
-      });
+    if(!this.props.expanded) {
+      this.props.expandMedia(true);
     }
   }
   render () {
-    const { data } = this.props;
+    const { data, expanded } = this.props;
     return (
-      <Wrapper onClick={this.handleClick}>
-        <video autoPlay loop muted controls="false" src={data.sources[0]} />
-        <a href="javascript:void(0);" className="play">
-          <span className="fa fa-volume-up"></span>
-        </a>
+      <Wrapper onClick={this.handleClick} expanded>
+        <video autoPlay loop={!expanded} muted={!expanded} controls={expanded} src={data.sources[0]} />
+        {!expanded ? (
+          <a href="javascript:void(0);" className="play">
+            <span className="fa fa-volume-up"></span>
+          </a>
+        ) : null}
       </Wrapper>
     )
   }
 }
 
-export default Video;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    expanded: state.media.expanded
+  }
+};
+
+const mapDispatchToProps = {
+  expandMedia
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Video);

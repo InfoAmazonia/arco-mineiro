@@ -1,20 +1,25 @@
 import {
-  SET_MEDIA
+  SET_MEDIA,
+  EXPAND_MEDIA
 } from 'actions/media';
 
+import {
+  REHYDRATE
+} from 'redux-persist';
+
 const initialState = {
-  type: 'video',
-  data: {
-    sources: [
-      'https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny.ogv'
-    ]
-  }
+  expanded: false
 };
 
 export default function reducer (state = initialState, action) {
   switch(action.type) {
     case SET_MEDIA : {
       return Object.assign({}, initialState, state, action.data);
+    }
+    case EXPAND_MEDIA : {
+      return Object.assign({}, initialState, state, {
+        expanded: action.data
+      });
     }
     default : {
       return state;

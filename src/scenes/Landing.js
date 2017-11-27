@@ -183,61 +183,44 @@ const Middle = styled.div`
 class Scene extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      lastPath: false
-    };
-  }
-  componentWillReceiveProps (nextProps) {
-    const path = nextProps.lastPath;
-    if(path !== '/' && !this.lastPath && this.props.rehydrated !== nextProps.rehydrated) {
-      this.setState({
-        lastPath: nextProps.lastPath
-      });
-    }
   }
   render () {
-    const { lastPath } = this.state;
-    const { resetContext, rehydrated } = this.props;
-    if(rehydrated) {
-      return (
-        <Wrapper className="scene landing">
-          <Top>
-            <SiteTitle logo="3" />
-            <h2>by Bram Ebus</h2>
-          </Top>
-          <Middle className="middle">
-            <p className="description">
-              The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela
-            </p>
-            {lastPath ? (
-              <div>
-                <Link to="/story/gold-mining" onClick={resetContext}>
-                  Start Over
-                </Link>
-                <Link to={lastPath}>
-                  Continue Reading
-                </Link>
-              </div>
-            ) : (
-              <Link to="/story/gold-mining">
-                Read the Story
+    const { lastPath } = this.props;
+    const { resetContext } = this.props;
+    return (
+      <Wrapper className="scene landing">
+        <Top>
+          <SiteTitle logo="3" />
+          <h2>by Bram Ebus</h2>
+        </Top>
+        <Middle className="middle">
+          <p className="description">
+            The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela
+          </p>
+          {lastPath ? (
+            <div>
+              <Link to="/story/gold-mining" onClick={resetContext}>
+                Start Over
               </Link>
-            )}
+              <Link to={lastPath}>
+                Continue Reading
+              </Link>
+            </div>
+          ) : (
+            <Link to="/story/gold-mining">
+              Read the Story
+            </Link>
+          )}
           {/* <h3>Developed by <strong>Miguel Peixe</strong>, edited by <strong>Stefano Wrobleski</strong> and advisory by <strong>Oscar Murillo</strong></h3> */}
         </Middle>
-        </Wrapper>
-      )
-    } else {
-      return null;
-    }
+      </Wrapper>
+    )
   }
 }
 
-
 const mapStateToProps = (state, ownProps) => {
   return {
-    rehydrated: state._persist.rehydrated,
-    lastPath: state.router.location ? state.router.location.pathname : ''
+    lastPath: state.context.lastPath
   }
 };
 
