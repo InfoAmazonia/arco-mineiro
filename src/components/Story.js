@@ -112,8 +112,8 @@ class Story extends Component {
     }
   }
   getMediaRatio (position) {
-    const threshold = window.innerHeight / 2;
-    return threshold - position;
+    const rect = this.node.getBoundingClientRect();
+    return (rect.height / 2) + rect.top - position;
   }
   detectMedia () {
     const { mediaLibrary, setMedia } = this.props;

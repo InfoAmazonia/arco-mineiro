@@ -4,48 +4,54 @@ import styled, { css } from 'styled-components';
 import { expandMedia } from 'actions/media';
 
 const Wrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
   video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(-50%) translateY(-50%);
-    width: auto;
+    width: 100%;
     height: auto;
   }
-  .play {
+  ${props => props.preview && css`
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
-    background: rgba(0,0,0,0.65);
-    color: #fff;
-    font-size: 3em;
-    text-align: center;
-    transition: all .4s ease-in-out;
-    opacity: 0;
-    .fa {
+    overflow: hidden;
+    video {
       position: absolute;
-      left: 50%;
       top: 50%;
-      margin-top: -1.5rem;
-      margin-left: -1.5rem;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translateX(-50%) translateY(-50%);
+      width: auto;
+      height: auto;
     }
-  }
-  &:hover {
     .play {
-      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      font-size: 3em;
+      text-align: center;
+      transition: all .4s ease-in-out;
+      opacity: 0;
+      .fa {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -1.5rem;
+        margin-left: -1.5rem;
+      }
     }
-  }
+    &:hover {
+      .play {
+        opacity: 1;
+      }
+    }
+  `}
 `
 
 class Video extends Component {
@@ -56,16 +62,17 @@ class Video extends Component {
   componentWillReceiveProps (nextProps) {
   }
   handleClick (ev) {
-    if(!this.props.expanded) {
+    if(!this.props.expanded && this.props.preview) {
       this.props.expandMedia(true);
     }
   }
   render () {
-    const { data, expanded } = this.props;
+    const { data, expanded, preview } = this.props;
+    console.log(preview);
     return (
-      <Wrapper onClick={this.handleClick} expanded>
-        <video autoPlay loop={!expanded} muted={!expanded} controls={expanded} src={data.sources[0]} />
-        {!expanded ? (
+      <Wrapper onClick={this.handleClick} preview={preview}>
+        <video autoPlay loop={preview} muted={preview} controls={!preview} src={data.sources[0]} />
+        {preview ? (
           <a href="javascript:void(0);" className="play">
             <span className="fa fa-volume-up"></span>
           </a>

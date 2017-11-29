@@ -17,7 +17,9 @@ export default function reducer (state = initialState, action) {
       if(action.data == null) {
         return Object.assign({}, initialState);
       } else {
-        return Object.assign({}, initialState, state, action.data);
+        return Object.assign({}, initialState, state, action.data, {
+          expanded: false
+        });
       }
     }
     case EXPAND_MEDIA : {

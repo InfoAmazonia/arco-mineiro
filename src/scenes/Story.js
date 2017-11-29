@@ -6,17 +6,17 @@ import styled from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { Redirect, Route, Link, Switch } from 'react-router-dom';
 
+import { expandMedia } from 'actions/media';
+
 import swipe from 'utils/swipe';
 
 import Header from 'components/Header';
 import ArticleNav from 'components/Nav';
+import Intro from 'components/Intro';
 import Content from 'components/Content';
-import Bottom from 'components/Bottom';
 import Media from 'components/Media';
-import Video from 'components/Video';
-import Map from 'components/Map';
-import Tools from 'components/Tools';
 import Story from 'components/Story';
+import Modal from 'components/Modal';
 
 import GoldMining from './articles/GoldMining';
 
@@ -69,6 +69,7 @@ class Scene extends Component {
     this.state = {
       redirect: false
     };
+    this.unexpand = this.unexpand.bind(this);
   }
   componentDidMount () {
     this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
@@ -93,16 +94,24 @@ class Scene extends Component {
       this.removeSwipeListeners = undefined;
     }
   }
+  unexpand () {
+    this.props.expandMedia(false);
+  }
   render () {
     const { redirect } = this.state;
-    const { location, match, media } = this.props;
+    const { location, match, media, scroll } = this.props;
     const go = `${match.url}/${redirect}`;
     const story = require('story.md');
+    const storyActive = scroll[location.pathname];
     return (
       <Wrapper className="scene story">
         <Header />
         <ArticleNav />
-        <Content>
+        {/* <Intro
+          active={!storyActive}
+          title="Unrest in Venezuela’s cradle of gold mining"
+        /> */}
+        <Content active={storyActive}>
           <Story>
             <TransitionGroup
               component={TransitionComp}
@@ -134,8 +143,12 @@ class Scene extends Component {
               <Redirect to={go} />
             }
           </Story>
-          {/* <Tools /> */}
-          <Media media={media} />
+          <Media media={media} preview={true} />
+          {media.expanded && (
+            <Modal close={this.unexpand}>
+              <Media media={media} />
+            </Modal>
+          )}
         </Content>
       </Wrapper>
     )
@@ -144,8 +157,13 @@ class Scene extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    media: state.media
+    media: state.media,
+    scroll: state.context.storyScroll
   }
 }
 
-export default connect(mapStateToProps)(Scene);
+const mapDispatchToProps = {
+  expandMedia
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Scene);

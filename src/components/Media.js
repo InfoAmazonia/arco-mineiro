@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     flex: 0 0 45%;
     max-width: 1000px;
     height: auto;
-    border-left: 1px solid #ddd;
     box-shadow: .1rem -.1rem 1rem rgba(0,0,0,0.05);
   `}
   ${media.desktopHD`
@@ -45,7 +44,6 @@ class Media extends Component {
   }
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       active: false
     }
@@ -70,11 +68,11 @@ class Media extends Component {
   }
   render () {
     const { active } = this.state;
-    const { media, children } = this.props;
+    const { media, preview, children } = this.props;
     if(media.type == 'video') {
       return (
         <Wrapper active={active}>
-          <Video data={media.data} />
+          <Video data={media.data} preview={preview || false} />
         </Wrapper>
       )
     } else if(media.type == 'map') {

@@ -13,6 +13,7 @@ const Wrapper = styled.nav`
   box-shadow: 0 3px .5rem rgba(0,0,0,0.03);
   position: relative;
   z-index: 10;
+  flex: 0 0 auto;
   ol {
     display: table;
     table-layout: fixed;
