@@ -101,7 +101,7 @@ class Media extends Component {
         if(preview) {
           return (
             <Wrapper className="clickable" onClick={this.handleClick} style={{
-              'background-image': `url(${media.data.src})`
+              backgroundImage: `url(${media.data.src})`
             }} />
           );
         } else {

@@ -40,8 +40,9 @@ const Wrapper = styled.section`
     display: block;
     margin: 2rem auto;
   }
-  article {
+  .story-content {
     max-width: 640px;
+    position: relative;
   }
   ${media.phablet`
     padding: 2rem 10vw;
@@ -70,8 +71,27 @@ const Wrapper = styled.section`
     padding: 2rem 2rem 2rem;
   `}
   ${media.desktopHD`
-    padding: 2rem 5vw 2rem 10vw;
+    padding: 5vw 5vw 2rem 10vw;
     font-size: 1.2em;
+    .story-content {
+      margin: 0 auto;
+    }
+  `}
+`
+
+const MediaReference = styled.div`
+  display: none;
+  position: absolute;
+  background: #eee;
+  top: 0;
+  right: -10px;
+  margin-top: 0;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  transition top .2s linear;
+  ${media.desktop`
+    display: block;
   `}
 `
 
@@ -81,17 +101,19 @@ class Story extends Component {
   }
   constructor (props) {
     super(props);
+    this.getMediaRefTop = this.getMediaRefTop.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.updateScrollHeight = this.updateScrollHeight.bind(this);
   }
   componentDidMount () {
     this.node = findDOMNode(this);
+    this.rect = this.node.getBoundingClientRect();
+    this.refTop = 0;
     this.pathname = this.props.location.pathname;
     this.node.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
     this.setScroll(this.props);
-
   }
   componentWillUnmount () {
     this.node.removeEventListener('scroll', this.handleScroll);
@@ -112,9 +134,16 @@ class Story extends Component {
       }, 200);
     }
   }
+  getMediaRefTop () {
+    const { media } = this.props;
+    if(media && media.position && this.rect) {
+      return media.position + this.rect.top;
+    } else {
+      return 0;
+    }
+  }
   getMediaRatio (position) {
-    const rect = this.node.getBoundingClientRect();
-    return (rect.height / 2) + rect.top - position;
+    return (this.rect.height / 2) + this.rect.top - position;
   }
   detectMedia () {
     // Do not detect media while expanded
@@ -136,9 +165,12 @@ class Story extends Component {
           }
         }
       }
-      if(!this.props.media || this.props.media.id !== media.id)
+      if(!this.props.media || this.props.media.id !== media.id) {
+        this.refTop = media.position - this.rect.top + this.node.scrollTop;
         setMedia(media);
+      }
     } else {
+      this.refTop = 0;
       setMedia();
     }
   }
@@ -163,12 +195,26 @@ class Story extends Component {
       updateContext('storyHeight', heightState);
     }
   }
-  handleScroll = debounce(this.updateScrollHeight, 100)
-  handleResize = debounce(this.updateScrollHeight, 100)
+  // handleScroll = debounce(this.updateScrollHeight, 100)
+  // handleResize = debounce(this.updateScrollHeight, 100)
+  handleScroll = this.updateScrollHeight
+  handleResize () {
+    this.updateScrollHeight();
+    this.rect = this.node.getBoundingClientRect();
+  }
   render () {
     return (
       <Wrapper>
-        {this.props.children}
+        <div className="story-content">
+          {this.props.children}
+        </div>
+        {this.refTop ? (
+          <MediaReference
+            ref={node => { this.mediaRef = node; }}
+            style={{
+              top: this.refTop + 'px'
+            }} />
+        ) : null}
       </Wrapper>
     )
   }
