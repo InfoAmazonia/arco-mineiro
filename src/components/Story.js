@@ -101,7 +101,6 @@ class Story extends Component {
   }
   constructor (props) {
     super(props);
-    this.getMediaRefTop = this.getMediaRefTop.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.updateScrollHeight = this.updateScrollHeight.bind(this);
@@ -134,30 +133,19 @@ class Story extends Component {
       }, 200);
     }
   }
-  getMediaRefTop () {
-    const { media } = this.props;
-    if(media && media.position && this.rect) {
-      return media.position + this.rect.top;
-    } else {
-      return 0;
-    }
-  }
-  getMediaRatio (position) {
+  _getMediaMiddleRatio (position) {
     return (this.rect.height / 2) + this.rect.top - position;
   }
-  detectMedia () {
-    // Do not detect media while expanded
-    if(this.props.media.expanded)
-      return false;
-
+  _getMediaClosestToMiddle () {
     const { mediaLibrary, setMedia } = this.props;
     const mediaArray = Object.values(mediaLibrary);
+    let media = mediaArray[0];
+    let diff;
     if(mediaArray.length) {
-      let media = mediaArray[0];
       if(mediaArray.length > 1) {
-        let diff = Math.abs(this.getMediaRatio(media.position));
+        diff = Math.abs(this._getMediaMiddleRatio(media.position));
         for(let val = 0; val < mediaArray.length; val++) {
-          let ratio = this.getMediaRatio(mediaArray[val].position);
+          let ratio = this._getMediaMiddleRatio(mediaArray[val].position);
           let newDiff = Math.abs(ratio);
           if(newDiff < diff) {
             diff = newDiff;
@@ -165,9 +153,32 @@ class Story extends Component {
           }
         }
       }
-      if(!this.props.media || this.props.media.id !== media.id) {
-        this.refTop = media.position - this.rect.top + this.node.scrollTop;
-        setMedia(media);
+    }
+    return {
+      media,
+      ratio: diff
+    };
+  }
+  detectMedia () {
+    // Do not detect media while expanded
+    if(this.props.media.expanded)
+      return false;
+    const { setMedia } = this.props;
+    const media = this._getMediaClosestToMiddle();
+    if(media.media !== undefined) {
+      if(
+        !this.props.media.id ||
+        (
+          this.props.media.id !== media.media.id &&
+          (
+            media.ratio <= 100 ||
+            this.node.scrollTop <= 10
+          )
+        )
+      ) {
+        console.log(media.ratio);
+        this.refTop = media.media.position - this.rect.top + this.node.scrollTop;
+        setMedia(media.media);
       }
     } else {
       this.refTop = 0;
