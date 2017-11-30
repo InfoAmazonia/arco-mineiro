@@ -176,7 +176,6 @@ class Story extends Component {
           )
         )
       ) {
-        console.log(media.ratio);
         this.refTop = media.media.position - this.rect.top + this.node.scrollTop;
         setMedia(media.media);
       }
