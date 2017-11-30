@@ -4,9 +4,12 @@ import styled, { css } from 'styled-components';
 import { expandMedia } from 'actions/media';
 
 const Wrapper = styled.div`
+  background: #000;
   video {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0;
   }
   ${props => props.preview && css`
     position: absolute;
@@ -32,18 +35,19 @@ const Wrapper = styled.div`
       right: 0;
       bottom: 0;
       z-index: 2;
-      background: rgba(0,0,0,0.65);
+      background: rgba(0,0,0,0.5);
       color: #fff;
       font-size: 3em;
       text-align: center;
       transition: all .4s ease-in-out;
-      opacity: 0;
+      opacity: 1;
       .fa {
         position: absolute;
         left: 50%;
         top: 50%;
         margin-top: -1.5rem;
         margin-left: -1.5rem;
+        text-shadow: 0 0 1rem rgba(0,0,0,0.5);
       }
     }
     &:hover {
@@ -60,6 +64,13 @@ class Video extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   componentWillReceiveProps (nextProps) {
+    if(nextProps.preview) {
+      if(nextProps.expanded && !this.props.expanded) {
+        this.node.pause();
+      } else if(!nextProps.expanded && this.props.expanded) {
+        this.node.play();
+      }
+    }
   }
   handleClick (ev) {
     if(!this.props.expanded && this.props.preview) {
@@ -68,13 +79,21 @@ class Video extends Component {
   }
   render () {
     const { data, expanded, preview } = this.props;
-    console.log(preview);
     return (
-      <Wrapper onClick={this.handleClick} preview={preview}>
-        <video autoPlay loop={preview} muted={preview} controls={!preview} src={data.sources[0]} />
+      <Wrapper
+        onClick={this.handleClick}
+        preview={preview}
+      >
+        <video
+          ref={node => { this.node = node; }}
+          autoPlay
+          loop={preview}
+          muted={preview}
+          controls={!preview}
+          src={data.sources[0]} />
         {preview ? (
           <a href="javascript:void(0);" className="play">
-            <span className="fa fa-volume-up"></span>
+            <span className="fa fa-play"></span>
           </a>
         ) : null}
       </Wrapper>

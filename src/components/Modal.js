@@ -22,11 +22,27 @@ const Wrapper = styled.div`
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 7%;
+    box-shadow: 0 0 5rem rgba(0,0,0,0.75);
   }
 `
 
 class Modal extends Component {
+  constructor (props) {
+    super(props);
+    this.handleKeydown = this.handleKeydown.bind(this);
+  }
+  componentDidMount () {
+    document.addEventListener('keydown', this.handleKeydown);
+  }
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.handleKeydown);
+  }
+  handleKeydown (ev) {
+    if(ev.keyCode == 27) {
+      this.props.close();
+    }
+  }
   render () {
     const { close } = this.props;
     return (

@@ -71,6 +71,7 @@ const Wrapper = styled.section`
   `}
   ${media.desktopHD`
     padding: 2rem 5vw 2rem 10vw;
+    font-size: 1.2em;
   `}
 `
 
@@ -116,6 +117,10 @@ class Story extends Component {
     return (rect.height / 2) + rect.top - position;
   }
   detectMedia () {
+    // Do not detect media while expanded
+    if(this.props.media.expanded)
+      return false;
+
     const { mediaLibrary, setMedia } = this.props;
     const mediaArray = Object.values(mediaLibrary);
     if(mediaArray.length) {
@@ -158,8 +163,8 @@ class Story extends Component {
       updateContext('storyHeight', heightState);
     }
   }
-  handleScroll = debounce(this.updateScrollHeight, 200)
-  handleResize = debounce(this.updateScrollHeight, 200)
+  handleScroll = debounce(this.updateScrollHeight, 100)
+  handleResize = debounce(this.updateScrollHeight, 100)
   render () {
     return (
       <Wrapper>

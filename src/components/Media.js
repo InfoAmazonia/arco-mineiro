@@ -8,7 +8,7 @@ import Video from './Video';
 import Map from './Map';
 
 const Wrapper = styled.div`
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   height: 90px;
   position: relative;
   box-sizing: border-box;
@@ -71,7 +71,7 @@ class Media extends Component {
     const { media, preview, children } = this.props;
     if(media.type == 'video') {
       return (
-        <Wrapper active={active}>
+        <Wrapper>
           <Video data={media.data} preview={preview || false} />
         </Wrapper>
       )
