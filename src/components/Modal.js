@@ -31,17 +31,25 @@ class Modal extends Component {
   constructor (props) {
     super(props);
     this.handleKeydown = this.handleKeydown.bind(this);
+    this.handlePopstate = this.handlePopstate.bind(this);
   }
   componentDidMount () {
     document.addEventListener('keydown', this.handleKeydown);
+    window.addEventListener('popstate', this.handlePopstate);
   }
   componentWillUnmount () {
     document.removeEventListener('keydown', this.handleKeydown);
+    window.removeEventListener('popstate', this.handlePopstate);
   }
   handleKeydown (ev) {
     if(ev.keyCode == 27) {
       this.props.close();
     }
+  }
+  handlePopstate (ev) {
+    ev.preventDefault();
+    this.props.close();
+    history.go(1);
   }
   render () {
     const { close } = this.props;
