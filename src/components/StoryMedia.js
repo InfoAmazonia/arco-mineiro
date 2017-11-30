@@ -11,33 +11,23 @@ const Wrapper = styled.span`
   transition: all .5s ease-in-out;
   line-height: 1.5;
   position: relative;
-  padding: .13em;
+  padding: .13em 0 .13em .13em;
   .fa {
     display: inline-block;
-    font-size: .6em;
-    margin: 0 .5rem;
+    line-height: 3;
+    padding: 0 .5em;
+    margin: 0 2px 0 .5em;
+    font-size: .5em;
+    color: #999;
+    text-align: center;
+    transition: all .5s ease-in-out;
   }
-  ${'' /* ${media.desktop`
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      height: 2px;
-      right: 0;
-      background: #f0f0f0;
-      transition: all 1s ease-in-out;
-    }
-  `} */}
   ${props => props.active && css`
-    border-color: rgb(255, 255, 200);
+    border-color: rgb(255, 255, 100);
     background: rgb(255, 255, 100);
-    ${media.desktop`
-      &:before {
-        right: -1000px;
-        background: #000;
-      }
-    `}
+    .fa {
+      color: #333;
+    }
   `}
 `;
 

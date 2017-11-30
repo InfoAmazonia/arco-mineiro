@@ -145,6 +145,7 @@ const Middle = styled.div`
   width: 95%;
   text-align: center;
   font-size: .8em;
+  font-family: "Playfair Display";
   ${media.phablet`
     width: 65%;
     padding: 2rem 3rem;
@@ -164,19 +165,24 @@ const Middle = styled.div`
   }
   .description {
     text-align: center;
-    margin: 0;
-    font-size: 1.2em;
+    margin: 0 0 2rem;
+    font-size: 1em;
+    ${media.tablet`
+      font-size: 1.6em;
+    `}
   }
   a {
-    font-size: .8em;
+    font-size: .6em;
+    letter-spacing: .1rem;
     display: inline-block;
     color: #fff;
     border: 1px solid #fff;
     text-align: center;
-    margin: 2rem 0 0;
-    padding: .75rem 3rem;
+    margin: -1px -1px 0 0;
+    padding: .75rem 1rem;
     font-weight: 600;
-    ${'' /* background: #111; */}
+    width: 210px;
+    text-transform: uppercase;
   }
 `
 

@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { media } from 'styles/utils';
 
 const Wrapper = styled.nav`
+  font-family: "Cinzel", serif;
+  font-weight: 600;
   ${'' /* background: #333; */}
   font-size: .4em;
   ${'' /* margin-bottom: 1rem; */}
@@ -31,7 +33,7 @@ const Wrapper = styled.nav`
         position: relative;
         z-index: 1;
         display: block;
-        color: #999;
+        color: #aaa;
         padding: .5rem;
         text-transform: uppercase;
         white-space: nowrap;
@@ -63,7 +65,6 @@ const Wrapper = styled.nav`
         }
         &.active {
           color: #333;
-          font-weight: 600;
           &:before {
             border-color: #aaa;
             background: #f7f7f7;
