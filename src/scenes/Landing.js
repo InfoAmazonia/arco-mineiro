@@ -205,7 +205,7 @@ class Scene extends Component {
           </p>
           {lastPath ? (
             <div>
-              <Link to="/story/gold-mining" onClick={resetContext}>
+              <Link to="/story" onClick={resetContext}>
                 Start Over
               </Link>
               <Link to={lastPath}>
@@ -213,7 +213,7 @@ class Scene extends Component {
               </Link>
             </div>
           ) : (
-            <Link to="/story/gold-mining">
+            <Link to="/story">
               Read the Story
             </Link>
           )}

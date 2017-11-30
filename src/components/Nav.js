@@ -130,6 +130,10 @@ class ArticleNav extends Component {
       <Wrapper>
         <ol>
           <li>
+            <NavLink exact to="/story">Introduction</NavLink>
+            <ProgressBar path="/story" />
+          </li>
+          <li>
             <NavLink to="/story/gold-mining">Gold Mining</NavLink>
             <ProgressBar path="/story/gold-mining" />
           </li>

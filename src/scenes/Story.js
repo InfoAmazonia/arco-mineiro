@@ -18,7 +18,7 @@ import Media from 'components/Media';
 import Story from 'components/Story';
 import Modal from 'components/Modal';
 
-import GoldMining from './articles/GoldMining';
+import Introduction from './articles/Introduction';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -122,8 +122,8 @@ class Scene extends Component {
                 timeout={600}
               >
                 <Switch location={location}>
-                  <Route exact path={`${match.url}`} component={GoldMining} />
-                  <Route path={`${match.url}/gold-mining`} component={GoldMining} />
+                  <Route exact path={`${match.url}`} component={Introduction} />
+                  <Route path={`${match.url}/gold-mining`} component={Introduction} />
                   <Route path={`${match.url}/grip-of-the-guerrilla`} render={props => (
                     <article dangerouslySetInnerHTML={{__html: story}} />
                   )} />

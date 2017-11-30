@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import StoryMedia from 'components/StoryMedia';
+import ExternalLink from 'components/ExternalLink';
 
-class GoldMining extends Component {
+class Introduction extends Component {
   render () {
     return (
       <article>
-        <p><strong>COVERED IN DIRT</strong>, a miner throws mineral-rich rocks in a spinning mechanic mill that crushes the stones to be further processed with mercury. The gold that is extracted comes from the heavily contested Venezuelan deposits and will end up on the world market in the form of jewelry, locked up in a bank or used in electronics. It does not really matter if the gold has a legal or an illegal origin, whether it is mined in by companies or gang controlled mines – the Arco Minero in Venezuela is a dark symbiosis of both worlds.</p>
-
-        <p>What matters most is that the miners risk their health and lives as working conditions are unsafe and mining areas violently disputed. The environment is not taken into consideration by enclaves of subsistence miners and the brutal forces that control them, but moreover is not a factor for the government that created a legal framework around digging it all up.</p>
-
         <p><StoryMedia media={{
           id: 'video-1',
           type: 'video',
@@ -17,7 +14,11 @@ class GoldMining extends Component {
               'https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny.ogv'
             ]
           }
-        }}>Four areas in Bolívar state, decreed in 2016 as a mining zone and branded the Arco Minero del Orinoco</StoryMedia> (spanish for “Orinoco Mining Arch”), overlap many legally protected environmental and indigenous territories, and will dictate their future destruction.</p>
+        }}><strong>COVERED IN DIRT</strong>, a miner throws mineral-rich rocks in a spinning mechanic mill that crushes the stones to be further processed with mercury.</StoryMedia> The gold that is extracted comes from the heavily contested Venezuelan deposits and will end up on the world market in the <ExternalLink href="http://google.com" language="en">form of jewelry</ExternalLink>, locked up in a bank or used in electronics. It does not really matter if the gold has a legal or an illegal origin, whether it is mined in by companies or gang controlled mines – the Arco Minero in Venezuela is a dark symbiosis of both worlds.</p>
+
+        <p>What matters most is that the miners risk their health and lives as working conditions are unsafe and mining areas violently disputed. The environment is not taken into consideration by enclaves of subsistence miners and the <ExternalLink href="http://google.com" language="es">brutal forces that control them, but moreover is not a factor for the government that created a legal</ExternalLink> framework around digging it all up.</p>
+
+        <p>Four areas in Bolívar state, decreed in 2016 as a mining zone and branded the Arco Minero del Orinoco (spanish for “Orinoco Mining Arch”), overlap many legally protected environmental and indigenous territories, and will dictate their future destruction.</p>
 
         <p><StoryMedia media={{
           id: 'video-2',
@@ -60,4 +61,4 @@ class GoldMining extends Component {
   }
 }
 
-export default GoldMining;
+export default Introduction;
