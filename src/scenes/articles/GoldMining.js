@@ -33,7 +33,13 @@ class GoldMining extends Component {
           id: 'map-1',
           type: 'map',
           data: {}
-        }}>The professor has a very grim prediction for the country. “This is the easiest road for environmental destruction in Venezuela.</StoryMedia> The big contribution from Venezuela to the destruction of the planet,” Luzardo says. The professor adds that Venezuela made some impressive progress in terms of environmental protection and fears that the Arco Minero will undo all progress: “This project is the worst answer to the crisis and the denial of the whole environmental project.”</p>
+        }}>The professor has a very grim prediction for the country. “This is the easiest road for environmental destruction in Venezuela.</StoryMedia> The big contribution from Venezuela to the destruction of the planet,” Luzardo says. The professor adds that Venezuela made some impressive progress in terms of environmental protection and fears that the <StoryMedia media={{
+          id: 'image-1',
+          type: 'image',
+          data: {
+            src: 'https://ei.marketwatch.com/Multimedia/2016/02/11/Photos/MG/MW-EF363_goldmi_20160211065835_MG.jpg?uuid=c7adf846-d0b6-11e5-8ca0-0015c588e0f6'
+          }
+        }}>Arco Minero will undo all progress: “This project is the worst answer to the crisis and the denial of the whole environmental project.”</StoryMedia></p>
 
         <p><StoryMedia media={{
           id: 'map-2',

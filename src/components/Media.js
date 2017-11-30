@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styled, { css } from 'styled-components';
+import { expandMedia } from 'actions/media';
 import { media } from 'styles/utils';
 
 import Video from './Video';
@@ -14,6 +16,12 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   z-index: 1;
   transition: all .2s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &.clickable {
+    cursor: pointer;
+  }
   ${media.desktop`
     flex: 0 0 45%;
     max-width: 1000px;
@@ -47,6 +55,7 @@ class Media extends Component {
     this.state = {
       active: false
     }
+    this.handleClick = this.handleClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
   }
   componentDidMount () {
@@ -66,29 +75,56 @@ class Media extends Component {
       this.setState({ active: true });
     }
   }
+  handleClick (ev) {
+    ev.preventDefault();
+    this.props.expandMedia(true);
+  }
   render () {
     const { active } = this.state;
     const { media, preview, children } = this.props;
-    if(media.type == 'video') {
-      return (
-        <Wrapper>
-          <Video data={media.data} preview={preview || false} />
-        </Wrapper>
-      )
-    } else if(media.type == 'map') {
-      return (
-        <Wrapper active={active}>
-          <Map {...media.data} />
-        </Wrapper>
-      );
-    } else {
-      return (
-        <Wrapper active={active}>
-          {children}
-        </Wrapper>
-      );
+    switch(media.type) {
+      case 'video' : {
+        return (
+          <Wrapper>
+            <Video data={media.data} preview={preview || false} />
+          </Wrapper>
+        )
+      }
+      case 'map' : {
+        return (
+          <Wrapper active={active}>
+            <Map {...media.data} />
+          </Wrapper>
+        );
+      }
+      case 'image' :  {
+        if(preview) {
+          return (
+            <Wrapper className="clickable" onClick={this.handleClick} style={{
+              'background-image': `url(${media.data.src})`
+            }} />
+          );
+        } else {
+          return (
+            <Wrapper>
+              <img src={media.data.src} />
+            </Wrapper>
+          );
+        }
+      }
+      default : {
+        return (
+          <Wrapper active={active}>
+            {children}
+          </Wrapper>
+        )
+      }
     }
   }
 }
 
-export default Media;
+const mapDispatchToProps = {
+  expandMedia
+};
+
+export default connect(null, mapDispatchToProps)(Media);
