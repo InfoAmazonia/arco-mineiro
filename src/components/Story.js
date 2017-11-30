@@ -13,9 +13,13 @@ const Wrapper = styled.section`
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 1rem;
   font-size: .8em;
   position: relative;
+  h1,
+  h2,
+  h3 {
+    line-height: 1.5;
+  }
   h1 {
     font-size: 1.4em;
     margin: 0 0 1rem;
@@ -23,11 +27,11 @@ const Wrapper = styled.section`
     padding-bottom: 1rem;
   }
   h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
   }
   h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 600;
   }
   p {
@@ -40,24 +44,25 @@ const Wrapper = styled.section`
     display: block;
     margin: 2rem auto;
   }
-  .story-content {
-    max-width: 640px;
+  article {
+    width: 100%;
     position: relative;
   }
   ${media.phablet`
-    padding: 2rem 10vw;
+    padding: 1rem 0;
     font-size: 1em;
     h1 {
+      font-size: 2em;
+    }
+    h2 {
       font-size: 1.8em;
-      padding-bottom: 2rem;
-      margin-bottom: 4rem;
     }
     p {
       margin: 0 0 1.5rem;
     }
   `}
   ${media.tablet`
-    padding: 2rem 15vw;
+    padding: 6vw 0;
     h1 {
       border-width: 2px;
       border-color: #000;
@@ -67,15 +72,9 @@ const Wrapper = styled.section`
       margin: 0 0 2rem;
     }
   `}
-  ${media.desktop`
-    padding: 2rem 2rem 2rem;
-  `}
   ${media.desktopHD`
-    padding: 5vw 5vw 2rem 10vw;
+    padding: 6vw 0;
     font-size: 1.2em;
-    .story-content {
-      margin: 0 auto;
-    }
   `}
 `
 
@@ -215,9 +214,7 @@ class Story extends Component {
   render () {
     return (
       <Wrapper>
-        <div className="story-content">
-          {this.props.children}
-        </div>
+        {this.props.children}
         {this.refTop ? (
           <MediaReference
             ref={node => { this.mediaRef = node; }}
