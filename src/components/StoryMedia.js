@@ -41,7 +41,7 @@ class StoryMedia extends Component {
     // Wait transition
     setTimeout(() => {
       this.updateMedia();
-    }, 700);
+    }, 600);
   }
   _getMediaId (media) {
     const { pathname } = this.props;

@@ -7,21 +7,21 @@ const styles = css`
   border-bottom: 1px solid #ddd;
   margin: 4vw 0;
   padding: 2vw 1rem;
+  span {
+    display: block;
+    max-width: 900px;
+  }
   ${media.phablet`
-    padding-left: 6vw;
-    padding-right: 6vw;
-  `}
-  ${media.tablet`
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   `}
   ${media.desktop`
     padding-left: 2rem;
     padding-right: 2rem;
   `}
   ${media.desktopHD`
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   `}
 `
 

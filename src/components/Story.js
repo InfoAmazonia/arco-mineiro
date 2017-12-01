@@ -53,10 +53,10 @@ const Wrapper = styled.section`
     padding: 1rem 0;
     font-size: 1em;
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
     }
     h2 {
-      font-size: 1.8em;
+      font-size: 1.6em;
     }
     p {
       margin: 0 0 1.5rem;
@@ -76,6 +76,12 @@ const Wrapper = styled.section`
   ${media.desktopHD`
     padding: 6vw 0;
     font-size: 1.2em;
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.8em;
+    }
   `}
 `
 
@@ -196,7 +202,7 @@ class Story extends Component {
   setScroll (props) {
     this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
-  updateScrollHeight = debounce(() => {
+  updateScrollHeight = throttle(() => {
     const { location, storyScroll, storyHeight, updateContext } = this.props;
     const path = location.pathname;
     const scrollTop = this.node.scrollTop;
@@ -214,10 +220,14 @@ class Story extends Component {
       updateContext('storyHeight', heightState);
     }
   }, 300);
-  handleScroll = throttle(() => {
+  // handleScroll = throttle(() => {
+  //   this.detectMedia();
+  //   this.updateScrollHeight();
+  // }, 100)
+  handleScroll () {
     this.detectMedia();
     this.updateScrollHeight();
-  }, 100)
+  }
   handleResize = throttle(() => {
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();

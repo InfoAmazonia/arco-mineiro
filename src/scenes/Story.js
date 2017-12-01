@@ -56,6 +56,7 @@ const TransitionComp = styled.div`
 `;
 
 const articles = [
+  '/story',
   'gold-mining',
   'grip-of-the-guerrilla',
   'coltan-country',

@@ -168,6 +168,12 @@ const Middle = styled.div`
     margin: 0 0 2rem;
     font-size: 1em;
     ${media.tablet`
+      font-size: 1.2em;
+    `}
+    ${media.desktop`
+      font-size: 1.4em;
+    `}
+    ${media.desktopHD`
       font-size: 1.6em;
     `}
   }

@@ -19,11 +19,14 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0 0 5rem rgba(0,0,0,0.2);
+  border-top: 1px solid #444;
   &.clickable {
     cursor: pointer;
   }
   ${media.desktop`
     flex: 0 0 45%;
+    border-top: 0;
     max-width: 1000px;
     height: auto;
     box-shadow: .1rem -.1rem 1rem rgba(0,0,0,0.05);

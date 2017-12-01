@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { media } from 'styles/utils';
 
 const Wrapper = styled.div`
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: block;
   color: #999;
   font-style: italic;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   margin: 3vw 0;
   font-size: 1.2em;
   ${media.phablet`
-    padding: 0 5vw 0 10vw;
+    padding: 0 8vw 0 10vw;
   `}
   blockquote {
     position: relative;
@@ -20,10 +20,14 @@ const Wrapper = styled.div`
     margin: 0;
     .fa {
       position: absolute;
-      color: #f0f0f0;
+      color: #f3f3f3;
       left: -.5em;
       top: -.5em;
       font-size: 2em;
+    }
+    .quote {
+      position: relative;
+      z-index: 2;
     }
     cite {
       color: #333;
@@ -35,7 +39,9 @@ export default ({ children, author }) => (
   <Wrapper>
     <blockquote>
       <span className="fa fa-quote-left" />
-      {children}
+      <section className="quote">
+        {children}
+      </section>
       {author ? (
         <footer>
           <cite>— {author}</cite>
