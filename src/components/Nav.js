@@ -98,6 +98,9 @@ const Wrapper = styled.nav`
       padding: 1rem 0 1rem .5rem;
     }
   `}
+  ${media.desktopHD`
+    font-size: .7em;
+  `}
 `
 
 const mapStateToProps = (state, ownProps) => {
