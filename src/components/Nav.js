@@ -12,7 +12,7 @@ const Wrapper = styled.nav`
   ${'' /* margin-bottom: 1rem; */}
   text-align: center;
   background: #f7f7f7;
-  box-shadow: 0 3px .5rem rgba(0,0,0,0.03);
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,0.05);
   position: relative;
   z-index: 10;
   flex: 0 0 auto;

@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     border-top: 0;
     max-width: 1000px;
     height: auto;
-    box-shadow: .1rem -.1rem 1rem rgba(0,0,0,0.05);
+    box-shadow: 0 0 0;
   `}
   ${media.desktopHD`
     flex: 0 0 40%;
