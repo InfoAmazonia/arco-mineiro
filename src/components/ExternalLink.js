@@ -13,7 +13,7 @@ const Wrapper = styled.a`
     background: #fff;
   }
   .lang-label {
-    font-size: .4em;
+    font-size: .6em;
     text-transform: uppercase;
     color: #999;
     position: absolute;
@@ -43,10 +43,11 @@ class ExternalLink extends Component {
     return (
       <Wrapper href={href} rel="external" target="_blank">
         {this.props.children}
-        <span className="fa fa-external-link-square" />
-        {language ? (
-          <span className="lang-label">{language}</span>
-        ) : null}
+        <span className="fa fa-external-link-square">
+          {language ? (
+            <span className="lang-label">{language}</span>
+          ) : null}
+        </span>
       </Wrapper>
     )
   }

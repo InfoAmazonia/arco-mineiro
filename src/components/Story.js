@@ -204,13 +204,16 @@ class Story extends Component {
       updateContext('storyHeight', heightState);
     }
   }
-  // handleScroll = debounce(this.updateScrollHeight, 100)
-  // handleResize = debounce(this.updateScrollHeight, 100)
-  handleScroll = this.updateScrollHeight
-  handleResize () {
+  handleScroll = debounce(this.updateScrollHeight, 50)
+  handleResize = debounce(() => {
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();
-  }
+  }, 50)
+  // handleScroll = this.updateScrollHeight
+  // handleResize () {
+  //   this.updateScrollHeight();
+  //   this.rect = this.node.getBoundingClientRect();
+  // }
   render () {
     return (
       <Wrapper>
