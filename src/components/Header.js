@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media, color } from 'styles/utils';
+import { Link } from 'react-router-dom';
 
 import SiteTitle from './SiteTitle';
 
 const Wrapper = styled.header`
   flex: 0 0 auto;
-  display: flex;
-  flex-direction: row;
   padding: 1rem;
   font-size: .8em;
-  box-shadow: 0 0 5px #eee;
+  background: #f3f3f3;
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   ${media.phablet`
-    padding: 1rem 10vw;
+    padding: 1rem;
     font-size: 1em;
   `}
-  ${media.tablet`
-    border-bottom: 0;
-    box-shadow: 0 0 0;
-    padding: 2vw 15vw;
-  `}
-  ${media.desktop`
+  ${media.desktopHD`
     padding: 2vw 10vw;
   `}
   .site-title {
@@ -32,13 +32,21 @@ const Wrapper = styled.header`
     justify-content: center;
     display: flex;
     a {
-      color: #444;
-      margin: 0 0 0 1.2rem;
+      color: #999;
+      margin-left: 1.2rem;
       ${media.phablet`
-        margin: 0 0 0 2rem;
+        margin-left: 2rem;
       `}
       ${media.desktop`
-        margin: 0 0 0 3rem;
+        margin-left: 1rem;
+        background: #fff;
+        width: 2em;
+        height: 2em;
+        padding: .5em;
+        border-radius: 100%;
+        line-height: 2em;
+        text-align: center;
+        font-size: .8em;
       `}
       position: relative;
       &:hover {
@@ -48,9 +56,9 @@ const Wrapper = styled.header`
         background: red;
         color: white;
         position: absolute;
-        width: 1.1rem;
-        height: 1.1rem;
-        line-height: 1.1rem;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1rem;
         text-align: center;
         top: -.5rem;
         right: -.5rem;
@@ -68,19 +76,20 @@ class Header extends Component {
   render () {
     return (
       <Wrapper>
-        <SiteTitle />
-        <nav>
-          {/* <a href="#" title="Notifications">
-            <span className="fa fa-bell-o"></span>
-            <span className="icon-info">12</span>
-          </a> */}
-          <a href="#" title="Share">
-            <span className="fa fa-share-alt"></span>
-          </a>
-          <a href="#" title="Learn more">
-            <span className="fa fa-info-circle"></span>
-          </a>
-        </nav>
+        <div className="header-content">
+          <SiteTitle />
+          <nav>
+            <Link to="/about" title="Data">
+              <span className="fa fa-database"></span>
+            </Link>
+            <Link to="/about" title="Learn more">
+              <span className="fa fa-info"></span>
+            </Link>
+            <Link to="/about" title="Share">
+              <span className="fa fa-share-alt"></span>
+            </Link>
+          </nav>
+        </div>
       </Wrapper>
     )
   }

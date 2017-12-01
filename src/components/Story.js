@@ -9,91 +9,15 @@ import throttle from 'utils/throttle';
 import { updateContext } from 'actions/context';
 import { setMedia } from 'actions/media';
 
-const Wrapper = styled.section`
-  flex: 1 1 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  font-size: .8em;
-  position: relative;
-  h1,
-  h2,
-  h3 {
-    line-height: 1.5;
-  }
-  h1 {
-    font-size: 1.4em;
-    margin: 0 0 1rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1rem;
-  }
-  h2 {
-    font-size: 1.3em;
-    font-weight: 600;
-  }
-  h3 {
-    font-size: 1.1em;
-    font-weight: 600;
-  }
-  p {
-    margin: 0 0 1rem;
-    strong {
-      text-transform: uppercase;
-    }
-  }
-  img {
-    display: block;
-    margin: 2rem auto;
-  }
-  article {
-    width: 100%;
-    position: relative;
-  }
-  ${media.phablet`
-    padding: 1rem 0;
-    font-size: 1em;
-    h1 {
-      font-size: 1.8em;
-    }
-    h2 {
-      font-size: 1.6em;
-    }
-    p {
-      margin: 0 0 1.5rem;
-    }
-  `}
-  ${media.tablet`
-    padding: 6vw 0;
-    h1 {
-      border-width: 2px;
-      border-color: #000;
-      font-size: 2em;
-    }
-    p {
-      margin: 0 0 2rem;
-    }
-  `}
-  ${media.desktopHD`
-    padding: 6vw 0;
-    font-size: 1.2em;
-    h1 {
-      font-size: 2em;
-    }
-    h2 {
-      font-size: 1.8em;
-    }
-  `}
-`
-
 const MediaReference = styled.div`
   display: none;
   position: absolute;
   background: #eee;
   top: 0;
-  right: -10px;
+  right: -15px;
   margin-top: 0;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   transform: rotate(45deg);
   transition top .5s linear;
   ${media.desktop`
@@ -220,10 +144,6 @@ class Story extends Component {
       updateContext('storyHeight', heightState);
     }
   }, 300);
-  // handleScroll = throttle(() => {
-  //   this.detectMedia();
-  //   this.updateScrollHeight();
-  // }, 100)
   handleScroll () {
     this.detectMedia();
     this.updateScrollHeight();
@@ -232,14 +152,10 @@ class Story extends Component {
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();
   }, 200);
-  // handleScroll = this.updateScrollHeight
-  // handleResize () {
-  //   this.updateScrollHeight();
-  //   this.rect = this.node.getBoundingClientRect();
-  // }
   render () {
+    const { id, className } = this.props;
     return (
-      <Wrapper>
+      <div id={id} className={className}>
         {this.props.children}
         {this.refTop ? (
           <MediaReference
@@ -248,7 +164,7 @@ class Story extends Component {
               top: this.refTop + 'px'
             }} />
         ) : null}
-      </Wrapper>
+      </div>
     )
   }
 }

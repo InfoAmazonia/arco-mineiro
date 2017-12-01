@@ -10,6 +10,7 @@ const styles = css`
   span {
     display: block;
     max-width: 900px;
+    margin: 0 auto;
   }
   ${media.phablet`
     padding-left: 8vw;
@@ -20,8 +21,8 @@ const styles = css`
     padding-right: 2rem;
   `}
   ${media.desktopHD`
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
   `}
 `
 

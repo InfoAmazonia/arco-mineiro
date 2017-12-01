@@ -23,8 +23,8 @@ const Wrapper = styled.span`
     transition: all .5s ease-in-out;
   }
   ${props => props.active && css`
-    border-color: rgb(255, 255, 100);
-    background: rgb(255, 255, 100);
+    border-color: rgb(255, 255, 180);
+    background: rgb(255, 255, 180);
     .fa {
       color: #333;
     }

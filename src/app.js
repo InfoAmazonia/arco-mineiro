@@ -6,6 +6,7 @@ import { withRouter, Route, Link, Switch } from 'react-router-dom';
 
 import Landing from 'scenes/Landing';
 import Story from 'scenes/Story';
+import About from 'scenes/About';
 
 import 'normalize.css';
 import 'font-awesome/css/font-awesome.css';
@@ -14,7 +15,10 @@ import 'styles/global.css';
 class Application extends Component {
   render () {
     const { location, match } = this.props;
-    const key = "/" + location.pathname.split('/')[1];
+    let key = 0;
+    if(location.pathname == '/') {
+      key = 1;
+    }
     return (
       <TransitionGroup>
         <CSSTransition
@@ -25,6 +29,7 @@ class Application extends Component {
           <Switch location={location}>
             <Route exact path="/" component={Landing} />
             <Route path="/story" component={Story} />
+            <Route path="/about" component={About} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

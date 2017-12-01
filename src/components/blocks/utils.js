@@ -16,6 +16,6 @@ export const paddings = css`
   `}
   ${media.desktopHD`
     padding-left: 10vw;
-    padding-right: 5vw;
+    padding-right: 10vw;
   `}
 `;

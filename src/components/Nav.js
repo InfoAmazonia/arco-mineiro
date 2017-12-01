@@ -29,6 +29,7 @@ const Wrapper = styled.nav`
       ${'' /* border-left: 1px solid #eee; */}
       line-height: 1;
       position: relative;
+      overflow: hidden;
       a {
         position: relative;
         z-index: 1;
@@ -57,7 +58,6 @@ const Wrapper = styled.nav`
           transition: all .2s ease-in-out;
         }
         &:hover {
-          border-color: #aaa;
           color: #333;
           &:before {
             border-color: #aaa;
@@ -65,8 +65,8 @@ const Wrapper = styled.nav`
         }
         &.active {
           color: #333;
+          background: #fff;
           &:before {
-            border-color: #aaa;
             background: #f7f7f7;
             transform: scale(1.5);
           }
@@ -78,14 +78,15 @@ const Wrapper = styled.nav`
         left: 0;
         bottom: 0;
         height: 1px;
-        background: #333;
+        background: #f09429;
+        box-shadow: 0 0 .5rem #f09429;
         transition: width .2s linear;
         z-index: 2;
       }
     }
   }
   ${media.phablet`
-    background: transparent;
+    // background: transparent;
     ol li a {
       padding: 1rem 0 1rem .5rem;
     }
