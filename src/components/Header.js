@@ -7,7 +7,7 @@ import SiteTitle from './SiteTitle';
 
 const Wrapper = styled.header`
   flex: 0 0 auto;
-  padding: 1rem;
+  padding: .5rem 1rem;
   font-size: .8em;
   background: #f3f3f3;
   .header-content {
@@ -33,10 +33,7 @@ const Wrapper = styled.header`
     display: flex;
     a {
       color: #999;
-      margin-left: 1.2rem;
-      ${media.phablet`
-        margin-left: 2rem;
-      `}
+      margin-left: 1.5rem;
       ${media.desktop`
         margin-left: 1rem;
         background: #fff;
