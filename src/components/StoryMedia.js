@@ -38,23 +38,32 @@ class StoryMedia extends Component {
   }
   componentDidMount () {
     this.node = findDOMNode(this);
-    this.updateMedia();
+    // Wait transition
+    setTimeout(() => {
+      this.updateMedia();
+    }, 700);
   }
-  componentWillUnmount () {
-    this.props.removeMedia(this.props.media.id);
+  _getMediaId (media) {
+    const { pathname } = this.props;
+    return `${pathname}/${media.id}`.replace(/\//g, '-');
   }
-  componentWillReceiveProps (nextProps) {
-    this.updateMedia(nextProps);
+  _getStoryOffset (props) {
+    props = props || this.props;
+    const { pathname, storyScroll } = props;
+    return storyScroll[pathname] || 0;
   }
   updateMedia (props) {
     props = props || this.props;
-    const { media, library, updateMedia } = props;
-    const inLibrary = library[media.id];
-    const position = this.node.getBoundingClientRect().top;
-    if(!inLibrary || Math.floor(position) != Math.floor(inLibrary.position || 0)) {
+    const { media, library, updateMedia, pathname } = props;
+    const inLibrary = library[this._getMediaId(media)];
+    const rect = this.node.getBoundingClientRect();
+    if(!inLibrary || Math.floor(rect.top) != Math.floor(inLibrary.rect.top || 0)) {
       updateMedia({
         ...media,
-        position: position
+        pathname,
+        rect,
+        offset: this._getStoryOffset(props),
+        id: this._getMediaId(media)
       });
     }
   }
@@ -79,9 +88,11 @@ class StoryMedia extends Component {
   }
   render () {
     const { activeMedia, media } = this.props;
-    const active = activeMedia.id == media.id;
+    const id = this._getMediaId(media);
+    const active = activeMedia.id == id;
     return (
       <Wrapper
+        id={id}
         active={active}
       >
         {this.props.children}
@@ -93,6 +104,8 @@ class StoryMedia extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    storyScroll: state.context.storyScroll,
+    pathname: state.router.location.pathname,
     activeMedia: state.media,
     library: state.mediaLibrary
   }
