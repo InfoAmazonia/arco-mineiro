@@ -201,7 +201,7 @@ class Scene extends Component {
     return (
       <Wrapper className="scene landing">
         <Top>
-          <SiteTitle logo="3" />
+          <SiteTitle />
           <h2>by Bram Ebus</h2>
         </Top>
         <Middle className="middle">

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
-import { connect } from 'react-redux';
 import styled from 'styled-components';
-
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Redirect, Route, Link, Switch } from 'react-router-dom';
 
 import Header from 'components/Header';
 import ArticleNav from 'components/Nav';

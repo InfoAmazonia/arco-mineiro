@@ -4,10 +4,8 @@ import { media, color } from 'styles/utils';
 import { Link } from 'react-router-dom';
 
 const logos = [
-  require('images/logo_1.svg'),
-  require('images/logo_1_dark.svg'),
-  require('images/logo_2.svg'),
-  require('images/logo_3.svg')
+  require('images/logo_3.svg'),
+  require('images/logo_3_black.svg')
 ];
 
 const Title = styled.h1`

@@ -74,7 +74,7 @@ class Header extends Component {
     return (
       <Wrapper>
         <div className="header-content">
-          <SiteTitle />
+          <SiteTitle logo="1" />
           <nav>
             <Link to="/about" title="Data">
               <span className="fa fa-database"></span>
