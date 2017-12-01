@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.section`
   position: fixed;
   z-index: 9999;
-  ${'' /* background: #fff; */}
   top: 0;
   left: 0;
   right: 0;
@@ -20,7 +19,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow: hidden;
   border: 0 solid ${color};
   box-sizing: border-box;
   text-shadow: 0 0 2px #000;

@@ -18,14 +18,11 @@ const Title = styled.h1`
   font-family: "Cinzel";
   color: #111;
   .logo {
-    ${'' /* background: #fff; */}
     border-radius: 100%;
     float: left;
     margin-right: -.5em;
     width: 1.65em;
     margin-top: -.1em;
-    ${'' /* border: 3px solid ${color}; */}
-    ${'' /* border: 1px solid #333; */}
   }
   ${props => props.logo ==  "2" && css`
     .logo {

@@ -59,7 +59,7 @@ class Story extends Component {
       // Wait leave story animation
       setTimeout(() => {
         this.setScroll(nextProps);
-      }, 200);
+      }, 150);
       // Wait library update
       setTimeout(() => {
         this.detectMedia(true);
