@@ -9,6 +9,8 @@ export default styled.section`
   overflow: hidden;
   transition: all .5s ease-in-out;
   font-size: .8em;
+  position: relative;
+  contain: strict;
   ${media.desktop`
     flex-direction: row;
   `}

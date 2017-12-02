@@ -46,7 +46,9 @@ const Wrapper = styled.header`
         font-size: .8em;
       `}
       position: relative;
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         color: #111;
       }
       .icon-info {

@@ -70,6 +70,7 @@ img {
 a {
   color: #ffa741;
   text-decoration: none;
+  outline: none;
 }
 a:hover,
 a:active,

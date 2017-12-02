@@ -70,7 +70,7 @@ class Scene extends Component {
         <Story className="content">
           <TransitionGroup>
             <CSSTransition
-              key={location.key}
+              key={location.pathname}
               classNames="pages-transition"
               timeout={600}
             >

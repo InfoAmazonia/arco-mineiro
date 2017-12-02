@@ -102,6 +102,7 @@ class Story extends Component {
     const { setMedia } = this.props;
     const media = this._getPathMediaClosestToMiddle();
     if(media.media !== undefined) {
+      this.refTop = media.media.rect.top + media.media.offset - this.rect.top;
       if(
         !this.props.media.id ||
         (
@@ -115,7 +116,6 @@ class Story extends Component {
           )
         )
       ) {
-        this.refTop = media.media.rect.top + media.media.offset - this.rect.top;
         setMedia(media.media);
       }
     } else if(this.props.media && this.props.media.id && media.media == undefined) {

@@ -7,9 +7,7 @@ import { media } from 'styles/utils';
 const Wrapper = styled.nav`
   font-family: "Cinzel", serif;
   font-weight: 600;
-  ${'' /* background: #333; */}
   font-size: .4em;
-  ${'' /* margin-bottom: 1rem; */}
   text-align: center;
   background: #f7f7f7;
   box-shadow: 0 .2rem .5rem rgba(0,0,0,0.05);
@@ -26,7 +24,6 @@ const Wrapper = styled.nav`
       margin: 0;
       padding: 0;
       display: table-cell;
-      ${'' /* border-left: 1px solid #eee; */}
       line-height: 1;
       position: relative;
       overflow: hidden;
@@ -42,51 +39,34 @@ const Wrapper = styled.nav`
         text-overflow: ellipsis;
         border-bottom: 1px solid #ddd;
         position: relative;
-        &:before {
-          content: '';
+        .progress {
+          display: block;
           position: absolute;
-          left: 50%;
-          margin-left: -.25rem;
-          bottom: -1px;
-          height: .4rem;
-          width: .6rem;
-          background: transparent;
-          border: 1px solid #ddd;
-          box-sizing: border-box;
-          border-top-left-radius: .6rem;
-          border-top-right-radius: .6rem;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          background: #bbb;
           transition: all .2s ease-in-out;
+          z-index: 2;
         }
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
           color: #333;
-          &:before {
-            border-color: #aaa;
-          }
         }
         &.active {
           color: #333;
           background: #fff;
-          &:before {
-            background: #f7f7f7;
-            transform: scale(1.5);
+          .progress {
+            height: 1px;
+            background: #f09429;
+            box-shadow: 0 0 .5rem #f09429;
           }
         }
-      }
-      .progress {
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 1px;
-        background: #f09429;
-        box-shadow: 0 0 .5rem #f09429;
-        transition: width .2s linear;
-        z-index: 2;
       }
     }
   }
   ${media.phablet`
-    // background: transparent;
     ol li a {
       padding: 1rem 0 1rem .5rem;
     }
@@ -134,28 +114,40 @@ class ArticleNav extends Component {
       <Wrapper>
         <ol>
           <li>
-            <NavLink exact to="/story">Introduction</NavLink>
-            <ProgressBar path="/story" />
+            <NavLink exact to="/story">
+              Introduction
+              <ProgressBar path="/story" />
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/story/gold-mining">Gold Mining</NavLink>
-            <ProgressBar path="/story/gold-mining" />
+            <NavLink to="/story/gold-mining">
+              Gold Mining
+              <ProgressBar path="/story/gold-mining" />
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/story/grip-of-the-guerrilla">Grip of the Guerrilla</NavLink>
-            <ProgressBar path="/story/grip-of-the-guerrilla" />
+            <NavLink to="/story/grip-of-the-guerrilla">
+              Grip of the Guerrilla
+              <ProgressBar path="/story/grip-of-the-guerrilla" />
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/story/coltan-country">Coltan Country</NavLink>
-            <ProgressBar path="/story/coltan-country" />
+            <NavLink to="/story/coltan-country">
+              Coltan Country
+              <ProgressBar path="/story/coltan-country" />
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/story/malaria">Malaria</NavLink>
-            <ProgressBar path="/story/malaria" />
+            <NavLink to="/story/malaria">
+              Malaria
+              <ProgressBar path="/story/malaria" />
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/story/gambling">Gambling</NavLink>
-            <ProgressBar path="/story/gambling" />
+            <NavLink to="/story/gambling">
+              Gambling
+              <ProgressBar path="/story/gambling" />
+            </NavLink>
           </li>
         </ol>
       </Wrapper>

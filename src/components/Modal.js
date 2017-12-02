@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   z-index: 100;
   background: rgba(0,0,0,0.9);
   overflow: auto;
+  display: flex;
+  align-items: center;
   .close-overlay {
     position: absolute;
     left: 0;
@@ -22,7 +24,7 @@ const Wrapper = styled.div`
     z-index: 2;
     width: 100%;
     max-width: 1000px;
-    margin: 7% auto;
+    margin: 0 auto;
     box-shadow: 0 0 5rem rgba(0,0,0,0.75);
     img {
       display: block;
