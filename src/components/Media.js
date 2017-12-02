@@ -10,8 +10,6 @@ import Video from './Video';
 import Map from './Map';
 
 const Wrapper = styled.div`
-  flex: 0 0 auto;
-  height: 90px;
   position: relative;
   box-sizing: border-box;
   z-index: 1;
@@ -21,6 +19,10 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   box-shadow: 0 0 5rem rgba(0,0,0,0.2);
   border-top: 1px solid #444;
+  ${props => props.preview && css`
+    flex: 0 0 auto;
+    height: 90px;
+  `}
   &.clickable {
     cursor: pointer;
   }
@@ -88,14 +90,14 @@ class Media extends Component {
     switch(media.type) {
       case 'video' : {
         return (
-          <Wrapper>
+          <Wrapper preview={preview}>
             <Video data={media.data} preview={preview || false} />
           </Wrapper>
         )
       }
       case 'map' : {
         return (
-          <Wrapper active={active}>
+          <Wrapper preview={preview} active={active}>
             <Map {...media.data} />
           </Wrapper>
         );
@@ -103,7 +105,7 @@ class Media extends Component {
       case 'image' :  {
         if(preview) {
           return (
-            <Wrapper className="clickable" onClick={this.handleClick} style={{
+            <Wrapper preview={true} className="clickable" onClick={this.handleClick} style={{
               backgroundImage: `url(${media.data.src})`
             }} />
           );
@@ -117,7 +119,7 @@ class Media extends Component {
       }
       default : {
         return (
-          <Wrapper active={active}>
+          <Wrapper preview={preview} active={active}>
             {children}
           </Wrapper>
         )

@@ -30,6 +30,7 @@ const Wrapper = styled.div`
       display: block;
       width: 100%;
       height: auto;
+      margin: 0;
     }
   }
 `
