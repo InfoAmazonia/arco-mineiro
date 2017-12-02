@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -49,6 +50,11 @@ class Modal extends Component {
     document.removeEventListener('keydown', this.handleKeydown);
     window.removeEventListener('popstate', this.handlePopstate);
   }
+  componentWillReceiveProps (nextProps) {
+    if(nextProps.location.key !== this.props.location.key) {
+      this.props.close();
+    }
+  }
   handleKeydown (ev) {
     if(ev.keyCode == 27) {
       this.props.close();
@@ -72,4 +78,4 @@ class Modal extends Component {
   }
 }
 
-export default Modal;
+export default withRouter(Modal);
