@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js -p",
+    "build": "rm public/* && webpack --config webpack.config.js -p",
     "watch": "webpack --config webpack.config.js --watch",
     "deploy": "rm public/* && npm run build && cp public/index.html public/404.html && gh-pages -d public",
     "manage:translations": "node ./translationRunner.js"
@@ -24,6 +24,7 @@
     "animated": "^0.2.0",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
+    "intl": "^1.2.5",
     "leaflet": "^1.2.0",
     "localforage": "^1.5.3",
     "moment": "^2.18.1",
@@ -38,6 +39,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.8",
     "react-transition-group": "^2.2.1",
+    "react-youtube": "^7.5.0",
     "redux": "^3.7.2",
     "redux-persist": "^5.2.0",
     "redux-promise-middleware": "^4.4.1",
@@ -63,6 +65,7 @@
     "imports-loader": "^0.7.1",
     "json-loader": "^0.5.7",
     "markdown-loader": "^2.0.1",
+    "raw-loader": "^0.5.1",
     "react-intl-translations-manager": "^5.0.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0"

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { resetContext } from 'actions/context';
 import { media, color } from 'styles/utils';
@@ -33,7 +34,7 @@ const Wrapper = styled.section`
     right: 0;
     background-image: url(${require('images/gold_.jpg')});
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     z-index: -1;
   }
   &.route-transition-enter {
@@ -136,10 +137,14 @@ const Top = styled.div`
 `
 
 const Middle = styled.div`
+  flex: 1 1 auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 1000px;
-  ${'' /* background: #222; */}
   color: #fff;
-  padding: 2rem;
+  padding: 0;
   box-sizing: border-box;
   width: 95%;
   text-align: center;
@@ -147,7 +152,7 @@ const Middle = styled.div`
   font-family: "Playfair Display";
   ${media.phablet`
     width: 65%;
-    padding: 2rem 3rem;
+    padding: 0 3rem;
     font-size: 1em;
   `}
   ${media.tablet`
@@ -170,14 +175,15 @@ const Middle = styled.div`
       font-size: 1.2em;
     `}
     ${media.desktop`
-      font-size: 1.4em;
+      font-size: 1.3em;
     `}
     ${media.desktopHD`
-      font-size: 1.6em;
+      font-size: 1.4em;
     `}
   }
   a {
-    font-size: .6em;
+    font-family: "Cinzel";
+    font-size: .5em;
     letter-spacing: .1rem;
     display: inline-block;
     color: #fff;
@@ -202,24 +208,36 @@ class Scene extends Component {
       <Wrapper className="scene landing">
         <Top>
           <SiteTitle />
-          <h2>by Bram Ebus</h2>
+          <h2>
+            <FormattedMessage
+              id="general.author"
+              defaultMessage="by Bram Ebus" />
+          </h2>
         </Top>
         <Middle className="middle">
           <p className="description">
-            The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela
+            <FormattedMessage
+              id="general.tagline"
+              defaultMessage="The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela" />
           </p>
           {lastPath ? (
             <div>
               <Link to="/story" onClick={resetContext}>
-                Start Over
+                <FormattedMessage
+                  id="general.startOver"
+                  defaultMessage="Start Over" />
               </Link>
               <Link to={lastPath}>
-                Continue Reading
+                <FormattedMessage
+                  id="general.continueReading"
+                  defaultMessage="Continue Reading" />
               </Link>
             </div>
           ) : (
             <Link to="/story">
-              Read the Story
+              <FormattedMessage
+                id="general.readStory"
+                defaultMessage="Read the Story" />
             </Link>
           )}
           {/* <h3>Developed by <strong>Miguel Peixe</strong>, edited by <strong>Stefano Wrobleski</strong> and advisory by <strong>Oscar Murillo</strong></h3> */}

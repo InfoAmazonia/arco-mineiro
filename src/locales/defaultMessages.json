@@ -1,0 +1,53 @@
+[
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Introduction",
+        "id": "general.introduction"
+      }
+    ],
+    "path": "src/components/Nav.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Digging",
+        "id": "general.siteTitle1"
+      },
+      {
+        "defaultMessage": "into the",
+        "id": "general.siteTitle2"
+      },
+      {
+        "defaultMessage": "Mining Arc",
+        "id": "general.siteTitle3"
+      }
+    ],
+    "path": "src/components/SiteTitle.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "by Bram Ebus",
+        "id": "general.author"
+      },
+      {
+        "defaultMessage": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela",
+        "id": "general.tagline"
+      },
+      {
+        "defaultMessage": "Start Over",
+        "id": "general.startOver"
+      },
+      {
+        "defaultMessage": "Continue Reading",
+        "id": "general.continueReading"
+      },
+      {
+        "defaultMessage": "Read the Story",
+        "id": "general.readStory"
+      }
+    ],
+    "path": "src/scenes/Landing.json"
+  }
+]

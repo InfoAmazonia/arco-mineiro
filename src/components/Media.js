@@ -7,6 +7,7 @@ import { expandMedia } from 'actions/media';
 import { media } from 'styles/utils';
 
 import Video from './Video';
+import YouTube from './YouTube';
 import Map from './Map';
 
 const Wrapper = styled.div`
@@ -92,6 +93,13 @@ class Media extends Component {
         return (
           <Wrapper preview={preview}>
             <Video data={media.data} preview={preview || false} />
+          </Wrapper>
+        )
+      }
+      case 'youtube' : {
+        return (
+          <Wrapper preview={preview}>
+            <YouTube data={media.data} preview={preview || false} />
           </Wrapper>
         )
       }

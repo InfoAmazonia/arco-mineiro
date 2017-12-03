@@ -78,7 +78,7 @@ class Video extends Component {
     }
   }
   render () {
-    const { data, expanded, preview } = this.props;
+    const { data, preview } = this.props;
     return (
       <Wrapper
         onClick={this.handleClick}

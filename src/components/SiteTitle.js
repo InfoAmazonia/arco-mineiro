@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import { media, color } from 'styles/utils';
 import { Link } from 'react-router-dom';
 
@@ -22,13 +23,6 @@ const Title = styled.h1`
     width: 1.65em;
     margin-top: -.1em;
   }
-  ${props => props.logo ==  "2" && css`
-    .logo {
-      width: 11em;
-      margin-top: -4em;
-      margin-left: -4em;
-    }
-  `}
   a {
     color: inherit;
     &:hover,
@@ -55,8 +49,6 @@ const Title = styled.h1`
     padding-right: .25em;
     font-size: .8em;
     white-space: nowrap;
-    &.title-2 {
-    }
     &.title-1 {
       font-size: .75em;
       padding-left: .75em;
@@ -86,9 +78,21 @@ class SiteTitle extends Component {
               <img src={logos[logoIndex]} alt="Digging in to the Mining Arc" />
             </span>
             <span className="title-text">
-              <span className="title-item title-1">Digging</span>
-              <span className="title-item title-2">into the</span>
-              <span className="title-item title-3">Mining Arc</span>
+              <span className="title-item title-1">
+                <FormattedMessage
+                  id="general.siteTitle1"
+                  defaultMessage="Digging" />
+              </span>
+              <span className="title-item title-2">
+                <FormattedMessage
+                  id="general.siteTitle2"
+                  defaultMessage="into the" />
+              </span>
+              <span className="title-item title-3">
+                <FormattedMessage
+                  id="general.siteTitle3"
+                  defaultMessage="Mining Arc" />
+              </span>
             </span>
           </Link>
         </Title>

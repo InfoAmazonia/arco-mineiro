@@ -77,18 +77,10 @@ class Scene extends Component {
               <Switch location={location}>
                 <Route exact path={`${match.url}`} component={Introduction} />
                 <Route path={`${match.url}/gold-mining`} component={Introduction} />
-                <Route path={`${match.url}/grip-of-the-guerrilla`} render={props => (
-                  <article dangerouslySetInnerHTML={{__html: story}} />
-                )} />
-                <Route path={`${match.url}/coltan-country`} render={props => (
-                  <article dangerouslySetInnerHTML={{__html: story}} />
-                )} />
-                <Route path={`${match.url}/malaria`} render={props => (
-                  <article dangerouslySetInnerHTML={{__html: story}} />
-                )} />
-                <Route path={`${match.url}/gambling`} render={props => (
-                  <article dangerouslySetInnerHTML={{__html: story}} />
-                )} />
+                <Route path={`${match.url}/grip-of-the-guerrilla`} render={props => <article />} />
+                <Route path={`${match.url}/coltan-country`} render={props => <article />} />
+                <Route path={`${match.url}/malaria`} render={props => <article />} />
+                <Route path={`${match.url}/gambling`} render={props => <article />} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>

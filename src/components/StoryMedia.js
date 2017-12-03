@@ -75,7 +75,8 @@ class StoryMedia extends Component {
         icon = 'map';
         break;
       }
-      case 'video' : {
+      case 'video' :
+      case 'youtube' : {
         icon = 'play';
         break;
       }

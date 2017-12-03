@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { media } from 'styles/utils';
@@ -115,7 +116,9 @@ class ArticleNav extends Component {
         <ol>
           <li>
             <NavLink exact to="/story">
-              Introduction
+              <FormattedMessage
+                id="general.introduction"
+                defaultMessage="Introduction" />
               <ProgressBar path="/story" />
             </NavLink>
           </li>

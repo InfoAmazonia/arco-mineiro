@@ -12,11 +12,9 @@ export default () => (
     <TextBlock>
       <p><StoryMedia media={{
         id: 'video-1',
-        type: 'video',
+        type: 'youtube',
         data: {
-          sources: [
-            'https://ia800201.us.archive.org/12/items/BigBuckBunny_328/BigBuckBunny.ogv'
-          ]
+          id: 'WwCpWXlg1-s'
         }
       }}><strong>COVERED IN DIRT</strong>, a miner throws mineral-rich rocks in a spinning mechanic mill that crushes the stones to be further processed with mercury.</StoryMedia> The gold that is extracted comes from the heavily contested Venezuelan deposits and will end up on the world market in the <ExternalLink href="http://google.com" language="en">form of jewelry</ExternalLink>, locked up in a bank or used in electronics. It does not really matter if the gold has a legal or an illegal origin, whether it is mined in by companies or gang controlled mines – the Arco Minero in Venezuela is a dark symbiosis of both worlds.</p>
 

@@ -10,7 +10,10 @@ module.exports = {
     modules: [
       'src',
       'node_modules'
-    ]
+    ],
+    alias: {
+      'react-markdown': path.resolve(__dirname, '../react-markdown/lib/react-markdown')
+    }
   },
   output: {
     path: path.resolve('public'),
@@ -37,7 +40,7 @@ module.exports = {
             'transform-class-properties'
           ]
         },
-        exclude: /node_modules/
+        exclude: /node_modules|react-markdown/
       },
       { test: /\.json$/, loader: 'json-loader' },
       {
@@ -49,13 +52,10 @@ module.exports = {
         loader: 'file-loader'
       },
       {
-        test: /\.md$/,
+        test: /\.(md|txt)$/,
         use: [
           {
-            loader: 'html-loader'
-          },
-          {
-            loader: 'markdown-loader'
+            loader: 'raw-loader'
           }
         ]
       }
