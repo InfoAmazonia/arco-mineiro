@@ -5,8 +5,8 @@ import { paddings } from './utils';
 
 const styles = css`
   border-bottom: 1px solid #ddd;
-  margin: 4vw 0;
-  padding: 2vw 1rem;
+  margin: 6vw 0;
+  padding: 0 1rem 1rem;
   span {
     display: block;
     max-width: 900px;
@@ -15,6 +15,7 @@ const styles = css`
   ${media.phablet`
     padding-left: 8vw;
     padding-right: 8vw;
+    padding-bottom: 2rem;
   `}
   ${media.desktop`
     padding-left: 2rem;

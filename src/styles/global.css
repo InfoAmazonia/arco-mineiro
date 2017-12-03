@@ -60,8 +60,18 @@ h2,
 h3,
 h4 {
   font-family: "Playfair Display", serif;
-  font-weight: normal;
-  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 0;
+}
+h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.2em;
 }
 img {
   max-width: 100%;

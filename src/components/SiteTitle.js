@@ -16,6 +16,7 @@ const Title = styled.h1`
   line-height: 1;
   font-family: "Cinzel";
   color: #111;
+  font-weight: normal;
   .logo {
     border-radius: 100%;
     float: left;
@@ -75,7 +76,7 @@ class SiteTitle extends Component {
         <Title {...props}>
           <Link to="/">
             <span className="logo">
-              <img src={logos[logoIndex]} alt="Digging in to the Mining Arc" />
+              <img src={logos[logoIndex]} alt="Digging in to the Mining Arch" />
             </span>
             <span className="title-text">
               <span className="title-item title-1">
@@ -91,7 +92,7 @@ class SiteTitle extends Component {
               <span className="title-item title-3">
                 <FormattedMessage
                   id="general.siteTitle3"
-                  defaultMessage="Mining Arc" />
+                  defaultMessage="Mining Arch" />
               </span>
             </span>
           </Link>

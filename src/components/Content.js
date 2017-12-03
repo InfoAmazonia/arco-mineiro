@@ -10,7 +10,8 @@ export default styled.section`
   transition: all .5s ease-in-out;
   font-size: .8em;
   position: relative;
-  contain: strict;
+  margin: 0;
+  padding: 0;
   ${media.desktop`
     flex-direction: row;
   `}
@@ -20,27 +21,8 @@ export default styled.section`
     overflow-x: hidden;
     box-sizing: border-box;
     position: relative;
-  }
-  h1,
-  h2,
-  h3 {
-    line-height: 1.5;
-    font-weight: 600;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  h2 {
-    font-size: 1.3em;
-  }
-  h3 {
-    font-size: 1.1em;
-  }
-  p {
-    margin: 0 0 1rem;
-    strong {
-      text-transform: uppercase;
-    }
+    margin: 0;
+    padding: 0;
   }
   img {
     display: block;
@@ -52,37 +34,20 @@ export default styled.section`
   }
   ${media.phablet`
     font-size: 1em;
-    .content {
-      padding: 1rem 0;
-    }
-    h1 {
-      font-size: 1.8em;
-    }
-    h2 {
-      font-size: 1.6em;
-    }
-    p {
-      margin: 0 0 1.5rem;
-    }
-  `}
-  ${media.tablet`
-    .content {
-      padding: 6vw 0;
-    }
-    p {
-      margin: 0 0 2rem;
-    }
-  `}
-  ${media.desktopHD`
-    font-size: 1.2em;
-    .content {
-      padding: 6vw 0;
-    }
     h1 {
       font-size: 2em;
     }
     h2 {
       font-size: 1.8em;
+    }
+  `}
+  ${media.desktopHD`
+    font-size: 1.2em;
+    h1 {
+      font-size: 2.2em;
+    }
+    h2 {
+      font-size: 2em;
     }
   `}
 `
