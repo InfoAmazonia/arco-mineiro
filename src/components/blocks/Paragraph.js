@@ -4,7 +4,6 @@ import { media } from 'styles/utils';
 import { margins } from './utils';
 
 const Wrapper = styled.p`
-  margin: 1rem;
   ${margins}
   ${media.desktop`
     margin-bottom: 1.5rem;
@@ -13,10 +12,13 @@ const Wrapper = styled.p`
     margin-bottom: 2rem;
   `}
   .paragraph-content {
-    max-width: 640px;
+    max-width: 500px;
     margin: 0 auto;
     position: relative;
     display: block;
+    ${media.desktopHD`
+      max-width: 640px;
+    `}
   }
 `
 export default ({ children }) => (

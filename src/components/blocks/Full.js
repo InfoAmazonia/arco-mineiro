@@ -9,16 +9,8 @@ export default styled.div`
     margin-left: 1rem;
     margin-right: 1rem;
     ${media.tablet`
-      margin-left: 6vw;
-      margin-right: 6vw;
-    `}
-    ${media.desktop`
-      margin-left: 2rem;
-      margin-right: 2rem;
-    `}
-    ${media.desktopHD`
-      margin-left: 6vw;
-      margin-right: 6vw;
+      margin-left: 4vw;
+      margin-right: 4vw;
     `}
   `}
 `

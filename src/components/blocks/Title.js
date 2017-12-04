@@ -13,17 +13,9 @@ const styles = css`
     margin: 0 auto;
   }
   ${media.phablet`
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
     padding-bottom: 2rem;
-  `}
-  ${media.desktop`
-    padding-left: 2rem;
-    padding-right: 2rem;
-  `}
-  ${media.desktopHD`
-    padding-left: 6vw;
-    padding-right: 6vw;
   `}
 `
 

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
 const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

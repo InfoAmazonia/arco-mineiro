@@ -20,7 +20,7 @@ const Wrapper = styled.header`
     padding: 1rem;
     font-size: 1em;
   `}
-  ${media.desktopHD`
+  ${media.desktop`
     padding: 2vw 10vw;
   `}
   .site-title {
