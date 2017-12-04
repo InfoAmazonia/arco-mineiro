@@ -8,7 +8,6 @@ import SiteTitle from './SiteTitle';
 const Wrapper = styled.header`
   flex: 0 0 auto;
   padding: .5rem 1rem;
-  font-size: .8em;
   background: #f3f3f3;
   .header-content {
     display: flex;
@@ -21,16 +20,21 @@ const Wrapper = styled.header`
     font-size: 1em;
   `}
   ${media.desktop`
-    padding: 2vw 10vw;
+    padding: 1.5vw 8vw;
+  `}
+  ${media.desktopHD`
+    padding: 1.5vw 10vw;
   `}
   .site-title {
     flex: 1 1 100%;
+    font-size: .6em;
   }
   nav {
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
     display: flex;
+    font-size: .8em;
     a {
       color: #999;
       margin-left: 1.5rem;
@@ -39,11 +43,11 @@ const Wrapper = styled.header`
         background: #fff;
         width: 2em;
         height: 2em;
-        padding: .5em;
+        padding: .3em;
         border-radius: 100%;
         line-height: 2em;
         text-align: center;
-        font-size: .8em;
+        font-size: 1em;
       `}
       position: relative;
       &:hover,

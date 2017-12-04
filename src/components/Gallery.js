@@ -49,7 +49,12 @@ const Wrapper = styled.div`
     bottom: 0;
     width: 50%;
     box-sizing: border-box;
-    padding: 30% 1rem 0 1rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    .fa {
+      flex: 1 1 100%;
+    }
     &:hover,
     &:active,
     &:focus {
@@ -137,15 +142,21 @@ class Gallery extends Component {
         <Wrapper>
           <a
             href="javascript:void(0);"
-            className="prev fa fa-angle-left"
-            onClick={this._prev} />
+            className="prev"
+            onClick={this._prev}
+          >
+            <span className="fa fa-angle-left" />
+          </a>
           <div className="image">
             <img src={data.items[current].src} />
           </div>
           <a
             href="javascript:void(0);"
-            className="next fa fa-angle-right"
-            onClick={this._next} />
+            className="next"
+            onClick={this._next}
+          >
+            <span className="fa fa-angle-right" />
+          </a>
         </Wrapper>
       )
     }

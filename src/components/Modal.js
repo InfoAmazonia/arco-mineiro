@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
 const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem 0;
   .close-overlay {
     position: absolute;
     left: 0;
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1000px;
+    max-width: 100vh;
     margin: auto;
     box-shadow: 0 0 5rem rgba(0,0,0,0.75);
     img {
