@@ -80,6 +80,7 @@ class StoryMedia extends Component {
         icon = 'play';
         break;
       }
+      case 'gallery' :
       case 'image' : {
         icon = 'image';
         break;

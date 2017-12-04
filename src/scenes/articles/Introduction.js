@@ -21,7 +21,17 @@ export default () => (
 
       <Paragraph>The gold that is extracted will end up on the world market in the form of jewelry, locked up in a bank or used in electronics, but few people will know about its origin. “They work commando style,” the miner continues about nightly shootouts in the hills surrounding the village where bullets are shot at every visible headlight as a curfew is imposed by active gangs. <strong>Most of the miners do not want to be named as they fear repercussions from armed actors in the region</strong>.</Paragraph>
 
-      <Paragraph>The Venezuelan military also participates in the violence and is often involved in mining through associated gangs and its own operations. Venezuela’s armed forces received a lot of power during the presidency of late Hugo Chávez. Cliver Alcalá Cordones, a Chávez loyalist who retired in 2013, was a Major General that held command in the mining regions. In a meeting in a hotel lobby in Bogotá, Colombia, he explains that Maduro increasingly is handing over functions to the military and government sectors that now partake in the “disaster and pillage”.</Paragraph>
+      <Paragraph>The Venezuelan military also participates in the violence and is often involved in mining through associated gangs and its own operations. Venezuela’s armed forces received a lot of power during the presidency of late Hugo Chávez. Cliver Alcalá Cordones, a Chávez loyalist who retired in 2013, was a Major General that held command in the mining regions. <StoryMedia media={{
+        id: 'gallery-1',
+        type: 'gallery',
+        data: {
+          items: [
+            { src: 'https://ei.marketwatch.com/Multimedia/2016/02/11/Photos/MG/MW-EF363_goldmi_20160211065835_MG.jpg?uuid=c7adf846-d0b6-11e5-8ca0-0015c588e0f6' },
+            { src: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Kalgoorlie_The_Big_Pit_DSC04498.JPG' },
+            { src: 'https://www.911metallurgist.com/blog/wp-content/uploads/2013/09/sukhoi-log-gold-mine-mod.png' }
+          ]
+        }
+      }}>In a meeting in a hotel lobby in Bogotá</StoryMedia>, Colombia, he explains that Maduro increasingly is handing over functions to the military and government sectors that now partake in the “disaster and pillage”.</Paragraph>
 
       {/* YouTube EMBED Military checkpoints in El Callao */}
 

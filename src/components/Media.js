@@ -9,6 +9,7 @@ import { media } from 'styles/utils';
 import Video from './Video';
 import YouTube from './YouTube';
 import Map from './Map';
+import Gallery from './Gallery';
 
 const Wrapper = styled.div`
   position: relative;
@@ -18,25 +19,28 @@ const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 0 5rem rgba(0,0,0,0.2);
-  border-top: 1px solid #444;
   ${props => props.preview && css`
+    box-shadow: 0 0 5rem rgba(0,0,0,0.2);
+    border-top: 1px solid #444;
     flex: 0 0 auto;
     height: 90px;
+    ${props => props.active && css`
+      height: 300px;
+    `}
+    ${media.desktop`
+      flex: 0 0 45%;
+      border-top: 0;
+      max-width: 1000px;
+      height: auto;
+      box-shadow: 0 0 0;
+    `}
+    ${media.desktopHD`
+      flex: 0 0 40%;
+    `}
   `}
   &.clickable {
     cursor: pointer;
   }
-  ${media.desktop`
-    flex: 0 0 45%;
-    border-top: 0;
-    max-width: 1000px;
-    height: auto;
-    box-shadow: 0 0 0;
-  `}
-  ${media.desktopHD`
-    flex: 0 0 40%;
-  `}
   .leaflet-container {
     width: 100%;
     height: 100%;
@@ -44,9 +48,6 @@ const Wrapper = styled.div`
     border-radius: inherit;
     overflow: hidden;
   }
-  ${props => props.active && css`
-    height: 300px;
-  `}
 `;
 
 class Media extends Component {
@@ -61,7 +62,7 @@ class Media extends Component {
     this.state = {
       active: false
     }
-    this.handleClick = this.handleClick.bind(this);
+    this._handleClick = this._handleClick.bind(this);
     this.handleTouchStart = this.handleTouchStart.bind(this);
   }
   componentDidMount () {
@@ -81,7 +82,7 @@ class Media extends Component {
       this.setState({ active: true });
     }
   }
-  handleClick (ev) {
+  _handleClick (ev) {
     ev.preventDefault();
     this.props.expandMedia(true);
   }
@@ -103,6 +104,13 @@ class Media extends Component {
           </Wrapper>
         )
       }
+      case 'gallery' : {
+        return (
+          <Wrapper preview={preview}>
+            <Gallery data={media.data} preview={preview || false} />
+          </Wrapper>
+        )
+      }
       case 'map' : {
         return (
           <Wrapper preview={preview} active={active}>
@@ -113,7 +121,7 @@ class Media extends Component {
       case 'image' :  {
         if(preview) {
           return (
-            <Wrapper preview={true} className="clickable" onClick={this.handleClick} style={{
+            <Wrapper preview={true} className="clickable" onClick={this._handleClick} style={{
               backgroundImage: `url(${media.data.src})`
             }} />
           );
