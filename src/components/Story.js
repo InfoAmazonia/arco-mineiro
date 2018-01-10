@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import styled from 'styled-components';
-import { media } from 'styles/utils';
-import debounce from 'utils/debounce';
-import throttle from 'utils/throttle';
-import { updateContext } from 'actions/context';
-import { setMedia } from 'actions/media';
+import React, { Component } from "react";
+import { findDOMNode } from "react-dom";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import styled from "styled-components";
+import { media } from "styles/utils";
+import debounce from "utils/debounce";
+import throttle from "utils/throttle";
+import { updateContext } from "actions/context";
+import { setMedia } from "actions/media";
 
 const MediaReference = styled.div`
   display: none;
@@ -23,38 +23,42 @@ const MediaReference = styled.div`
   ${media.desktop`
     display: block;
   `}
-`
+`;
 
 class Story extends Component {
   static defaultProps = {
     mediaLibrary: {}
-  }
-  constructor (props) {
+  };
+  constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.handleResize = this.handleResize.bind(this);
     this.updateScrollHeight = this.updateScrollHeight.bind(this);
   }
-  componentDidMount () {
+  componentDidMount() {
     this.node = findDOMNode(this);
     this.rect = this.node.getBoundingClientRect();
     this.refTop = 0;
     this.pathname = this.props.location.pathname;
     this.setScroll(this.props);
-    this.node.addEventListener('scroll', this.handleScroll);
-    window.addEventListener('resize', this.handleResize);
+    twttr.events.bind("loaded", this.handleScroll);
+    twttr.events.bind("loaded", this.handleResize);
+    this.node.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("resize", this.handleResize);
     setTimeout(() => {
       this.detectMedia(true);
     }, 800);
   }
-  componentWillUnmount () {
-    this.node.removeEventListener('scroll', this.handleScroll);
-    window.removeEventListener('resize', this.handleResize);
+  componentWillUnmount() {
+    twttr.events.unbind("loaded", this.handleScroll);
+    twttr.events.unbind("loaded", this.handleResize);
+    this.node.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("resize", this.handleResize);
   }
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     const path = nextProps.location.pathname;
     const scroll = nextProps.storyScroll[path];
-    if(this.pathname !== path) {
+    if (this.pathname !== path) {
       this.pathname = path;
       // Wait leave story animation
       setTimeout(() => {
@@ -66,23 +70,32 @@ class Story extends Component {
       }, 750);
     }
   }
-  _getMediaMiddleRatio (mediaRect = {}, offset = 0) {
-    return (this.rect.height / 2)
-      + (this.rect.top + this.node.scrollTop)
-      + (-mediaRect.top - offset);
+  _getMediaMiddleRatio(mediaRect = {}, offset = 0) {
+    return (
+      this.rect.height / 2 +
+      (this.rect.top + this.node.scrollTop) +
+      (-mediaRect.top - offset)
+    );
   }
-  _getPathMediaClosestToMiddle () {
+  _getPathMediaClosestToMiddle() {
     const { mediaLibrary, setMedia, location } = this.props;
     let media, diff;
-    if(location.pathname) {
-      const mediaArray = Object.values(mediaLibrary).filter(m => m.pathname == location.pathname);
+    if (location.pathname) {
+      const mediaArray = Object.values(mediaLibrary).filter(
+        m => m.pathname == location.pathname
+      );
       media = mediaArray[0];
-      if(mediaArray.length) {
-        if(mediaArray.length > 1) {
+      if (mediaArray.length) {
+        if (mediaArray.length > 1) {
           diff = Math.abs(this._getMediaMiddleRatio(media.rect, media.offset));
-          for(let i = 0; i < mediaArray.length; i++) {
-            let newDiff = Math.abs(this._getMediaMiddleRatio(mediaArray[i].rect, mediaArray[i].offset));
-            if(newDiff < diff) {
+          for (let i = 0; i < mediaArray.length; i++) {
+            let newDiff = Math.abs(
+              this._getMediaMiddleRatio(
+                mediaArray[i].rect,
+                mediaArray[i].offset
+              )
+            );
+            if (newDiff < diff) {
               diff = newDiff;
               media = mediaArray[i];
             }
@@ -95,35 +108,30 @@ class Story extends Component {
       ratio: diff
     };
   }
-  detectMedia (force = false) {
+  detectMedia(force = false) {
     // Do not detect media while expanded
-    if(this.props.media.expanded)
-      return false;
+    if (this.props.media.expanded) return false;
     const { setMedia } = this.props;
     const media = this._getPathMediaClosestToMiddle();
-    if(media.media !== undefined) {
+    if (media.media !== undefined) {
       this.refTop = media.media.rect.top + media.media.offset - this.rect.top;
-      if(
+      if (
         !this.props.media.id ||
-        (
-          this.props.media.id !== media.media.id &&
-          (
-            force ||
-            (
-              media.ratio <= 200 ||
-              this.node.scrollTop <= 10
-            )
-          )
-        )
+        (this.props.media.id !== media.media.id &&
+          (force || (media.ratio <= 200 || this.node.scrollTop <= 10)))
       ) {
         setMedia(media.media);
       }
-    } else if(this.props.media && this.props.media.id && media.media == undefined) {
+    } else if (
+      this.props.media &&
+      this.props.media.id &&
+      media.media == undefined
+    ) {
       this.refTop = 0;
       setMedia();
     }
   }
-  setScroll (props) {
+  setScroll(props) {
     this.node.scrollTop = props.storyScroll[props.location.pathname] || 0;
   }
   updateScrollHeight = throttle(() => {
@@ -132,40 +140,44 @@ class Story extends Component {
     const scrollTop = this.node.scrollTop;
     const height = this.node.scrollHeight - this.node.offsetHeight;
 
-    if(storyScroll[path] !== scrollTop) {
+    if (storyScroll[path] !== scrollTop) {
       let scrollState = {};
       scrollState[location.pathname] = scrollTop;
-      updateContext('storyScroll', scrollState);
+      updateContext("storyScroll", scrollState);
     }
 
-    if(storyHeight[path] !== height) {
+    if (storyHeight[path] !== height) {
       let heightState = {};
       heightState[location.pathname] = height;
-      updateContext('storyHeight', heightState);
+      updateContext("storyHeight", heightState);
     }
   }, 300);
-  handleScroll () {
+  handleScroll() {
     this.detectMedia();
     this.updateScrollHeight();
   }
   handleResize = throttle(() => {
+    console.log('resize');
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();
   }, 200);
-  render () {
+  render() {
     const { id, className } = this.props;
     return (
       <div id={id} className={className}>
         {this.props.children}
         {this.refTop ? (
           <MediaReference
-            ref={node => { this.mediaRef = node; }}
+            ref={node => {
+              this.mediaRef = node;
+            }}
             style={{
-              top: this.refTop + 'px'
-            }} />
+              top: this.refTop + "px"
+            }}
+          />
         ) : null}
       </div>
-    )
+    );
   }
 }
 
@@ -175,8 +187,8 @@ const mapStateToProps = (state, ownProps) => {
     storyHeight: state.context.storyHeight,
     media: state.media,
     mediaLibrary: state.mediaLibrary
-  }
-}
+  };
+};
 
 const mapDispatchToProps = {
   updateContext,

@@ -36,14 +36,20 @@ const Wrapper = styled.span`
 class StoryMedia extends Component {
   constructor(props) {
     super(props);
+    this._getMediaId = this._getMediaId.bind(this);
+    this._updateMedia = this._updateMedia.bind(this);
     this._getIcon = this._getIcon.bind(this);
   }
   componentDidMount() {
     this.node = findDOMNode(this);
     // Wait transition
     setTimeout(() => {
-      this.updateMedia();
+      this._updateMedia();
     }, 600);
+    twttr.events.bind("loaded", this._updateMedia);
+  }
+  componentWillUnmount() {
+    twttr.events.unbind("loaded", this._updateMedia);
   }
   _getMediaId(media) {
     const { pathname } = this.props;
@@ -54,9 +60,9 @@ class StoryMedia extends Component {
     const { pathname, storyScroll } = props;
     return storyScroll[pathname] || 0;
   }
-  updateMedia(props) {
-    props = props || this.props;
-    const { media, library, updateMedia, pathname } = props;
+  _updateMedia() {
+    console.log("updated media", this.props);
+    const { media, library, updateMedia, pathname } = this.props;
     const inLibrary = library[this._getMediaId(media)];
     const rect = this.node.getBoundingClientRect();
     if (
@@ -67,7 +73,7 @@ class StoryMedia extends Component {
         ...media,
         pathname,
         rect,
-        offset: this._getStoryOffset(props),
+        offset: this._getStoryOffset(this.props),
         id: this._getMediaId(media)
       });
     }
