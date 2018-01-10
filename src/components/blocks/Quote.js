@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   color: #999;
   font-style: italic;
   text-align: right;
-  margin: 3vw 0;
+  margin: 6vw 0;
   font-size: 1.2em;
   ${media.phablet`
     padding: 0 8vw 0 10vw;
@@ -31,6 +31,7 @@ const Wrapper = styled.div`
     }
     cite {
       color: #333;
+      font-size: .6em;
     }
   }
 `

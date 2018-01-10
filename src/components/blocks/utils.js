@@ -1,36 +1,34 @@
-import { css } from 'styled-components';
-import { media } from 'styles/utils';
+import { css } from "styled-components";
+import { media } from "styles/utils";
+
+const values = ["1rem", "2rem", "8vw", "10vw"];
 
 export const margins = css`
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: ${values[0]};
+  margin-right: ${values[0]};
   ${media.phablet`
-    margin-left: 2rem;
-    margin-right: 2rem;
-  `}
-  ${media.desktop`
-    margin-left: 8vw;
-    margin-right: 8vw;
-  `}
-  ${media.desktopHD`
-    margin-left: 10vw;
-    margin-right: 10vw;
-  `}
+    margin-left: ${values[1]};
+    margin-right: ${values[1]};
+  `} ${media.desktop`
+    margin-left: ${values[2]};
+    margin-right: ${values[2]};
+  `} ${media.desktopHD`
+    margin-left: ${values[3]};
+    margin-right: ${values[3]};
+  `};
 `;
 
 export const paddings = css`
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: ${values[0]};
+  padding-right: ${values[0]};
   ${media.phablet`
-    padding-left: 2rem;
-    padding-right: 2rem;
-  `}
-  ${media.desktop`
-    padding-left: 8vw;
-    padding-right: 8vw;
-  `}
-  ${media.desktopHD`
-    padding-left: 10vw;
-    padding-right: 10vw;
-  `}
+    padding-left: ${values[1]};
+    padding-right: ${values[1]};
+  `} ${media.desktop`
+    padding-left: ${values[2]};
+    padding-right: ${values[2]};
+  `} ${media.desktopHD`
+    padding-left: ${values[3]};
+    padding-right: ${values[3]};
+  `};
 `;

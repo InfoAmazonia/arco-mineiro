@@ -10,4 +10,7 @@ export default styled.div`
   ${media.tablet`
     margin: 6vw 0;
   `}
+  .twitter-tweet {
+    margin: 0 auto;
+  }
 `

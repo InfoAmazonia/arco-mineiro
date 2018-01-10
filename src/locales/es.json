@@ -1,11 +1,13 @@
 {
-  "general.author": "by Bram Ebus",
-  "general.continueReading": "Continue Reading",
+  "general.author": "por Bram Ebus",
+  "general.continueReading": "Sigue Leyendo",
   "general.introduction": "Introducción",
-  "general.readStory": "Read the Story",
+  "general.publishDate": "15 de enero de 2018",
+  "general.publishRemaining": "restante para el lanzamiento",
+  "general.readStory": "Lee la historia",
   "general.siteTitle1": "Explorando",
   "general.siteTitle2": "el",
   "general.siteTitle3": "Arco Minero",
-  "general.startOver": "Start Over",
-  "general.tagline": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+  "general.startOver": "Comenzar de nuevo",
+  "general.tagline": "La destrucción de 44 mil millas cuadradas de bosques en el proyecto minero más grande de Venezuela"
 }

@@ -3,6 +3,8 @@ import Container from 'components/blocks/Container';
 import Title from 'components/blocks/Title';
 import Paragraph from 'components/blocks/Paragraph';
 import ExternalLink from 'components/ExternalLink';
+import FileLink from 'components/FileLink';
+import StoryMedia from 'components/StoryMedia';
 
 export default () => (
   <article>
@@ -13,18 +15,36 @@ export default () => (
 
       <Paragraph>Venezuela does not have an elaborate mining history like its neighbours Colombia and Brazil, but if there is one place in the country that traditionally breaths mining it is El Callao. The face of the village in Bolívar state changed forever when gold was discovered in 1853 and it even became the world's <ExternalLink href="https://www.britannica.com/place/El-Callao" language="en">leading gold producer in 1885</ExternalLink>. Various foreign companies operated mines in the area, but it is Minerven, a company created in 1970 and nationalised four years later, that has exploited most gold coming from El Callao.</Paragraph>
 
-      <Paragraph>Local miners tell that working for Minerven meant status and that an employee would wear a company shirt with honor, but things have changed over the last years. Minerven fell into decay. Production plants have been dismantled and the yearly production targets are not met, by far. Meanwhile, many armed groups started to overtake the larger mines that surround the village. About one year ago, the Venezuelan army increasingly militarized the area – for its own gain, many say – and has not stopped combatting gangs and killing its members ever since.</Paragraph>
+      <Paragraph>Local miners tell that working for Minerven meant status and that an employee would wear a company shirt with honor, but things have changed over the last years. Minerven fell into decay. <StoryMedia media={{
+        id: "image-1",
+        type: "image",
+        data: {
+          src: require('photos/El Callao-55.jpg')
+        }
+      }}>Production plants have been dismantled</StoryMedia> and the yearly production targets are not met, by far. Meanwhile, many armed groups started to overtake the larger mines that surround the village. About one year ago, the Venezuelan army increasingly militarized the area – for its own gain, many say – and has not stopped combatting gangs and killing its members ever since.</Paragraph>
 
       {/* PHOTO: Minerven/mining project and soldiers or broken plant of Minerven */}
       {/* START MAP: Arco Minero by areas */}
 
-      <Paragraph>Mining in El Callao belongs to the Arco Minero project. About four mixed companies claim to be part of it, but a visit to El Callao is more than enough to understand that illegal and legal mining go hand in hand. </Paragraph>
+      <Paragraph><StoryMedia media={{
+        id: "image-2",
+        type: "image",
+        data: {
+          src: require('photos/El Callao-3.jpg')
+        }
+      }}>Mining in El Callao belongs to the Arco Minero project</StoryMedia>. About four mixed companies claim to be part of it, but a visit to El Callao is more than enough to understand that illegal and legal mining go hand in hand. </Paragraph>
 
       <Paragraph>Not only is most of the population directly or indirectly involved in the rudimentary extraction of gold, but mining and village life are tangled up. Wherever you are in El Callao, you probably will not have to walk more than a minute to find a gold merchant while it is a more difficult task to encounter a bakery or a supermarket. </Paragraph>
 
       {/* PHOTO: gold pawn shop */}
 
-      <Paragraph>In the evenings, when most shops close up and when most miners dedicate themselves to their favourite activity – drinking – you will see people sweeping the floor in front of the gold shops, not only to clean, but to find gold. Flakes of gold can be accidently dropped by an uncareful salesman, or small shavings of gold get lost whilst burning the mercury amalgam, an activity that one prefers to do in front of the shop so that the toxic mercury fumes do not remain indoors.</Paragraph>
+      <Paragraph>In the evenings, when most shops close up and when most miners dedicate themselves to their favourite activity – drinking – you will see people sweeping the floor in front of the <StoryMedia media={{
+        id: "image-3",
+        type: "image",
+        data: {
+          src: require('photos/IMG_4420.jpg')
+        }
+      }}>gold shops</StoryMedia>, not only to clean, but to find gold. Flakes of gold can be accidently dropped by an uncareful salesman, or small shavings of gold get lost whilst burning the mercury amalgam, an activity that one prefers to do in front of the shop so that the toxic mercury fumes do not remain indoors.</Paragraph>
 
       <Paragraph>In 2017, until mid-November the <ExternalLink href="http://desarrollominero.gob.ve/2017/749-kilos-de-oro-sumo-arco-minero-del-orinoco-en-su-decimo-segundo-despacho-en-2017/" language="es">Central Bank of Venezuela (BCV) received 5.992kg of gold</ExternalLink>, all from Minerven. “El Callao is maintaining Venezuela,” comments the owner of a gold pawn shop on the central square of the village. However, according to various miners and Minerven personnel interviewed for this report, the gold does not originally come from Minerven, but from the small-scale, and illegal mines.</Paragraph>
 
@@ -32,7 +52,21 @@ export default () => (
 
       <Paragraph>Miners explain that only a minor part of Venezuela’s gold production ends up at the BCV. Most of it is smuggled abroad by the army and organized crime. “Six thousand kilos is nothing,” says retired general Cliver Alcalá Cordones. “It goes to Aruba and Curacao.” About 80 per cent of Venezuela’s gold illegally leaves the country by airplanes transporting contraband, according to Alcalá.</Paragraph>
 
-      <Paragraph>Since the 19th century, various international companies, for example from France, the United Kingdom and Russia, entered the region to mine the veins rich in gold that not only surround the village, but run right beneath it. Neighbourhoods around the center slowly became mines. It is not uncommon that a house has a few processing mills in its backyard close to various holes in the ground. These holes must not be misunderstood for bad sewerage, but are mining tunnels that lead to various horizontal mining galleries.</Paragraph>
+      <Paragraph>Since the 19th century, various international companies, for example from France, the United Kingdom and Russia, entered the region to mine the veins rich in gold that not only surround the village, but run right beneath it. <StoryMedia media={{
+        id: "image-4",
+        type: "image",
+        data: {
+          src: require('photos/El Callao-57.jpg')
+        }
+      }}>Neighbourhoods around the center slowly became mines</StoryMedia>.</Paragraph>
+
+      <Paragraph>It is not uncommon that a house has a few processing mills in its backyard close to various holes in the ground. <StoryMedia media={{
+        id: "image-5",
+        type: "image",
+        data: {
+          src: require('photos/El Callao-22.jpg')
+        }
+      }}>These holes</StoryMedia> must not be misunderstood for bad sewerage, but are mining tunnels that lead to various horizontal mining galleries.</Paragraph>
 
       {/* PHOTO: processing mills and shafts */}
 
@@ -48,7 +82,38 @@ export default () => (
       {/* STORYMAP JS EMBED: Project in El Peru (with coordinates) */}
       {/* START MAP: Zoom in El Peru area – satellite imagery */}
 
-      <Paragraph>Our pick-up truck is driven by Minerven personnel and leaves El Callao to visit the mines, not to show us the ones of Minerven, but to take us to the illegal mines around the village. Here, mineral extraction plants based on the prohibited use of mercury [10MB; PDF] produce gold to sell to the state company.</Paragraph>
+      <Paragraph>Our pick-up truck is driven by Minerven personnel and leaves El Callao to visit the mines, not to show us the ones of Minerven, but to take us to the <StoryMedia media={{
+        id: "galery-1",
+        type: "gallery",
+        data: {
+          items: [
+            {
+              src: require('photos/el-peru/El Peru_1.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_2.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_3.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_4.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_5.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_6.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_7.jpg')
+            },
+            {
+              src: require('photos/el-peru/El Peru_8.jpg')
+            }
+          ]
+        }
+      }}>illegal mines</StoryMedia> around the village. Here, mineral extraction plants based on the <FileLink href={require('documents/GacetaOficial_40960.pdf')} format="pdf" size="10.5MB">prohibited use of mercury</FileLink> produce gold to sell to the state company.</Paragraph>
 
       <Paragraph>“Come with us,” our driver shouts at the local army major, who already is waiting for us in a black jeep. He puts an armed soldier in the back of our truck and escorts us with his own transport. Various military checkpoints are passed before entering El Perú. The area is completely militarized but the danger comes from the hilltops where gangs might come down to take over one of the mines. This luring danger became evident when <ExternalLink href="http://www.eluniversal.com/noticias/sucesos/guerra-entre-bandas-sur-bolivar-dejo-seis-muertos_674893" language="es">six locals were killed</ExternalLink> in a gang shootout the night after our visit.</Paragraph>
 
@@ -74,7 +139,13 @@ export default () => (
 
       {/* PHOTO: A little gold (IMG_4490) */}
 
-      <Paragraph>Violence and poverty make El Callao a difficult place to live. “The miner is still the dirty one that walks on street. He earns 300 thousand bolívares, drinks a beer and the next day he has nothing and needs to find 0.3 or 0.4 grams of gold to bring food back to his home. A miner should not live like this if the Arco Minero really was functioning.”</Paragraph>
+      <Paragraph>Violence and poverty make El Callao a difficult place to live. “The miner is still the dirty one that walks on street. He earns 300 thousand bolívares, drinks a beer and the next day he has nothing and needs to find <StoryMedia media={{
+        id: 'image-6',
+        type: 'image',
+        data: {
+          src: require('photos/IMG_4490.jpg')
+        }
+      }}>0.3 or 0.4 grams of gold</StoryMedia> to bring food back to his home. A miner should not live like this if the Arco Minero really was functioning.”</Paragraph>
 
       {/* YOUTUBE EMBED: Going down with an elevator */}
 
@@ -86,7 +157,16 @@ export default () => (
 
       {/* YOUTUBE EMBED: Gutiérrez at work and with mercury */}
 
-      <Paragraph>Having your income determined by luck and hard work instead of just working hours is an integral part of mining culture. “At the moment nobody receives a wage. You work to get the gold and the money is yours,” says Eduardo Gutiérrez. A 43-year old from El Callao who works at one of the processing mills in El Perú.</Paragraph>
+      <Paragraph>
+        Having your income determined by luck and hard work instead of just working hours is an integral part of mining culture. “At the moment nobody receives a wage. You work to get the gold and the money is yours,” says Eduardo Gutiérrez. A 43-year old from El Callao who works at one of the
+        {/* <StoryMedia media={{
+          id: 'vr-1',
+          type: 'vr',
+          data: {
+            image: require('photos/IMG_20171020_100542.vr.jpg')
+          }
+        }}>processing mills in El Perú</StoryMedia>. */}
+      </Paragraph>
 
       {/* PHOTO: Bottle of mercury */}
 

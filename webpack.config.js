@@ -9,11 +9,9 @@ module.exports = {
   resolve: {
     modules: [
       'src',
+      'files',
       'node_modules'
-    ],
-    alias: {
-      'react-markdown': path.resolve(__dirname, '../react-markdown/lib/react-markdown')
-    }
+    ]
   },
   output: {
     path: path.resolve('public'),
@@ -32,24 +30,36 @@ module.exports = {
       {
         test: /\.jsx?/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['env', 'react'],
           plugins: [
             'transform-object-rest-spread',
             'syntax-class-properties',
             'transform-class-properties'
           ]
-        },
-        exclude: /node_modules|react-markdown/
+        }
       },
-      { test: /\.json$/, loader: 'json-loader' },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.(png|jpg|gif|svg|woff2|woff|eot|ttf|mp4)$/,
-        loader: 'file-loader'
+        test: /\.(png|jpg|gif|svg|woff2|woff|eot|ttf|mp4|pdf)$/,
+        loader: 'file-loader',
+        options: {
+          name (file) {
+            if(file.indexOf('/documents/') !== -1) {
+              return '[name]-[hash].[ext]';
+            } else {
+              return '[hash].[ext]';
+            }
+          }
+        }
       },
       {
         test: /\.(md|txt)$/,

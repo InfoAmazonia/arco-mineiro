@@ -32,8 +32,16 @@
         "id": "general.author"
       },
       {
+        "defaultMessage": "January 15, 2018",
+        "id": "general.publishDate"
+      },
+      {
         "defaultMessage": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela",
         "id": "general.tagline"
+      },
+      {
+        "defaultMessage": "remaining for launch",
+        "id": "general.publishRemaining"
       },
       {
         "defaultMessage": "Start Over",

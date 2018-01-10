@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import { connect } from 'react-redux';
-import { resetContext } from 'actions/context';
-import { media, color } from 'styles/utils';
+import React, { Component } from "react";
+import styled from "styled-components";
+import moment from "moment";
+import { FormattedMessage } from "react-intl";
+import { connect } from "react-redux";
+import { resetContext } from "actions/context";
+import { media, color } from "styles/utils";
+import Countdown from "react-countdown-now";
 
-import SiteTitle from 'components/SiteTitle';
+import SiteTitle from "components/SiteTitle";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+const launchDate = process.env.LAUNCH_DATE || "2018-01-09T00:00:00-04:00";
 
 const Wrapper = styled.section`
   position: fixed;
@@ -26,13 +30,13 @@ const Wrapper = styled.section`
   text-shadow: 0 0 2px #000;
   color: #fff;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(${require('images/gold_.jpg')});
+    background-image: url(${require("images/gold_.jpg")});
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -50,6 +54,7 @@ const Wrapper = styled.section`
     }
     &:before,
     h2,
+    h3,
     a {
       opacity: 0;
     }
@@ -63,6 +68,7 @@ const Wrapper = styled.section`
     .site-title,
     .middle,
     h2,
+    h3,
     a {
       opacity: 1;
       transform: translate(0, 0);
@@ -76,6 +82,7 @@ const Wrapper = styled.section`
     .site-title,
     .middle,
     h2,
+    h3,
     a {
       opacity: 1;
       transform: translate(0, 0);
@@ -97,12 +104,13 @@ const Wrapper = styled.section`
     }
     &:before,
     h2,
+    h3,
     a {
       opacity: 0;
       transition: all 250ms ease-in;
     }
   }
-`
+`;
 
 const Top = styled.div`
   flex: 1 1 auto;
@@ -118,28 +126,32 @@ const Top = styled.div`
     }
     ${media.tablet`
       font-size: 1.4em;
-    `}
-    ${media.desktopHD`
+    `} ${media.desktopHD`
       font-size: 1.6em;
-    `}
+    `};
   }
   h2 {
-    white-space:nowrap;
+    white-space: nowrap;
     color: #fff;
-    font-size: .8em;
+    font-size: 0.8em;
     font-style: italic;
     font-weight: normal;
     border-top: 1px solid #fff;
-    margin: 2rem 0;
-    padding: .5rem 2rem;
+    margin: 2rem 0 0;
+    padding: 0.5rem 2rem;
     ${media.tablet`
       font-size: 1em;
-    `}
-    ${media.desktopHD`
-      margin: 3rem 0;
-    `}
+    `} ${media.desktopHD`
+      margin: 3rem 0 0;
+    `};
   }
-`
+  h3 {
+    font-size: 0.6em;
+    font-style: italic;
+    font-weight: normal;
+    ${"" /* color: rgba(255,255,255,0.8); */};
+  }
+`;
 
 const Middle = styled.div`
   flex: 1 1 auto;
@@ -153,47 +165,62 @@ const Middle = styled.div`
   box-sizing: border-box;
   width: 95%;
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
   font-family: "Playfair Display";
   ${media.phablet`
     width: 65%;
     padding: 0 3rem;
     font-size: 1em;
-  `}
-  ${media.tablet`
+  `} ${media.tablet`
     font-size: 1.2em;
-  `}
-  .description {
+  `} .description {
     text-align: center;
     margin: 0 0 2rem;
     font-size: 1em;
     ${media.desktopHD`
       font-size: 1.2em;
-    `}
+    `};
+  }
+  .countdown {
+    display: inline-block;
+    background: #333;
+    color: #f0f0f0;
+    text-shadow: 0 0 0;
+    padding: 1rem 2rem;
+    font-size: 0.6em;
+    span {
+      display: block;
+    }
+    .count {
+      font-family: monospace;
+      font-size: 2em;
+    }
   }
   a {
     font-family: "Cinzel";
-    font-size: .5em;
-    letter-spacing: .1rem;
+    font-size: 0.5em;
+    letter-spacing: 0.1rem;
     display: inline-block;
     color: #fff;
     border: 1px solid #fff;
     text-align: center;
     margin: -1px -1px 0 0;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
     font-weight: 600;
     width: 210px;
     text-transform: uppercase;
   }
-`
+`;
 
 class Scene extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
   }
-  render () {
-    const { lastPath } = this.props;
-    const { resetContext } = this.props;
+  isLaunchDate() {
+    return moment(launchDate).isAfter(window.currentDate);
+  }
+  render() {
+    const { lastPath, resetContext } = this.props;
     return (
       <Wrapper className="scene landing">
         <Top>
@@ -201,46 +228,75 @@ class Scene extends Component {
           <h2>
             <FormattedMessage
               id="general.author"
-              defaultMessage="by Bram Ebus" />
+              defaultMessage="by Bram Ebus"
+            />
           </h2>
+          <h3>
+            <FormattedMessage
+              id="general.publishDate"
+              defaultMessage="January 15, 2018"
+            />
+          </h3>
         </Top>
         <Middle className="middle">
           <p className="description">
             <FormattedMessage
               id="general.tagline"
-              defaultMessage="The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela" />
+              defaultMessage="The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela"
+            />
           </p>
-          {lastPath ? (
-            <div>
-              <Link to="/story" onClick={resetContext}>
+          {this.isLaunchDate() ? (
+            <span className="countdown">
+              <span className="count">
+                <Countdown
+                  date={launchDate}
+                  onComplete={() => location.reload()}
+                />
+              </span>
+              <span className="desc">
                 <FormattedMessage
-                  id="general.startOver"
-                  defaultMessage="Start Over" />
-              </Link>
-              <Link to={lastPath}>
-                <FormattedMessage
-                  id="general.continueReading"
-                  defaultMessage="Continue Reading" />
-              </Link>
-            </div>
+                  id="general.publishRemaining"
+                  defaultMessage="remaining for launch"
+                />
+              </span>
+            </span>
           ) : (
-            <Link to="/story">
-              <FormattedMessage
-                id="general.readStory"
-                defaultMessage="Read the Story" />
-            </Link>
+            <div>
+              {lastPath ? (
+                <div>
+                  <Link to="/story" onClick={resetContext}>
+                    <FormattedMessage
+                      id="general.startOver"
+                      defaultMessage="Start Over"
+                    />
+                  </Link>
+                  <Link to={lastPath}>
+                    <FormattedMessage
+                      id="general.continueReading"
+                      defaultMessage="Continue Reading"
+                    />
+                  </Link>
+                </div>
+              ) : (
+                <Link to="/story">
+                  <FormattedMessage
+                    id="general.readStory"
+                    defaultMessage="Read the Story"
+                  />
+                </Link>
+              )}
+            </div>
           )}
-          {/* <h3>Developed by <strong>Miguel Peixe</strong>, edited by <strong>Stefano Wrobleski</strong> and advisory by <strong>Oscar Murillo</strong></h3> */}
         </Middle>
       </Wrapper>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
     lastPath: state.context.lastPath
-  }
+  };
 };
 
 const mapDispatchToProps = {

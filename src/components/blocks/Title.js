@@ -20,6 +20,7 @@ const styles = css`
 `
 
 export default ({ as, children }) => {
+  as = as || 'h3';
   const Wrapper = styled[as]([styles]);
   return (
     <Wrapper as={as}>

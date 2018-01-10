@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media, color } from 'styles/utils';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import SiteTitle from './SiteTitle';
 
@@ -36,8 +36,10 @@ const Wrapper = styled.header`
     display: flex;
     font-size: .8em;
     a {
+      position: relative;
       color: #999;
       margin-left: 1.5rem;
+      transition: all .2s ease-in-out;
       ${media.desktop`
         margin-left: 1rem;
         background: #fff;
@@ -49,11 +51,14 @@ const Wrapper = styled.header`
         text-align: center;
         font-size: 1em;
       `}
-      position: relative;
+      &.active,
       &:hover,
       &:active,
       &:focus {
         color: #111;
+      }
+      &.active {
+        transform: scale(1.3);
       }
       .icon-info {
         background: red;
@@ -82,15 +87,15 @@ class Header extends Component {
         <div className="header-content">
           <SiteTitle logo="1" />
           <nav>
-            <Link to="/about" title="Data">
+            <NavLink to="/data" title="Data">
               <span className="fa fa-database"></span>
-            </Link>
-            <Link to="/about" title="Learn more">
+            </NavLink>
+            <NavLink to="/about" title="Learn more">
               <span className="fa fa-info"></span>
-            </Link>
-            <Link to="/about" title="Share">
+            </NavLink>
+            <NavLink to="/share" title="Share">
               <span className="fa fa-share-alt"></span>
-            </Link>
+            </NavLink>
           </nav>
         </div>
       </Wrapper>

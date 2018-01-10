@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
-import { media } from 'styles/utils';
-import { paddings } from './utils';
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
+import { media } from "styles/utils";
+import { paddings } from "./utils";
 
 const Wrapper = styled.div`
   background-size: cover;
@@ -13,15 +13,13 @@ const Wrapper = styled.div`
   margin: 6vw 0;
   padding: 1rem;
   color: #fff;
-  text-shadow: 0 0 1rem rgba(0,0,0,1);
-  ${'' /* ${props => props.first && css`
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+  ${"" /* ${props => props.first && css`
     margin-top: -2rem;
     ${media.desktopHD`
       margin-top: -6vw;
     `}
-  `} */}
-  ${paddings}
-  .margin {
+  `} */} ${paddings} .margin {
     display: block;
     flex: 1 1 100%;
   }
@@ -32,7 +30,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     position: relative;
   }
-`
+`;
 export default ({ children, url, first }) => (
   <Wrapper
     first
@@ -41,8 +39,6 @@ export default ({ children, url, first }) => (
     }}
   >
     <span className="margin" />
-    <div className="image-box-content">
-      {children}
-    </div>
+    <div className="image-box-content">{children}</div>
   </Wrapper>
 );
