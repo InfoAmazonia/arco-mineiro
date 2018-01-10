@@ -125,8 +125,8 @@ export default class Introduction extends React.Component {
               size="13.3MB"
             >
               decreed in 2016
-            </FileLink>
-            as an immense mining zone and branded the
+            </FileLink>{" "}
+            as an immense mining zone and branded the{" "}
             <StoryMedia
               icon="map"
               media={{
@@ -139,7 +139,7 @@ export default class Introduction extends React.Component {
               }}
             >
               Arco Minero del Orinoco
-            </StoryMedia>
+            </StoryMedia>{" "}
             (spanish for “Orinoco Mining Arch”), represent a dark symbiosis of
             both worlds.
           </Paragraph>
