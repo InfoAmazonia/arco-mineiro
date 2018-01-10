@@ -118,7 +118,7 @@ export default class Introduction extends React.Component {
           <Paragraph>
             It does not really matter if the gold has a legal or an illegal
             origin, whether it is mined by companies or gang controlled mines.
-            Four areas in Bolívar state,
+            Four areas in Bolívar state,{" "}
             <FileLink
               href={require("documents/GacetaOficial_40855.pdf")}
               format="pdf"
