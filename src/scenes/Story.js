@@ -24,11 +24,11 @@ import Gambling from "./articles/Gambling";
 
 const articles = [
   "/story",
-  "gold-mining",
-  "grip-of-the-guerrilla",
-  "coltan-country",
-  "malaria",
-  "gambling"
+  "/story/gold-mining",
+  "/story/grip-of-the-guerrilla",
+  "/story/coltan-country",
+  "/story/malaria",
+  "/story/gambling"
 ];
 
 class Scene extends Component {
@@ -43,7 +43,7 @@ class Scene extends Component {
     this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
       const { location } = this.props;
       const idx = articles.findIndex(article => {
-        return location.pathname.indexOf(article) !== -1;
+        return location.pathname == article;
       });
       if (direction == "left" && idx < articles.length - 1) {
         this.setState({
@@ -78,7 +78,7 @@ class Scene extends Component {
   render() {
     const { redirect } = this.state;
     const { location, match, media } = this.props;
-    const go = `${match.url}/${redirect}`;
+    const go = `${redirect}`;
     const story = require("story.md");
     return (
       <Page>
