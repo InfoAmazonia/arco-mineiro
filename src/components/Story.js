@@ -157,7 +157,6 @@ class Story extends Component {
     this.updateScrollHeight();
   }
   handleResize = throttle(() => {
-    console.log('resize');
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();
   }, 200);

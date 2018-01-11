@@ -61,7 +61,6 @@ class StoryMedia extends Component {
     return storyScroll[pathname] || 0;
   }
   _updateMedia() {
-    console.log("updated media", this.props);
     const { media, library, updateMedia, pathname } = this.props;
     const inLibrary = library[this._getMediaId(media)];
     const rect = this.node.getBoundingClientRect();
