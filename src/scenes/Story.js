@@ -78,8 +78,6 @@ class Scene extends Component {
   render() {
     const { redirect } = this.state;
     const { location, match, media } = this.props;
-    const go = `${redirect}`;
-    const story = require("story.md");
     return (
       <Page>
         <Story className="content">
@@ -108,7 +106,8 @@ class Scene extends Component {
               </Switch>
             </CSSTransition>
           </TransitionGroup>
-          {redirect && go !== location.pathname && <Redirect to={go} />}
+          {redirect &&
+            redirect !== location.pathname && <Redirect to={redirect} />}
         </Story>
         <Media media={media} preview={true} />
         {media.expanded && (
