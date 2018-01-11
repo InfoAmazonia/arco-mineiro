@@ -7,6 +7,8 @@ const Wrapper = styled.div`
   padding: 2rem;
   background: #f7f7f7;
   font-size: 1.2em;
+  position: relative;
+  z-index: 1;
   ${media.desktop`
     width: 20vw;
     margin: 0 2vw;

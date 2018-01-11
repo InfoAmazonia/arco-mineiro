@@ -434,7 +434,7 @@ export default class Introduction extends React.Component {
             Venezuela has a $150bn debt to pay to a large queue of creditors.
           </Paragraph>
 
-          <FeaturedText float="right">
+          <FeaturedText>
             Until this day, recognized companies in the mining sector remain
             absent in Venezuela.
           </FeaturedText>

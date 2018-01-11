@@ -153,8 +153,8 @@ class Media extends Component {
             <iframe
               className="media-embed"
               src={media.data.src}
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             />
           </Wrapper>
         );
