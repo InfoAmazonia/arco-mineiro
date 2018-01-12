@@ -1,4 +1,4 @@
-# Digging into the Mining Arch
+# Digging into the Mining Arc
 
  > by Bram Ebus
 

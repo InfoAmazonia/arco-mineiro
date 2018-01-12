@@ -131,7 +131,7 @@ export default () => (
         >
           Arco Minero del Orinoco
         </StoryMedia>{" "}
-        (spanish for “Orinoco Mining Arch”), represent a dark symbiosis of both
+        (spanish for “Orinoco Mining Arc”), represent a dark symbiosis of both
         worlds.
       </Paragraph>
 
