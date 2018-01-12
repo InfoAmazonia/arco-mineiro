@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Redirect, Route, Link, Switch } from "react-router-dom";
 
+import Container from "components/blocks/Container";
+import Paragraph from "components/blocks/Paragraph";
+
 import { expandMedia } from "actions/media";
 
 import swipe from "utils/swipe";
@@ -35,25 +38,17 @@ class Scene extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: false
+      redirect: false,
+      entering: false
     };
+    this.nextArticle = this.nextArticle.bind(this);
+    this.onStoryEnter = this.onStoryEnter.bind(this);
+    this.onStoryEntered = this.onStoryEntered.bind(this);
     this.unexpand = this.unexpand.bind(this);
   }
   componentDidMount() {
     this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
-      const { location } = this.props;
-      const idx = articles.findIndex(article => {
-        return location.pathname == article;
-      });
-      if (direction == "left" && idx < articles.length - 1) {
-        this.setState({
-          redirect: articles[idx + 1]
-        });
-      } else if (direction == "right" && idx > 0) {
-        this.setState({
-          redirect: articles[idx - 1]
-        });
-      }
+      this.nextArticle(direction);
     });
     twttr.widgets.load();
   }
@@ -65,6 +60,11 @@ class Scene extends Component {
     ) {
       twttr.widgets.load();
     }
+    if (this.state.redirect) {
+      this.setState({
+        redirect: false
+      });
+    }
   }
   componentWillUnmount() {
     if (this.removeSwipeListeners) {
@@ -72,11 +72,45 @@ class Scene extends Component {
       this.removeSwipeListeners = undefined;
     }
   }
+  isLastArticle() {
+    const { location } = this.props;
+    const idx = articles.findIndex(article => {
+      return location.pathname == article;
+    });
+    if (idx == articles.length - 1) return true;
+    return false;
+  }
+  nextArticle(direction) {
+    direction = direction || "left";
+    const { location } = this.props;
+    const idx = articles.findIndex(article => {
+      return location.pathname == article;
+    });
+    if (direction == "left" && idx < articles.length - 1) {
+      this.setState({
+        redirect: articles[idx + 1]
+      });
+    } else if (direction == "right" && idx > 0) {
+      this.setState({
+        redirect: articles[idx - 1]
+      });
+    }
+  }
+  onStoryEnter() {
+    this.setState({
+      entering: true
+    });
+  }
+  onStoryEntered() {
+    this.setState({
+      entering: false
+    });
+  }
   unexpand() {
     this.props.expandMedia(false);
   }
   render() {
-    const { redirect } = this.state;
+    const { redirect, entering } = this.state;
     const { location, match, media } = this.props;
     return (
       <Page>
@@ -86,6 +120,8 @@ class Scene extends Component {
               key={location.pathname}
               classNames="pages-transition"
               timeout={600}
+              onEnter={this.onStoryEnter}
+              onEntered={this.onStoryEntered}
             >
               <Switch location={location}>
                 <Route exact path={`${match.url}`} component={Introduction} />
@@ -106,6 +142,22 @@ class Scene extends Component {
               </Switch>
             </CSSTransition>
           </TransitionGroup>
+          {!entering ? (
+            <footer>
+              <Container>
+                {!this.isLastArticle() ? (
+                  <Paragraph>
+                    <a
+                      onClick={() => this.nextArticle()}
+                      href="javascript:void(0);"
+                      >
+                        Next
+                      </a>
+                  </Paragraph>
+                ) : null}
+              </Container>
+            </footer>
+          ) : null}
           {redirect &&
             redirect !== location.pathname && <Redirect to={redirect} />}
         </Story>
