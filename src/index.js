@@ -58,8 +58,7 @@ const messages = localeData[findLocale(language)] || localeData.en;
 const store = configureStore();
 const history = createHistory();
 
-axios.get("https://www.peixe.co/ds/date").then(res => {
-  window.currentDate = res.data.date;
+const init = () => {
   ReactDom.render(
     <Provider store={store.store}>
       <PersistGate persistor={store.persistor} loading={null}>
@@ -72,4 +71,13 @@ axios.get("https://www.peixe.co/ds/date").then(res => {
     </Provider>,
     document.getElementById("app")
   );
-});
+};
+
+if (process.env.LAUNCH_DATE) {
+  axios.get("https://www.peixe.co/ds/date").then(res => {
+    window.currentDate = res.data.date;
+    init();
+  });
+} else {
+  init();
+}

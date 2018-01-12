@@ -11,7 +11,7 @@ import SiteTitle from "components/SiteTitle";
 
 import { Link } from "react-router-dom";
 
-const launchDate = process.env.LAUNCH_DATE || "2018-01-09T00:00:00-04:00";
+const launchDate = process.env.LAUNCH_DATE;
 
 const Wrapper = styled.section`
   position: fixed;
@@ -217,7 +217,11 @@ class Scene extends Component {
     super(props);
   }
   isLaunchDate() {
-    return moment(launchDate).isAfter(window.currentDate);
+    if(launchDate) {
+      return moment(launchDate).isAfter(window.currentDate);
+    } else {
+      return false;
+    }
   }
   render() {
     const { lastPath, resetContext } = this.props;
