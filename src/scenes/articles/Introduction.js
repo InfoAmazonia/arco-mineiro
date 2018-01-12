@@ -105,8 +105,6 @@ export default () => (
         when approaching the mines it is the military that runs the show.
       </Paragraph>
 
-      {/* START MAP: Arco Minero limits, Venezuela and states political */}
-
       <Paragraph>
         It does not really matter if the gold has a legal or an illegal origin,
         whether it is mined by companies or gang controlled mines. Four areas in
@@ -145,8 +143,6 @@ export default () => (
         control them, but moreover, is not a factor for the government that
         created a legal framework around digging it all up.
       </Paragraph>
-
-      {/* START MAP: Arco Minero + protected and indigenous areas */}
 
       <Paragraph>
         Alexander Luzardo, a former senator holding a doctorate in political and
@@ -460,9 +456,6 @@ export default () => (
         organized crime,” he says.
       </Paragraph>
 
-      {/* YOUTUBE EMBED:Short video-interview, De Grazia
-        START MAP: Militarization Arco Minero */}
-
       <Paragraph>
         Venezuela counts with an astonishing{" "}
         <ExternalLink
@@ -558,12 +551,6 @@ export default () => (
         the damage that is done to one of the most important ecosystems, the
         Amazon, makes the Arco Minero an issue of international interest.
       </Paragraph>
-
-      {/* <ImageBlock
-        url="https://ei.marketwatch.com/Multimedia/2016/02/11/Photos/MG/MW-EF363_goldmi_20160211065835_MG.jpg?uuid=c7adf846-d0b6-11e5-8ca0-0015c588e0f6"
-      >
-        <h2>Testando título com imagem</h2>
-      </ImageBlock> */}
     </Container>
   </article>
 );
