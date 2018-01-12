@@ -1,62 +1,63 @@
-const path = require('path');
-const webpack = require('webpack');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ['./src/index']
+    main: ["./src/index"]
   },
   resolve: {
-    modules: [
-      'src',
-      'files',
-      'node_modules'
-    ]
+    modules: ["src", "files", "node_modules"]
   },
   output: {
-    path: path.resolve('public'),
-    publicPath:  '/',
-    filename: '[name]-[chunkhash].js'
+    path: path.resolve("public"),
+    publicPath: "/",
+    filename: "[name]-[chunkhash].js"
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
+      }
+    }),
     new HTMLWebpackPlugin({
-      template: path.resolve('src', 'index.html'),
-      filename: 'index.html',
-      inject: 'body'
+      template: path.resolve("src", "index.html"),
+      filename: "index.html",
+      inject: "body"
     })
   ],
   module: {
     loaders: [
       {
         test: /\.jsx?/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/,
         query: {
-          presets: ['env', 'react'],
+          presets: ["env", "react"],
           plugins: [
-            'transform-object-rest-spread',
-            'syntax-class-properties',
-            'transform-class-properties'
+            "transform-object-rest-spread",
+            "syntax-class-properties",
+            "transform-class-properties"
           ]
         }
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        loader: "json-loader"
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        loader: "style-loader!css-loader"
       },
       {
         test: /\.(png|jpg|gif|svg|woff2|woff|eot|ttf|mp4|pdf)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name (file) {
-            if(file.indexOf('/documents/') !== -1) {
-              return '[name]-[hash].[ext]';
+          name(file) {
+            if (file.indexOf("/documents/") !== -1) {
+              return "[name]-[hash].[ext]";
             } else {
-              return '[hash].[ext]';
+              return "[hash].[ext]";
             }
           }
         }
@@ -65,7 +66,7 @@ module.exports = {
         test: /\.(md|txt)$/,
         use: [
           {
-            loader: 'raw-loader'
+            loader: "raw-loader"
           }
         ]
       }
