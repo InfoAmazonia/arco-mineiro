@@ -175,8 +175,6 @@ export default () => (
         lead to various horizontal mining galleries.
       </Paragraph>
 
-      {/* PHOTO: processing mills and shafts */}
-
       <Paragraph>
         “Confrontations have already been taking place for two years, these
         occur because there are many mining zones here,” says a local miner from
@@ -223,10 +221,6 @@ export default () => (
         </ExternalLink>{" "}
         in a confrontation with the army.
       </Paragraph>
-
-      {/* PHOTO GALLERY: Project in El Peru */}
-      {/* STORYMAP JS EMBED: Project in El Peru (with coordinates) */}
-      {/* START MAP: Zoom in El Peru area – satellite imagery */}
 
       <Paragraph>
         Our pick-up truck is driven by Minerven personnel and leaves El Callao
@@ -331,8 +325,6 @@ export default () => (
         maintain my family,” the former carpenter says.
       </Paragraph>
 
-      {/* YOUTUBE EMBED: Vicente and his nephew climb out of a tunnel */}
-
       <Paragraph>
         Close to him Minorca Maurera is resting, she is a 23-year single mom who
         worked in a bakery before she came to El Callao. “The minimum wage just
@@ -342,8 +334,6 @@ export default () => (
         maintain my children now.”
       </Paragraph>
 
-      {/* YOUTUBE EMBED: Interview with Minorca */}
-
       <Paragraph>
         Dusty slum-like neighbourhoods with dispersed and small makeshift wooden
         shacks that just have a thin corrugated roof are filled with mining
@@ -351,8 +341,6 @@ export default () => (
         of gold extraction has brought the local population anything but riches,
         which even makes a hardcore Chavista wary of the Arco Minero.
       </Paragraph>
-
-      {/* START MAP: Zoom in El Callao area – satellite imagery */}
 
       <Quote author="Darwin Lizardi, local coordinator of the government party">
         The Arco Minero, practically has functioned to cover up many things,
@@ -447,8 +435,6 @@ export default () => (
         assuming their role as a mining company because all their plants are
         halted.”
       </Paragraph>
-
-      {/* YOUTUBE EMBED: Gutiérrez at work and with mercury */}
 
       <Paragraph>
         Having your income determined by luck and hard work instead of just
@@ -574,8 +560,6 @@ export default () => (
         </StoryMedia>. Behind the sign we find dozens of informal miners working
         in the muddy open-air pits.
       </Paragraph>
-
-      {/* YOUTUBE EMBED: Artisan miners */}
 
       <Paragraph>
         We are only allowed to take pictures of{" "}
