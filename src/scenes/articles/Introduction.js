@@ -16,27 +16,15 @@ export default () => (
     <Container>
       <Note>
         <p>
-          For three months I traveled Venezuela’s disputed mining areas. In my
-          visits to the Amazonas and Bolívar states I have been confronted with
-          illegal armed groups, indigenous communities repressed by Colombian
-          guerrillas and enclaves of informal miners tormented by malaria.
+        For three months our reporter travelled Venezuela’s disputed mining
+        areas where he was confronted with illegal armed groups, indigenous
+        communities repressed by Colombian guerrillas and enclaves of informal
+        miners tormented by malaria.
         </p>
         <p>
-          Problems related to Venezuela’s current crisis such as widespread
-          corruption, a lack of cash money, fuel shortages and a general culture
-          of fear made fieldwork a rather complicated experience.
-        </p>
-        <p>
-          An illegal detention by the National Guard almost prematurely ended
-          this investigation, but the intervention, guidance and support of
-          various organizations and individuals made it possible that we can
-          present this project. El Correo del Caroni helped with a part of the
-          investigation.
-        </p>
-        <p>
-          In this journey, I talked to miners, companies, academics, indigenous,
-          politicians and activists and gathered exclusive material on Latin
-          America’s most underreported resource conflict.
+        In this journey, we talked to miners, companies, academics, indigenous,
+        politicians and activists and gathered exclusive material on Latin
+        America’s most underreported resource conflict.
         </p>
       </Note>
       <Paragraph>
