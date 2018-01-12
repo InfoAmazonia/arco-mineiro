@@ -50,46 +50,46 @@ export default () => (
           }}
         >
           <strong>With muddy hands</strong>, a miner throws mineral-rich rocks
-          in a spinning mechanic mill that crushes the stones to be processed
-          with mercury
+          into a spinning mechanical mill that crushes the stones to be
+          processed with mercury
         </StoryMedia>. At a small distance, a few soldiers hang around. The
-        military escorted us during this visit in the green hills next to El
+        military escorted us during our visit to the green hills next to El
         Callao, one of many heavily contested mining hotspots in Venezuela. “A
         shootout or a massacre could happen any moment, all days were like
         this,” another miner enthusiastically tells about the violent behaviour
-        applied by armed groups that fought for access to this exact mine.
+        applied by armed groups that fought for access to this very mine.
       </Paragraph>
 
       <Paragraph>
-        The gold that is extracted will end up on the world market in the form
-        of jewelry, locked up in a bank or used in electronics, but few people
-        will know about its origin. “They work commando style,” the miner
-        continues about nightly shootouts in the hills surrounding the village
-        where bullets are shot at every visible headlight as a curfew is imposed
-        by active gangs. Most of the miners do not want to be named as they fear
-        repercussions from armed actors in the region.
+        The gold that is extracted will end up on the world market
+        in the form of jewellery, locked up in a bank or used in electronics,
+        but few people will know about its origin. “They work commando style,”
+        the miner continues about the nightly shootouts in the hills surrounding
+        the village where bullets are shot at every visible headlight as a
+        curfew is imposed by active gangs. Most of the miners do not want to be
+        named as they fear repercussions from armed actors in the region.
       </Paragraph>
 
       <Paragraph>
         The Venezuelan military also participates in the violence and is often
         involved in mining through associated gangs and its own operations.
-        Venezuela’s armed forces received a lot of power during the presidency
-        of late Hugo Chávez. Cliver Alcalá Cordones, a Chávez loyalist who
-        retired in 2013, was a Major General that held command in the mining
-        regions. In a meeting in a hotel lobby in Bogotá, Colombia, he explains
-        that Maduro increasingly is handing over functions to the military and
-        government sectors that now partake in the “disaster and pillage”.
+        Venezuela’s armed forces gained power during the presidency of the late
+        Hugo Chávez. Cliver Alcalá Cordones, a Chávez loyalist who retired in
+        2013, was a Major General that held command in the mining regions. At a
+        meeting in a hotel lobby in Bogotá, Colombia, he explains that Maduro is
+        increasingly handing over power to the military and government sectors
+        that now partake in what is called “disaster and pillage”.
       </Paragraph>
 
       <FeaturedText>
-        The armed forces’ rush for minerals results in a visible militarization
-        of mining areas.
+        The armed forces’ pursuit of minerals results in a visible
+        militarization of mining areas.
       </FeaturedText>
 
       <Paragraph>
-        A road trip to the south of Venezuela, approaching the illegal gold
-        mines of the state, gives the impression that the region is well
-        controlled.
+        A road trip to the south of Venezuela, near many illegal gold mines,
+        gives the impression that the region is well controlled. While driving
+        on the main roads,
         <StoryMedia
           media={{
             id: "video-2",
@@ -99,18 +99,19 @@ export default () => (
             }
           }}
         >
-          Every 30 minutes of driving on main roads are interrupted by armed
-          National Guard checkpoints
-        </StoryMedia>, the only ones charged with internal public order, but
-        when approaching the mines it is the military that runs the show.
+          we are interrupted every 30 minutes at checkpoints by armed National
+          Guardsmen
+        </StoryMedia>, who are charged with maintaining internal public
+        order—but when approaching the mines, it is the military that runs the
+        show.
       </Paragraph>
 
       {/* START MAP: Arco Minero limits, Venezuela and states political */}
 
       <Paragraph>
         It does not really matter if the gold has a legal or an illegal origin,
-        whether it is mined by companies or gang controlled mines. Four areas in
-        Bolívar state,{" "}
+        whether it is mined by companies or gangs. Four areas in Bolívar
+        state,{" "}
         <FileLink
           href={require("documents/GacetaOficial_40855.pdf")}
           format="pdf"
@@ -129,31 +130,32 @@ export default () => (
             }
           }}
         >
-          Arco Minero del Orinoco
+          <em>Arco Minero del Orinoco</em>
         </StoryMedia>{" "}
-        (spanish for “Orinoco Mining Arc”), represent a dark symbiosis of both
+        (Spanish for “Orinoco Mining Arc”), represent a dark symbiosis of both
         worlds.
       </Paragraph>
 
       <Paragraph>
-        What does matter is the impact that the Arco Minero creates. The four
-        areas overlap many legally-protected environmental and indigenous
-        territories, which likely will dictate their future destruction. Miners
-        risk their health and lives as working conditions are unsafe and mining
-        areas violently disputed. Damage to the environment is inconsequential
-        for the enclaves of subsistence miners and the brutal forces that
-        control them, but moreover, is not a factor for the government that
-        created a legal framework around digging it all up.
+        What matters most, is the impact that the Arco Minero creates on the
+        region. The four areas overlap many legally-protected environmental and
+        indigenous territories, which will likely lead to their destruction.
+        Miners risk their health and lives as working conditions are unsafe and
+        mining areas violently disputed. Damage to the environment is of no
+        concern to the enclaves of subsistence miners and the brutal forces that
+        control them.  Moreover, the environment is considered inconsequential
+        by the government that created the legal framework that sanctions all
+        the extraction activities.
       </Paragraph>
 
       {/* START MAP: Arco Minero + protected and indigenous areas */}
 
       <Paragraph>
-        Alexander Luzardo, a former senator holding a doctorate in political and
+        Alexander Luzardo, a former senator with a doctorate in political and
         environmental law, has been personally involved in Venezuela’s
         environmental legislation. He wrote the environmental standards for the
-        current constitution in place since 1999. With these standards he
-        underlined the significance for Venezuela to protect{" "}
+        current constitution, in place since 1999. With these standards he
+        underlined how important it is for Venezuela to protect{" "}
         <StoryMedia
           icon="map"
           media={{
@@ -164,16 +166,16 @@ export default () => (
             }
           }}
         >
-          environmentally important regions
+          environmentally vital regions
         </StoryMedia>. However, in 2016, he saw his decrees violated by the Arco
         Minero. “The Arco Minero is illegal. It denies the existence and
-        creation of protected areas by decree,” Luzardo says in an interview in
+        creation of protected areas by decree,” Luzardo says in an interview at
         a small coffee shop on the campus of the Central University of Venezuela
         (UCV), in Caracas, where he currently teaches.
       </Paragraph>
 
       <Quote author="Alexander Luzardo, former senator">
-        This is the easiest road for environmental destruction in Venezuela, the
+        This is the easiest road for environmental destruction in Venezuela. The
         big contribution from Venezuela to the destruction of the planet
       </Quote>
 
@@ -188,22 +190,20 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        There is not much known about mining in the country that has built its
-        complete economy on its nationalized oil industry. Now they are tapping
+        Not much is known about mining in a country that has built its entire
+        economy on its nationalized oil industry. Now the government is tapping
         into another finite resource, because Venezuela not only possesses the
-        world's largest oil supplies, the government actually claims to have the
-        second biggest gold reserve too. If Venezuela is able to certify the
-        deposits, it would undoubtedly be welcome news during the country’s
-        darkest hour.
+        world’s largest oil supplies, but also claims to have the second biggest
+        gold reserve. If Venezuela is able to certify the deposits, it would
+        undoubtedly be welcome news during the country’s darkest hour.
       </Paragraph>
 
       <Paragraph>
-        The country finds itself in a financial and political turmoil since a
-        few years already, but current levels of hyperinflation and shortages in
-        basic products are driving the economy to rock bottom. The government
-        needs sounding solutions, hence the announcement that a significant part
-        of the country will be opened for a new motor of economic development:
-        mining.
+        The country has already found itself in financial and political turmoil,
+        but current levels of hyperinflation and shortages in basic products are
+        driving the economy towards rock bottom. The government needs concrete
+        solutions, hence the announcement that a significant part of the country
+        will be opened for a new motor of economic development: mining.
       </Paragraph>
 
       <FullBlock withMargin>
@@ -218,19 +218,19 @@ export default () => (
 
       <Paragraph>
         The billions of dollars generated by oil and gas exploitations financed
-        late President Chávez’s social programs from 1999 until his death in
-        2013. Unfortunately these revenues dried up after structural{" "}
+        President Chávez’s social programs from 1999 until his death in 2013.
+        Unfortunately these revenues dried up after structural{" "}
         <ExternalLink
           href="https://www.nytimes.com/2017/05/06/world/americas/venezuela-unrest-protests.html"
           language="en"
         >
-          self-enrichment by the country's elites
+          self-enrichment by the country’s elites
         </ExternalLink>{" "}
         and declining oil prices after 2014.
       </Paragraph>
 
       <FeaturedText>
-        In a last ditch attempt to inject the broken economy with foreign
+        In a last-ditch attempt to inject the broken economy with foreign
         capital, President Maduro opened up twelve percent of the national
         territory to future large-scale mining operations.
       </FeaturedText>
@@ -337,9 +337,9 @@ export default () => (
             }
           }}
         >
-          an area of not less than 112 thousand square kilometers bordering the
+          an area of no less than 112 thousand square kilometres bordering the
           southern side of the Orinoco River
-        </StoryMedia>, the main water source of Venezuela and the third most
+        </StoryMedia>, the main source of water for Venezuela and the third most
         important in Latin America.
       </Paragraph>
 
@@ -377,22 +377,22 @@ export default () => (
 
       <Paragraph>
         There were a lot of press junkets and even a new Mining Ministry was
-        created. A joint venture with Endiama, an Angolan public mining company
-        was{" "}
+        created. A joint venture with Endiama, an Angolan public mining company,
+        was {" "}
         <ExternalLink
           href="https://www.telesurtv.net/news/Venezuela-firma-acuerdo-con-empresa-de-diamantes-de-Angola-20170720-0055.html"
           language="es"
         >
           signed to mine diamonds
         </ExternalLink>{" "}
-        and{" "}
+        and a{" "}
         <ExternalLink
           href="http://desarrollominero.gob.ve/2017/empresas-palestinas-y-autoridades-mineras-revisaron-acuerdos-para-explotacion-de-coltan/"
           language="es"
         >
-          hands were shaken with the Palestinian ambassador
-        </ExternalLink>, who put forward two Palestinian corporations that want
-        to mine for coltan. The usual allies,{" "}
+          handshake with the Palestinian ambassador
+        </ExternalLink>, revealed that two Palestinian corporations want to mine
+        for coltan. The usual allies, {" "}
         <ExternalLink
           href="https://www.telesurtv.net/news/Venezuela-y-China-firman-acuerdo-para-actividades-mineras-20170721-0060.html"
           language="es"
@@ -412,9 +412,9 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Venezuela’s cake of minerals on their plate, mainly for debt management
-        with both countries that facilitated loans. In total, Venezuela has a
-        $150bn debt to pay to a large queue of creditors.
+        both want a piece of Venezuela’s cake of minerals on their plate, mainly
+        for debt management with both countries that facilitated loans. In
+        total, Venezuela has a $150bn debt to pay to a long list of creditors.
       </Paragraph>
 
       <FeaturedText>
@@ -423,8 +423,8 @@ export default () => (
       </FeaturedText>
 
       <Paragraph>
-        The world’s biggest gold mining company Barrick Gold responded to our
-        enquiry, explaining that: “While Barrick did participate in a review of
+        The world’s biggest gold mining company, Barrick Gold, responded to our
+        enquiry, explaining:  “While Barrick did participate in a review of
         mining projects in the country, the company is not pursuing any projects
         or investments in Venezuela.” Maduro, however, claimed to have{" "}
         <ExternalLink
@@ -437,10 +437,10 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        More than a year after Maduro’s announcements, it remains a taboo to
-        talk about who really controls mining in the crisis-ridden country.
-        “Behind mining in Venezuela, there has always been the opacity of
-        military factors”,{" "}
+        More than a year after Maduro’s announcements, talking about who really
+        controls mining in the crisis-ridden country remains taboo. “Behind
+        mining in Venezuela, there has always been the opacity of military
+        factors”,{" "}
         <StoryMedia
           media={{
             id: "video-3",
@@ -452,54 +452,57 @@ export default () => (
         >
           says Américo de Grazia
         </StoryMedia>, who belongs to the political opposition and is a deputy
-        in the government-sidelined parliament. De Grazia represents the state
-        where most of the gold reserves are hidden, Bolívar. “[Illegal] mining
-        has been criminalized for the public opinion, but their own
-        clandestinity is allowed. Here the maximum operator [the ones in charge]
-        are the public forces, and the practical operator [the executor] is
-        organized crime,” he says.
+        in the government-side-lined parliament. De Grazia represents the state
+        where most of the gold reserves are hidden, Bolívar, the state where
+        most of the gold reserves are hidden. “[Illegal] mining has been
+        criminalized for the public opinion, but their own clandestinity is
+        allowed. Here the maximum operator [the ones in charge] are the public
+        forces, and the practical operator [the executor] is organized crime,”
+        he says.
       </Paragraph>
 
       {/* YOUTUBE EMBED:Short video-interview, De Grazia
         START MAP: Militarization Arco Minero */}
 
       <Paragraph>
-        Venezuela counts with an astonishing{" "}
+        Venezuela has an astonishing number of generals – {" "}
         <ExternalLink
           href="https://www.nytimes.com/2017/08/08/world/americas/nicolas-maduro-venezuela-military.html"
           language="en"
         >
-          number of generals, at about two thousand
-        </ExternalLink>, and the armed forces rule the Arco Minero, which is
-        underlined by De Grazia and Luzardo who argue that most of the sector is
-        dominated by the military. They extort the gangs that operate the
-        illegal mines and control export routes. Mining is a cash machine that
-        slowly becomes institutionalized. Last year, the Anonymous Military
-        Company of Mining, Petroleum and Gas Industries (Camimpeg){" "}
+          about two thousand
+        </ExternalLink> – and the armed forces rule the Arco Minero, which is
+        underlined by De Grazia and Luzardo, who argue that military domination
+        extends to most of the mining sector. They extort the gangs that operate
+        the illegal mines and control the export routes. Mining is a cash
+        machine that slowly is becoming institutionalized. Last year, the
+        Anonymous Military Company of Mining, Petroleum and Gas Industries
+        (Camimpeg) {" "}
         <ExternalLink
           href="http://efectococuyo.com/economia/fanb-firme-con-la-logistica-de-seguridad-en-el-arcominero"
           language="es"
         >
-          was created alongside a Military Economic Zone
-        </ExternalLink>. Active or pensioned{" "}
+          was created alongside a ‘Military Economic Zone’
+        </ExternalLink>. Active or former{" "}
         <ExternalLink
           href="https://transparencia.org.ve/project/informe-general-2016-2017/"
           language="es"
         >
-          militares are present in about 30 per cent of the state companies
+          military personnel are present in about 30 percent of the state
+          companies
         </ExternalLink>{" "}
-        with known boards of directors. Knowing that the Arco Minero will be
+        with public boards of directors. Knowing that the Arco Minero will be
         exploited by joint ventures in which state companies will have a
         majority share, it is very likely the military remain in charge.
       </Paragraph>
 
       <Paragraph>
         De Grazia says that generals are frequently changed, as are military
-        personnel on the boards of companies: “Every military that arrives wants
-        to be rich overnight, which makes him more cruel, more violent and his
-        norms will be more inhuman because he knows that the form to enrich
-        himself is this and that he has one or two months, maybe a year to do
-        so.”
+        personnel on the boards of companies: “Every military person that
+        arrives wants to be rich overnight, which makes him more cruel, more
+        violent and his norms will be more inhuman because he knows that the
+        path to enriching himself is this, and that he has one or two months,
+        maybe a year to do so.”
       </Paragraph>
 
       <FeaturedText>
@@ -521,27 +524,26 @@ export default () => (
         >
           says Alcalá, the retired general who held command in the mining
           regions
-        </StoryMedia>. The retired general mentions that many planes illegally
-        export a majority of Venezuela’s gold to the Caribbean Islands. The
-        military is involved: “They get [the plane] off the radar so they do not
-        know where it is.”
+        </StoryMedia>. He mentions that many planes illegally export a majority
+        of Venezuela’s gold to the Caribbean Islands. The military is involved:
+        “They get [the plane] off the radar so they do not know where it is.”
       </Paragraph>
 
       <Paragraph>
         Alcalá confirms that the army receives significant benefits from illegal
-        mining and the gangs that operate the projects, where violence is
-        applied to maintain control. “Since a year, there have been massacres
-        executed by the army in some areas because there is gold.”
+        mining, while the gangs that operate the mines, use violence to maintain
+        control. “Since a year, there have been massacres executed by the army
+        in some areas because there is gold.”
       </Paragraph>
 
       <Paragraph>
-        In the first ten months of 2017, an analysis of press reports by the
-        Observatory of Violence and Crime in Bolívar state, shows that at least
-        1,415 people have been murdered in said state, many of them in mining
-        areas. An accurate estimate of people killed in clashes between violent
-        gangs and shootouts with the army is impossible to obtain, as it is not
-        unusual that migrant miners, who are not from the region themselves, end
-        up in clandestine graves after being murdered in remote regions.
+        An analysis of press reports by the Observatory of Violence and Crime in
+        Bolívar state shows that in the first ten months of 2017, at least 1,415
+        people have been murdered there, many of them in mining areas. An
+        accurate estimate of people killed in clashes between violent gangs and
+        shootouts with the army is impossible to obtain, as it is not unusual
+        that migrant miners, who are not from the region themselves, end up in
+        clandestine graves after being murdered in remote areas.
       </Paragraph>
 
       <Paragraph>
@@ -552,11 +554,12 @@ export default () => (
         >
           real battle for access to mineral resources
         </ExternalLink>{" "}
-        seems just to have begun. Legalised larceny directly impacts Venezuela
-        and its border areas, but the global mineral demand and international
-        networks of resource traffickers involve many actors abroad. Therefore,
-        the damage that is done to one of the most important ecosystems, the
-        Amazon, makes the Arco Minero an issue of international interest.
+        seems just to have begun. Legalised looting not only directly impacts
+        Venezuela and its border areas, but also the global demand for minerals
+        and the numerous international networks of resource traffickers abroad.
+        Therefore, the damage that is done to one of the most important
+        ecosystems, the Amazon, makes the Arco Minero an issue of international
+        interest.
       </Paragraph>
 
       {/* <ImageBlock
