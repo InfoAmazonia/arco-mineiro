@@ -44,6 +44,7 @@ const Wrapper = styled.section`
   &.route-transition-enter {
     opacity: 1;
     background-color: transparent;
+    .partners,
     .site-title {
       opacity: 0;
       transform: translate(0, -15px);
@@ -65,6 +66,7 @@ const Wrapper = styled.section`
     z-index: 9999;
     background-color: #000;
     &:before,
+    .partners,
     .site-title,
     .middle,
     h2,
@@ -79,6 +81,7 @@ const Wrapper = styled.section`
     opacity: 1;
     background-color: #000;
     &:before,
+    .partners,
     .site-title,
     .middle,
     h2,
@@ -92,6 +95,7 @@ const Wrapper = styled.section`
     opacity: 1;
     transition: all 800ms ease-in;
     background-color: transparent;
+    .partners,
     .site-title {
       opacity: 0;
       transform: translate(0, -15px);
