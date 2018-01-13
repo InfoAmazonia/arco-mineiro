@@ -118,6 +118,28 @@ const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  .partners {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    display: flex;
+    flex-direction: columns;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: auto;
+      height: auto;
+      max-height: 2vh;
+      margin: 0 1rem;
+      ${media.phablet`
+        max-height: 5vh;
+        max-width: 8vw;
+      `}
+      ${media.desktop`
+        margin: 0 2rem;
+      `};
+    }
+  }
   h1 {
     font-size: 1.1em;
     color: #fff;
@@ -125,7 +147,7 @@ const Top = styled.div`
       margin-left: -1rem;
     }
     ${media.tablet`
-      font-size: 1.4em;
+      font-size: 1.2em;
     `} ${media.desktopHD`
       font-size: 1.6em;
     `};
@@ -153,6 +175,10 @@ const Top = styled.div`
   }
 `;
 
+const Spacer = styled.div`
+  flex: 1 1 25%;
+`;
+
 const Middle = styled.div`
   flex: 1 1 auto;
   flex-direction: column;
@@ -171,9 +197,8 @@ const Middle = styled.div`
     width: 65%;
     padding: 0 3rem;
     font-size: 1em;
-  `} ${media.tablet`
-    font-size: 1.2em;
-  `} .description {
+  `}
+  .description {
     text-align: center;
     margin: 0 0 2rem;
     font-size: 1em;
@@ -217,7 +242,7 @@ class Scene extends Component {
     super(props);
   }
   isLaunchDate() {
-    if(launchDate) {
+    if (launchDate) {
       return moment(launchDate).isAfter(window.currentDate);
     } else {
       return false;
@@ -228,6 +253,10 @@ class Scene extends Component {
     return (
       <Wrapper className="scene landing">
         <Top>
+          <div className="partners">
+            <img src={require("images/partners/infoamazonia.png")} />
+            <img src={require("images/partners/correo.png")} />
+          </div>
           <SiteTitle />
           <h2>
             <FormattedMessage
@@ -242,6 +271,7 @@ class Scene extends Component {
             />
           </h3>
         </Top>
+        <Spacer />
         <Middle className="middle">
           <p className="description">
             <FormattedMessage
