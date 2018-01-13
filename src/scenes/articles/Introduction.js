@@ -19,7 +19,8 @@ export default () => (
         For three months our reporter travelled Venezuela’s disputed mining
         areas where he was confronted with illegal armed groups, indigenous
         communities repressed by Colombian guerrillas and enclaves of informal
-        miners tormented by malaria.
+        miners tormented by malaria. An illegal detention by the National Guard
+        almost prematurely ended this investigation.
         </p>
         <p>
         In this journey, we talked to miners, companies, academics, indigenous,
