@@ -45,11 +45,11 @@ class StoryMedia extends Component {
     // Wait transition
     setTimeout(() => {
       this._updateMedia();
+      twttr.events.bind("rendered", this._updateMedia);
     }, 600);
-    twttr.events.bind("loaded", this._updateMedia);
   }
   componentWillUnmount() {
-    twttr.events.unbind("loaded", this._updateMedia);
+    twttr.events.unbind("rendered", this._updateMedia);
   }
   _getMediaId(media) {
     const { pathname } = this.props;
@@ -64,6 +64,7 @@ class StoryMedia extends Component {
     const { media, library, updateMedia, pathname } = this.props;
     const inLibrary = library[this._getMediaId(media)];
     const rect = this.node.getBoundingClientRect();
+    console.log(media);
     if (
       !inLibrary ||
       Math.floor(rect.top) != Math.floor(inLibrary.rect.top || 0)

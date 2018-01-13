@@ -41,8 +41,8 @@ class Story extends Component {
     this.refTop = 0;
     this.pathname = this.props.location.pathname;
     this.setScroll(this.props);
-    twttr.events.bind("loaded", this.handleScroll);
-    twttr.events.bind("loaded", this.handleResize);
+    twttr.events.bind("rendered", this.handleScroll);
+    twttr.events.bind("rendered", this.handleResize);
     this.node.addEventListener("scroll", this.handleScroll);
     window.addEventListener("resize", this.handleResize);
     setTimeout(() => {
@@ -50,8 +50,8 @@ class Story extends Component {
     }, 800);
   }
   componentWillUnmount() {
-    twttr.events.unbind("loaded", this.handleScroll);
-    twttr.events.unbind("loaded", this.handleResize);
+    twttr.events.unbind("rendered", this.handleScroll);
+    twttr.events.unbind("rendered", this.handleResize);
     this.node.removeEventListener("scroll", this.handleScroll);
     window.removeEventListener("resize", this.handleResize);
   }
