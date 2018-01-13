@@ -70,6 +70,7 @@ class StoryMedia extends Component {
     ) {
       updateMedia({
         ...media,
+        icon: this._getIcon(),
         pathname,
         rect,
         offset: this._getStoryOffset(this.props),

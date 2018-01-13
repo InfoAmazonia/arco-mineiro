@@ -33,7 +33,7 @@ const Wrapper = styled.div`
       ${props =>
         props.active &&
         css`
-          height: 300px;
+          height: 50vh;
         `} ${media.desktop`
       flex: 0 0 45%;
       border-top: 0;
@@ -52,6 +52,20 @@ const Wrapper = styled.div`
     background: #fff;
     border-radius: inherit;
     overflow: hidden;
+  }
+`;
+
+const Expand = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  .fa {
+    font-size: 2em;
+    margin: 5%;
   }
 `;
 
@@ -149,13 +163,18 @@ class Media extends Component {
       }
       case "embed": {
         return (
-          <Wrapper preview={preview || false}>
+          <Wrapper preview={preview || false} active={active}>
             <iframe
               className="media-embed"
               src={media.data.src}
               frameBorder="0"
               allowFullScreen
             />
+            {!active ? (
+              <Expand>
+                <span className={`fa fa-${media.icon}`} />
+              </Expand>
+            ) : null}
           </Wrapper>
         );
       }
