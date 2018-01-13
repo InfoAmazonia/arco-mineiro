@@ -63,7 +63,9 @@ const Expand = styled.div`
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
   color: #fff;
-  .fa {
+  ${media.desktop`
+    display: none;
+  `} .fa {
     font-size: 2em;
     margin: 5%;
   }
