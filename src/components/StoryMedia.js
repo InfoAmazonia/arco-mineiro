@@ -64,7 +64,6 @@ class StoryMedia extends Component {
     const { media, library, updateMedia, pathname } = this.props;
     const inLibrary = library[this._getMediaId(media)];
     const rect = this.node.getBoundingClientRect();
-    console.log(media);
     if (
       !inLibrary ||
       Math.floor(rect.top) != Math.floor(inLibrary.rect.top || 0)
