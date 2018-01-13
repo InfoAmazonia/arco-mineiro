@@ -25,7 +25,7 @@ export default () => (
         <p>
         In this journey, we talked to miners, companies, academics, indigenous,
         politicians and activists and gathered exclusive material on Latin
-        America’s most underreported resource conflict.
+        America’s most underreported natural resources conflict.
         </p>
       </Note>
       <Paragraph>
