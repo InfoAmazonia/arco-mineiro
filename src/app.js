@@ -6,7 +6,6 @@ import { withRouter, Route, Link, Switch } from 'react-router-dom';
 
 import Landing from 'scenes/Landing';
 import Story from 'scenes/Story';
-import Data from 'scenes/Data';
 import About from 'scenes/About';
 import Share from 'scenes/Share';
 
@@ -31,7 +30,6 @@ class Application extends Component {
           <Switch location={location}>
             <Route exact path="/" component={Landing} />
             <Route path="/story" component={Story} />
-            <Route path="/data" component={Data} />
             <Route path="/about" component={About} />
             <Route path="/share" component={Share} />
           </Switch>

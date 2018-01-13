@@ -13,4 +13,7 @@ export default styled.div`
   .twitter-tweet {
     margin: 0 auto;
   }
+  hr {
+    margin: 6rem 0;
+  }
 `

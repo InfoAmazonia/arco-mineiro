@@ -16,16 +16,16 @@ export default () => (
     <Container>
       <Note>
         <p>
-        For three months our reporter travelled Venezuela’s disputed mining
-        areas where he was confronted with illegal armed groups, indigenous
-        communities repressed by Colombian guerrillas and enclaves of informal
-        miners tormented by malaria. An illegal detention by the National Guard
-        almost prematurely ended this investigation.
+          For three months our reporter travelled Venezuela’s disputed mining
+          areas where he was confronted with illegal armed groups, indigenous
+          communities repressed by Colombian guerrillas and enclaves of informal
+          miners tormented by malaria. An illegal detention by the National
+          Guard almost prematurely ended this investigation.
         </p>
         <p>
-        In this journey, we talked to miners, companies, academics, indigenous,
-        politicians and activists and gathered exclusive material on Latin
-        America’s most underreported natural resources conflict.
+          In this journey, we talked to miners, companies, academics,
+          indigenous, politicians and activists and gathered exclusive material
+          on Latin America’s most underreported natural resources conflict.
         </p>
       </Note>
       <Paragraph>
@@ -50,13 +50,13 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        The gold that is extracted will end up on the world market
-        in the form of jewellery, locked up in a bank or used in electronics,
-        but few people will know about its origin. “They work commando style,”
-        the miner continues about the nightly shootouts in the hills surrounding
-        the village where bullets are shot at every visible headlight as a
-        curfew is imposed by active gangs. Most of the miners do not want to be
-        named as they fear repercussions from armed actors in the region.
+        The gold that is extracted will end up on the world market in the form
+        of jewellery, locked up in a bank or used in electronics, but few people
+        will know about its origin. “They work commando style,” the miner
+        continues about the nightly shootouts in the hills surrounding the
+        village where bullets are shot at every visible headlight as a curfew is
+        imposed by active gangs. Most of the miners do not want to be named as
+        they fear repercussions from armed actors in the region.
       </Paragraph>
 
       <Paragraph>
@@ -78,7 +78,7 @@ export default () => (
       <Paragraph>
         A road trip to the south of Venezuela, near many illegal gold mines,
         gives the impression that the region is well controlled. While driving
-        on the main roads,
+        on the main roads,{" "}
         <StoryMedia
           media={{
             id: "video-2",
@@ -97,8 +97,7 @@ export default () => (
 
       <Paragraph>
         It does not really matter if the gold has a legal or an illegal origin,
-        whether it is mined by companies or gangs. Four areas in Bolívar
-        state,{" "}
+        whether it is mined by companies or gangs. Four areas in Bolívar state,{" "}
         <FileLink
           href={require("documents/GacetaOficial_40855.pdf")}
           format="pdf"
@@ -130,9 +129,9 @@ export default () => (
         Miners risk their health and lives as working conditions are unsafe and
         mining areas violently disputed. Damage to the environment is of no
         concern to the enclaves of subsistence miners and the brutal forces that
-        control them.  Moreover, the environment is considered inconsequential
-        by the government that created the legal framework that sanctions all
-        the extraction activities.
+        control them. Moreover, the environment is considered inconsequential by
+        the government that created the legal framework that sanctions all the
+        extraction activities.
       </Paragraph>
 
       <Paragraph>
@@ -363,7 +362,7 @@ export default () => (
       <Paragraph>
         There were a lot of press junkets and even a new Mining Ministry was
         created. A joint venture with Endiama, an Angolan public mining company,
-        was {" "}
+        was{" "}
         <ExternalLink
           href="https://www.telesurtv.net/news/Venezuela-firma-acuerdo-con-empresa-de-diamantes-de-Angola-20170720-0055.html"
           language="es"
@@ -377,7 +376,7 @@ export default () => (
         >
           handshake with the Palestinian ambassador
         </ExternalLink>, revealed that two Palestinian corporations want to mine
-        for coltan. The usual allies, {" "}
+        for coltan. The usual allies,{" "}
         <ExternalLink
           href="https://www.telesurtv.net/news/Venezuela-y-China-firman-acuerdo-para-actividades-mineras-20170721-0060.html"
           language="es"
@@ -409,7 +408,7 @@ export default () => (
 
       <Paragraph>
         The world’s biggest gold mining company, Barrick Gold, responded to our
-        enquiry, explaining:  “While Barrick did participate in a review of
+        enquiry, explaining: “While Barrick did participate in a review of
         mining projects in the country, the company is not pursuing any projects
         or investments in Venezuela.” Maduro, however, claimed to have{" "}
         <ExternalLink
@@ -447,19 +446,19 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Venezuela has an astonishing number of generals – {" "}
+        Venezuela has an astonishing number of generals –{" "}
         <ExternalLink
           href="https://www.nytimes.com/2017/08/08/world/americas/nicolas-maduro-venezuela-military.html"
           language="en"
         >
           about two thousand
-        </ExternalLink> – and the armed forces rule the Arco Minero, which is
-        underlined by De Grazia and Luzardo, who argue that military domination
-        extends to most of the mining sector. They extort the gangs that operate
-        the illegal mines and control the export routes. Mining is a cash
-        machine that slowly is becoming institutionalized. Last year, the
-        Anonymous Military Company of Mining, Petroleum and Gas Industries
-        (Camimpeg) {" "}
+        </ExternalLink>{" "}
+        – and the armed forces rule the Arco Minero, which is underlined by De
+        Grazia and Luzardo, who argue that military domination extends to most
+        of the mining sector. They extort the gangs that operate the illegal
+        mines and control the export routes. Mining is a cash machine that
+        slowly is becoming institutionalized. Last year, the Anonymous Military
+        Company of Mining, Petroleum and Gas Industries (Camimpeg){" "}
         <ExternalLink
           href="http://efectococuyo.com/economia/fanb-firme-con-la-logistica-de-seguridad-en-el-arcominero"
           language="es"

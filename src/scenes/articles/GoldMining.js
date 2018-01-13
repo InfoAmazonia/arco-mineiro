@@ -17,7 +17,7 @@ export default () => (
         Venezuela does not have an elaborate mining history like its neighbours
         Colombia and Brazil, but if there is one place in the country that
         traditionally breathes mining, it is El Callao. The face of the village
-        in Bolívar state changed forever when gold was discovered there in  The
+        in Bolívar state changed forever when gold was discovered there in The
         face of the village in Bolívar state changed forever when gold was
         discovered in 1853 and it even became the world’s{" "}
         <ExternalLink
@@ -78,7 +78,7 @@ export default () => (
         the rudimentary extraction of gold, but mining and village life are
         intertwined. Wherever you are in El Callao, you probably will not have
         to walk more than a minute to find a gold merchant while it is a more
-        difficult task to encounter a bakery or a supermarket. {" "}
+        difficult task to encounter a bakery or a supermarket.{" "}
       </Paragraph>
 
       {/* PHOTO: gold pawn shop */}
@@ -134,7 +134,7 @@ export default () => (
       <Paragraph>
         Miners explain that only a minor portion of Venezuela’s gold production
         ends up at the BCV. Most of it is smuggled abroad by the army and
-        organized crime. “Eight thousand kilos are  nothing,” says retired
+        organized crime. “Eight thousand kilos are nothing,” says retired
         general Cliver Alcalá Cordones. “It goes to Aruba and Curacao.” About 80
         per cent of Venezuela’s gold illegally leaves the country by airplanes
         transporting contraband, according to Alcalá.
@@ -143,7 +143,7 @@ export default () => (
       <Paragraph>
         Since the 19th century, various international companies, from France,
         the United Kingdom, and Russia have entered the region to mine the rich
-        gold veins that not only surround the village, but run right beneath it. {" "}
+        gold veins that not only surround the village, but run right beneath it.{" "}
         <StoryMedia
           media={{
             id: "image-4",
@@ -195,7 +195,7 @@ export default () => (
             }
           }}
         >
-        Villages becomes mines, and mines become villages
+          Villages becomes mines, and mines become villages
         </StoryMedia>. Mining areas around El Callao are called Colombia, Peru
         and Chile, along with other names that were given by previously present
         foreign mining companies. At the moment, these mines are worked by
@@ -211,9 +211,9 @@ export default () => (
         from El Callao explains. Still, various areas are filled with
         reminiscences of former gangs. “Small bases are still active between the
         people.” According to the miner, the ones in El Perú are the most
-        horrific.  Violent encounters occur frequently. In September, before our
-        visit to El Perú—in a sector under command by a gangster alias “el
-        Toto” – {" "}
+        horrific. Violent encounters occur frequently. In September, before our
+        visit to El Perú—in a sector under command by a gangster alias “el Toto”
+        –{" "}
         <ExternalLink
           href="http://www.eluniversal.com/noticias/sucesos/mueren-personas-durante-incursion-del-ejercito-mina-bolivar_669537"
           language="es"
@@ -351,17 +351,17 @@ export default () => (
         the youth branch of the Venezuela’s United Socialist Party (PSUV), the
         government party, and wears a red Minerven cap when we meet him. “The
         Arco Minero as such has not functioned, man. I will tell you that I’m a
-        revolutionary Chavist, but you need to tell the things as they are.
-        This is camouflage here. I don’t know why. Because in the end it’s
-        hurting us as miners and the village.”
+        revolutionary Chavist, but you need to tell the things as they are. This
+        is camouflage here. I don’t know why. Because in the end it’s hurting us
+        as miners and the village.”
       </Paragraph>
 
       <Paragraph>
         Lizardi is proudly El Callao-born, but times have changed. He explains
-        that his mother grew up  in quieter times. “This was when you could
-        leave the door of your house open all night, nobody would enter.”
-        Lizardi’s 66-year old mother now considers leaving the place they both
-        carry in their heart.
+        that his mother grew up in quieter times. “This was when you could leave
+        the door of your house open all night, nobody would enter.” Lizardi’s
+        66-year old mother now considers leaving the place they both carry in
+        their heart.
       </Paragraph>
 
       <Paragraph>
@@ -408,16 +408,15 @@ export default () => (
         The Arco Minero has received a lot of criticism in the Venezuelan press,
         mainly because of its future environmental impact, gang involvement and
         its presence in indigenous territories. In October, the state’s Ministry
-        of Information went on the counter-attack and published an article
-        that{" "}
+        of Information went on the counter-attack and published an article that{" "}
         <ExternalLink
           href="http://desarrollominero.gob.ve/2017/criminalizacion-mediatica-deforma-la-verdad-del-arco-minero-del-orinoco/"
           language="es"
         >
           accuses the press of criminalizing the small-scale miners
         </ExternalLink>{" "}
-        and overlooking the fact that 250 thousand people directly or
-        indirectly depend on the Arco Minero.
+        and overlooking the fact that 250 thousand people directly or indirectly
+        depend on the Arco Minero.
       </Paragraph>
 
       <FeaturedText>
@@ -524,7 +523,7 @@ export default () => (
         areas. Illegal gold mining in El Callao has contributed to unsafe and
         unhealthy circumstances, but the Arco Minero has a stake in it all. “All
         the gold that arrives at Minerven is legal, on paper, even if it’s
-        illegal,” Lizardi explains. {" "}
+        illegal,” Lizardi explains.{" "}
       </Paragraph>
 
       <Paragraph>

@@ -87,9 +87,6 @@ class Header extends Component {
         <div className="header-content">
           <SiteTitle logo="1" />
           <nav>
-            <NavLink to="/data" title="Data">
-              <span className="fa fa-database"></span>
-            </NavLink>
             <NavLink to="/about" title="Learn more">
               <span className="fa fa-info"></span>
             </NavLink>

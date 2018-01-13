@@ -28,6 +28,59 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "This story was produced by {infoamazonia} in partnership with {correo} and support from {pulitzer} through “{grant}” funding.",
+        "id": "about.intro"
+      },
+      {
+        "defaultMessage": "Reporter",
+        "id": "about.reporter"
+      },
+      {
+        "defaultMessage": "Photos & videos",
+        "id": "about.photos_videos"
+      },
+      {
+        "defaultMessage": "Editor in chief, maps, charts and translation to Portuguese",
+        "id": "about.editor_chief"
+      },
+      {
+        "defaultMessage": "Editors",
+        "id": "about.editors"
+      },
+      {
+        "defaultMessage": "Translation to Spanish",
+        "id": "about.trans_spanish"
+      },
+      {
+        "defaultMessage": "Copy editors",
+        "id": "about.copy_editors"
+      },
+      {
+        "defaultMessage": "Web Development and Design",
+        "id": "about.dev"
+      },
+      {
+        "defaultMessage": "Special thanks",
+        "id": "about.thanks"
+      },
+      {
+        "defaultMessage": "Publishing partners",
+        "id": "about.pub_partners"
+      },
+      {
+        "defaultMessage": "Supporter",
+        "id": "about.supporter"
+      },
+      {
+        "defaultMessage": "Except for the maps, which have different licenses, all the content published at this website is licensed using the Creative Commons BY-ND 4.0 license. For any other use, please write us at contact@infoamazonia.org",
+        "id": "about.license"
+      }
+    ],
+    "path": "src/scenes/About.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "by Bram Ebus",
         "id": "general.author"
       },
