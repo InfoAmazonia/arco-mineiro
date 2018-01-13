@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Redirect, Route, Link, Switch } from "react-router-dom";
 
+import { FormattedMessage } from "react-intl";
+
 import Container from "components/blocks/Container";
 import Paragraph from "components/blocks/Paragraph";
 
@@ -148,11 +150,16 @@ class Scene extends Component {
                 {!this.isLastArticle() ? (
                   <Paragraph>
                     <a
+                      className="continue"
                       onClick={() => this.nextArticle()}
                       href="javascript:void(0);"
-                      >
-                        Next
-                      </a>
+                    >
+                      <FormattedMessage
+                        id="story.continueReading"
+                        defaultMessage="Continue reading"
+                      />
+                      <span className="fa fa-chevron-right" />
+                    </a>
                   </Paragraph>
                 ) : null}
               </Container>

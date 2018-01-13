@@ -34,6 +34,15 @@ const Wrapper = styled.div`
     transition: all 200ms ease-in-out;
     position: absolute;
   }
+  a.continue {
+    display: block;
+    text-align: right;
+    color: #333;
+    .fa {
+      margin-left: 1rem;
+      font-size: .8em;
+    }
+  }
 `;
 
 export default ({ children }) => (

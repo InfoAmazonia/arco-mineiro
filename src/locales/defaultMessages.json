@@ -57,5 +57,14 @@
       }
     ],
     "path": "src/scenes/Landing.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Continue reading",
+        "id": "story.continueReading"
+      }
+    ],
+    "path": "src/scenes/Story.json"
   }
 ]

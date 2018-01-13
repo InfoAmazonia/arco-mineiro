@@ -152,10 +152,10 @@ class Story extends Component {
       updateContext("storyHeight", heightState);
     }
   }, 300);
-  handleScroll() {
+  handleScroll = throttle(() => {
     this.detectMedia();
     this.updateScrollHeight();
-  }
+  }, 200);
   handleResize = throttle(() => {
     this.updateScrollHeight();
     this.rect = this.node.getBoundingClientRect();
