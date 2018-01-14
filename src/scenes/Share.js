@@ -6,15 +6,19 @@ import {
   defineMessages,
   FormattedMessage
 } from "react-intl";
+import { ShareButtons, ShareCounts, generateShareIcon } from "react-share";
+import styled from "styled-components";
+import { media } from "styles/utils";
 import Page from "components/Page";
 import Container from "components/blocks/Container";
 import Paragraph from "components/blocks/Paragraph";
 import Title from "components/blocks/Title";
+import Full from "components/blocks/Full";
 
 const messages = defineMessages({
   title: {
     id: "share.title",
-    defaultMessage: "Share this reporting"
+    defaultMessage: "Share this article"
   },
   siteTitle: {
     id: "head.title",
@@ -22,9 +26,40 @@ const messages = defineMessages({
   }
 });
 
+const Buttons = styled.div`
+  display: table;
+  text-align: center;
+  width: 100%;
+  ${media.phablet`
+    width: 70%;
+    margin: 0 auto;
+  `} .fa {
+    font-size: 3em;
+  }
+  > * {
+    display: table-cell;
+  }
+`;
+
 const Share = ({ intl }) => {
   const title = intl.formatMessage(messages.title);
   const siteTitle = intl.formatMessage(messages.siteTitle);
+  const url = process.env.SITE_URL || "http://google.com";
+  const {
+    FacebookShareButton,
+    GooglePlusShareButton,
+    LinkedinShareButton,
+    TwitterShareButton,
+    TelegramShareButton,
+    WhatsappShareButton,
+    PinterestShareButton,
+    VKShareButton,
+    OKShareButton,
+    RedditShareButton,
+    TumblrShareButton,
+    LivejournalShareButton,
+    EmailShareButton
+  } = ShareButtons;
   return (
     <Page>
       <Helmet>
@@ -37,9 +72,23 @@ const Share = ({ intl }) => {
           <Title as="h2">
             <FormattedMessage
               id="share.title"
-              defaultMessage="Share this reporting"
+              defaultMessage="Share this article"
             />
           </Title>
+          <Buttons>
+            <FacebookShareButton url={url} quote={siteTitle}>
+              <span className="fa fa-facebook" />
+            </FacebookShareButton>
+            <TwitterShareButton url={url} title={siteTitle} via="infoamazonia">
+              <span className="fa fa-twitter" />
+            </TwitterShareButton>
+            <TelegramShareButton url={url} title={siteTitle}>
+              <span className="fa fa-telegram" />
+            </TelegramShareButton>
+            <WhatsappShareButton url={url} title={siteTitle}>
+              <span className="fa fa-whatsapp" />
+            </WhatsappShareButton>
+          </Buttons>
         </Container>
       </section>
     </Page>

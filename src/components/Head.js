@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import { injectIntl, intlShape, defineMessages } from "react-intl";
 import { Helmet } from "react-helmet";
 
@@ -23,7 +24,7 @@ class Head extends React.Component {
     super(props);
   }
   render() {
-    const { intl } = this.props;
+    const { intl, location } = this.props;
     const title = intl.formatMessage(messages.title);
     const description = intl.formatMessage(messages.description);
     const keywords = intl.formatMessage(messages.keywords);
@@ -36,8 +37,8 @@ class Head extends React.Component {
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <link rel="canonical" href={url} />
-        <meta property="og:url" content={url} />
+        <link rel="canonical" href={`${url}${location.pathname}`} />
+        <meta property="og:url" content={`${url}${location.pathname}`} />
         <meta
           property="og:image"
           content={`${url}${require("images/facebook-poster.jpg")}`}
@@ -51,4 +52,4 @@ Head.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(Head);
+export default injectIntl(withRouter(Head));
