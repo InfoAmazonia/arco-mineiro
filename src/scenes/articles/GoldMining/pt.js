@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Container from "components/blocks/Container";
 import Title from "components/blocks/Title";
 import Paragraph from "components/blocks/Paragraph";
@@ -10,6 +11,12 @@ import Quote from "components/blocks/Quote";
 
 export default () => (
   <article>
+    <Helmet>
+      <title>
+        Mal-estar no berço da mineração de ouro da Venezuela | Explorando o Arco
+        Mineiro
+      </title>
+    </Helmet>
     <Container>
       <Title as="h2">
         Mal-estar no berço da mineração de ouro da Venezuela

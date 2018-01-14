@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import Container from "components/blocks/Container";
@@ -9,6 +10,9 @@ import Quote from "components/blocks/Quote";
 
 export default () => (
   <article>
+    <Helmet>
+      <title>Novos visitantes no país do coltan | Explorando o Arco Mineiro</title>
+    </Helmet>
     <Container>
       <Title as="h2">Novos visitantes no país do coltan</Title>
       <Paragraph>

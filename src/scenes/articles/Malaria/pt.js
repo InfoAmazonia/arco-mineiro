@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
@@ -11,6 +12,12 @@ import FullBlock from "components/blocks/Full";
 
 export default () => (
   <article>
+    <Helmet>
+      <title>
+        A malária está mordendo pelas áreas de mineração da Venezuela |
+        Explorando o Arco Mineiro
+      </title>
+    </Helmet>
     <Container>
       <Title as="h2">
         A malária está mordendo pelas áreas de mineração da Venezuela

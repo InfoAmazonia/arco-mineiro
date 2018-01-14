@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
@@ -10,6 +11,9 @@ import Quote from "components/blocks/Quote";
 
 export default () => (
   <article>
+    <Helmet>
+      <title>Apostando contra el ambiente | Explorando el Arco Minero</title>
+    </Helmet>
     <Container>
       <Title as="h2">Apostando contra el ambiente</Title>
       <Paragraph>

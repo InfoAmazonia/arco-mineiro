@@ -11,6 +11,23 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "Digging into the Mining Arc",
+        "id": "head.title"
+      },
+      {
+        "defaultMessage": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela",
+        "id": "head.description"
+      },
+      {
+        "defaultMessage": "venezuela, mining arc",
+        "id": "head.keywords"
+      }
+    ],
+    "path": "src/components/Head.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Introduction",
         "id": "general.introduction"
       }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import StoryMedia from "components/StoryMedia";
 import ExternalLink from "components/ExternalLink";
 import FileLink from "components/FileLink";
@@ -10,6 +11,12 @@ import FeaturedText from "components/blocks/FeaturedText";
 
 export default () => (
   <article>
+    <Helmet>
+      <title>
+        Amazonas y el oeste de Bolívar: en manos de la guerrilla | Explorando el
+        Arco Minero
+      </title>
+    </Helmet>
     <Container>
       <Title as="h2">
         Amazonas y el oeste de Bolívar: en manos de la guerrilla
