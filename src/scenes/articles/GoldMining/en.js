@@ -70,7 +70,7 @@ export default () => (
           Mining in El Callao belongs to the Arco Minero project
         </StoryMedia>. About four mixed companies claim to be part of it, but a
         visit to El Callao is more than enough to understand that illegal and
-        legal mining go hand in hand.{" "}
+        legal mining go hand in hand.
       </Paragraph>
 
       <Paragraph>
@@ -78,10 +78,8 @@ export default () => (
         the rudimentary extraction of gold, but mining and village life are
         intertwined. Wherever you are in El Callao, you probably will not have
         to walk more than a minute to find a gold merchant while it is a more
-        difficult task to encounter a bakery or a supermarket.{" "}
+        difficult task to encounter a bakery or a supermarket.
       </Paragraph>
-
-      {/* PHOTO: gold pawn shop */}
 
       <Paragraph>
         In the evenings, when most shops close up and when most miners dedicate
@@ -342,7 +340,7 @@ export default () => (
       </Paragraph>
 
       <Quote author="Darwin Lizardi, local coordinator of the government party">
-        The Arco Minero, practically has functioned to cover up many things,
+        The Arco Minero practically has functioned to cover up many things
       </Quote>
 
       <Paragraph>
