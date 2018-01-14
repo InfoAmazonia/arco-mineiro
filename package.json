@@ -30,6 +30,7 @@
     "localforage": "^1.5.3",
     "moment": "^2.18.1",
     "normalize.css": "^7.0.0",
+    "offline-plugin": "^4.9.0",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-countdown-now": "^1.2.0",
@@ -74,6 +75,7 @@
     "raw-loader": "^0.5.1",
     "react-intl-translations-manager": "^5.0.1",
     "style-loader": "^0.18.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-pwa-manifest": "^3.4.1"
   }
 }
