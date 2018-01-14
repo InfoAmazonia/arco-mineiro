@@ -29,7 +29,27 @@
     "descriptors": [
       {
         "defaultMessage": "Introduction",
-        "id": "general.introduction"
+        "id": "articles.introduction"
+      },
+      {
+        "defaultMessage": "Gold Mining",
+        "id": "articles.gold_mining"
+      },
+      {
+        "defaultMessage": "Grip of the Guerrilla",
+        "id": "articles.grip_of_the_guerrilla"
+      },
+      {
+        "defaultMessage": "Coltan Country",
+        "id": "articles.coltan_country"
+      },
+      {
+        "defaultMessage": "Malaria",
+        "id": "articles.malaria"
+      },
+      {
+        "defaultMessage": "Gambling",
+        "id": "articles.gambling"
       }
     ],
     "path": "src/components/Nav.json"
@@ -148,7 +168,7 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Share this reporting",
+        "defaultMessage": "Share this article",
         "id": "share.title"
       },
       {
