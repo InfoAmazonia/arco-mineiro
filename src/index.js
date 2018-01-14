@@ -1,7 +1,10 @@
 import "es6-set/implement";
 
 import * as runtime from "offline-plugin/runtime";
-if (process.env.NODE_ENV == "production") {
+if (
+  process.env.NODE_ENV == "production" &&
+  navigator.userAgent.indexOf("Prerender") == -1
+) {
   runtime.install({
     onUpdateReady: () => {
       runtime.applyUpdate();
