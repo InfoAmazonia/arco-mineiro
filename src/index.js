@@ -1,4 +1,9 @@
 import "es6-set/implement";
+import Promise from "promise-polyfill";
+// To add to window
+if (!window.Promise) {
+  window.Promise = Promise;
+}
 
 import * as runtime from "offline-plugin/runtime";
 if (
