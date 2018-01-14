@@ -35,6 +35,11 @@ const Buttons = styled.div`
     margin: 0 auto;
   `} .fa {
     font-size: 3em;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      color: #000;
+    }
   }
   > * {
     display: table-cell;
