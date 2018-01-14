@@ -234,8 +234,9 @@ export default () => (
         Its name, the Arco Minero, is also bothersome for Luzardo. He argues
         that the term ‘Mining Arc’ is linguistic reductionism. “You reduce
         everything to Arco Minero,” he explains, “Already with the name you give
-        up the territory [to mining],” arguing that an ‘Arc of Biodiversity’
-        would be a better fit and would do more justice to the, on paper,
+        up the territory [to mining],” arguing that an ‘<em>
+          Arc of Biodiversity
+        </em>’ would be a better fit and would do more justice to the, on paper,
         protected environmental areas.
       </Paragraph>
       <Paragraph>
