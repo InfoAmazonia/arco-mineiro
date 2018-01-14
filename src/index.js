@@ -53,7 +53,9 @@ const findLocale = language => {
   return locale;
 };
 
-const messages = localeData[findLocale(language)] || localeData.en;
+window.locale = findLocale(language);
+
+const messages = localeData[locale] || localeData.en;
 
 const store = configureStore();
 const history = createHistory();

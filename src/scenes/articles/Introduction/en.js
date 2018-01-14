@@ -219,8 +219,6 @@ export default () => (
         territory to future large-scale mining operations.
       </FeaturedText>
 
-      {/* PHOTO: Indigenous people, rivers, environment */}
-
       <Paragraph>
         “It is a desperate move by the Maduro government to raise cash,” says
         David Smilde, sociology professor at Tulane University and Senior Fellow
@@ -345,9 +343,6 @@ export default () => (
         </blockquote>
       </FullBlock>
 
-      {/* START MAP: Arco Minero limits and to certify areas
-      TWITTER EMBED: https://twitter.com/PresidencialVen/status/803362045974421509/ */}
-
       <Paragraph>
         In August 2016 Maduro officially announced: “<ExternalLink
           href="http://globovision.com/article/ministerios-presentaran-a-maduro-el-plan-de-inversiones-del-arco-minero"
@@ -389,16 +384,10 @@ export default () => (
           language="es"
         >
           Russia
-        </ExternalLink>, want a piece of Venezuela’s cake of minerals on their
-        plate, mainly for debt management with both countries that facilitated
-        loans. In total, Venezuela has a $150bn debt to pay to a large queue of
-        creditors.
-      </Paragraph>
-
-      <Paragraph>
-        both want a piece of Venezuela’s cake of minerals on their plate, mainly
-        for debt management with both countries that facilitated loans. In
-        total, Venezuela has a $150bn debt to pay to a long list of creditors.
+        </ExternalLink>, both want a piece of Venezuela’s cake of minerals on
+        their plate, mainly for debt management with both countries that
+        facilitated loans. In total, Venezuela has a $150bn debt to pay to a
+        long list of creditors.
       </Paragraph>
 
       <FeaturedText>
