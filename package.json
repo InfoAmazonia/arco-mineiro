@@ -23,6 +23,7 @@
   "homepage": "https://github.com/aparabolica/arco-mineiro#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "es6-set": "^0.1.5",
     "font-awesome": "^4.7.0",
     "history": "^4.7.2",
     "intl": "^1.2.5",

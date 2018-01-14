@@ -1,3 +1,5 @@
+import "es6-set/implement";
+
 import * as runtime from "offline-plugin/runtime";
 if (process.env.NODE_ENV == "production") {
   runtime.install({
