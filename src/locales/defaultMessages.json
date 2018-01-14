@@ -54,6 +54,14 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "About",
+        "id": "about.title"
+      },
+      {
+        "defaultMessage": "Digging into the Mining Arc",
+        "id": "head.title"
+      },
+      {
         "defaultMessage": "This story was produced by {infoamazonia} in partnership with {correo} and support from {pulitzer} through “{grant}” funding.",
         "id": "about.intro"
       },
@@ -136,6 +144,19 @@
       }
     ],
     "path": "src/scenes/Landing.json"
+  },
+  {
+    "descriptors": [
+      {
+        "defaultMessage": "Share this reporting",
+        "id": "share.title"
+      },
+      {
+        "defaultMessage": "Digging into the Mining Arc",
+        "id": "head.title"
+      }
+    ],
+    "path": "src/scenes/Share.json"
   },
   {
     "descriptors": [

@@ -10,6 +10,7 @@
   "about.reporter": "Reportero",
   "about.supporter": "Financiamiento",
   "about.thanks": "Agradecimientos Especiales",
+  "about.title": "Sobre",
   "about.trans_spanish": "Traducción al español",
   "gallery.photos_label": "fotos",
   "general.author": "por Bram Ebus",
@@ -26,5 +27,6 @@
   "head.description": "La destrucción de 110 mil quilometros cuadradas de bosques en el proyecto minero más grande de Venezuela",
   "head.keywords": "venezuela, arco minero",
   "head.title": "Explorando el Arco Minero",
+  "share.title": "Comparte este reportaje",
   "story.continueReading": "Sigue leyendo"
 }
