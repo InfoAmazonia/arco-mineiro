@@ -1,14 +1,14 @@
 CACHE MANIFEST
-#ver:2018-1-14 15:06:46
+#ver:2018-1-14 15:29:43
 #plugin:4.9.0
 
 CACHE:
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-36x36.png
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-48x48.png
-/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-96x96.png
-/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-144x144.png
-/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-192x192.png
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-72x72.png
+/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-144x144.png
+/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-96x96.png
+/icons-708bc71a1b9e992870650d86c58f307d/android-chrome-192x192.png
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-256x256.png
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-384x384.png
 /icons-708bc71a1b9e992870650d86c58f307d/android-chrome-512x512.png
@@ -28,11 +28,11 @@ CACHE:
 /icons-708bc71a1b9e992870650d86c58f307d/favicon-32x32.png
 /icons-708bc71a1b9e992870650d86c58f307d/favicon.ico
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-320x460.png
-/icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-640x1096.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-640x920.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-748x1024.png
-/icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-750x1294.png
+/icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-640x1096.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-768x1004.png
+/icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-750x1294.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-1182x2208.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-1242x2148.png
 /icons-708bc71a1b9e992870650d86c58f307d/apple-touch-startup-image-1536x2008.png
@@ -121,7 +121,7 @@ CACHE:
 /fee66e712a8a08eef5805a46892932ad.woff
 /b06871f281fee6b241d60582ae9369b9.ttf
 /912ec66d7572ff821749319396470bde.svg
-/main-fab3f160679ecc9689c5.js
+/main-8633b113abffbe6e5551.js
 /manifest.b8d3c6e1c394eeb5b13ac3c8c3beb6b8.json
 /icon_512x512.669339007f287006852971dfd356c2d7.png
 /icon_256x256.00e3c1528cd091acd9877f769fed2889.png
