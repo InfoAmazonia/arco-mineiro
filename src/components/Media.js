@@ -71,6 +71,19 @@ const Expand = styled.div`
   }
 `;
 
+const Credits = styled.p`
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.6em;
+  padding: 0.25rem 0.5rem;
+`;
+
 class Media extends Component {
   static propTypes = {
     media: PropTypes.object
@@ -111,6 +124,10 @@ class Media extends Component {
     const { active } = this.state;
     const { media, preview, children } = this.props;
 
+    let credits;
+    if (media && media.data)
+      credits = media.data.credits || process.env.DEFAULT_CREDITS;
+
     switch (media.type) {
       case "video": {
         return (
@@ -130,6 +147,7 @@ class Media extends Component {
         return (
           <Wrapper preview={preview}>
             <Gallery data={media.data} preview={preview || false} />
+            {credits ? <Credits>{credits}</Credits> : null}
           </Wrapper>
         );
       }
@@ -153,12 +171,15 @@ class Media extends Component {
               style={{
                 backgroundImage: `url(${media.data.src})`
               }}
-            />
+            >
+              {credits ? <Credits>{credits}</Credits> : null}
+            </Wrapper>
           );
         } else {
           return (
             <Wrapper>
               <img src={media.data.src} />
+              {credits ? <Credits>{credits}</Credits> : null}
             </Wrapper>
           );
         }
