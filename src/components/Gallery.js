@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import styled, { css } from 'styled-components';
-import { expandMedia } from 'actions/media';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
+import styled, { css } from "styled-components";
+import { expandMedia } from "actions/media";
 
 const Preview = styled.div`
   position: absolute;
@@ -20,20 +21,20 @@ const Preview = styled.div`
     right: 0;
     bottom: 0;
     z-index: 2;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     opacity: 1;
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 600;
-    span {
+    > span {
       position: absolute;
       width: 100%;
       top: 50%;
       left: 0;
       margin-top: -1.5rem;
-      text-shadow: 0 0 1rem rgba(0,0,0,0.5);
+      text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     }
   }
 `;
@@ -61,7 +62,7 @@ const Wrapper = styled.div`
       color: #fff;
     }
     &:hover {
-      text-shadow: 0 0 .5rem #000;
+      text-shadow: 0 0 0.5rem #000;
     }
     &.prev {
       left: 0;
@@ -74,7 +75,7 @@ const Wrapper = styled.div`
 `;
 
 class Gallery extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       current: 0
@@ -84,44 +85,43 @@ class Gallery extends Component {
     this._prev = this._prev.bind(this);
     this._next = this._next.bind(this);
   }
-  componentDidMount () {
-    window.addEventListener('keydown', this._handleKeydown);
+  componentDidMount() {
+    window.addEventListener("keydown", this._handleKeydown);
   }
-  componentWillUnmount () {
-    window.removeEventListener('keydown', this._handleKeydown);
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this._handleKeydown);
   }
-  _handleKeydown (ev) {
-    switch(ev.keyCode) {
-      case 37 :
+  _handleKeydown(ev) {
+    switch (ev.keyCode) {
+      case 37:
         this._prev();
         break;
-      case 39 :
+      case 39:
         this._next();
         break;
     }
   }
-  _next () {
+  _next() {
     const { items } = this.props.data;
     const { current } = this.state;
     this.setState({
-      current: current == (items.length-1) ? 0 : current + 1
+      current: current == items.length - 1 ? 0 : current + 1
     });
   }
-  _prev () {
+  _prev() {
     const { items } = this.props.data;
     const { current } = this.state;
     this.setState({
       current: current == 0 ? items.length - 1 : current - 1
     });
-
   }
-  _handleClick (ev) {
+  _handleClick(ev) {
     ev.preventDefault();
     this.props.expandMedia(true);
   }
-  render () {
+  render() {
     const { data, preview } = this.props;
-    if(preview) {
+    if (preview) {
       const first = data.items[0];
       return (
         <Preview
@@ -131,34 +131,31 @@ class Gallery extends Component {
           onClick={this._handleClick}
         >
           <span className="open">
-            <span>+{data.items.length} photos</span>
+            <span>
+              +{data.items.length}{" "}
+              <FormattedMessage
+                id="gallery.photos_label"
+                defaultMessage="photos"
+              />
+            </span>
           </span>
         </Preview>
-
-      )
+      );
     } else {
       const { current } = this.state;
       return (
         <Wrapper>
-          <a
-            href="javascript:void(0);"
-            className="prev"
-            onClick={this._prev}
-          >
+          <a href="javascript:void(0);" className="prev" onClick={this._prev}>
             <span className="fa fa-angle-left" />
           </a>
           <div className="image">
             <img src={data.items[current].src} />
           </div>
-          <a
-            href="javascript:void(0);"
-            className="next"
-            onClick={this._next}
-          >
+          <a href="javascript:void(0);" className="next" onClick={this._next}>
             <span className="fa fa-angle-right" />
           </a>
         </Wrapper>
-      )
+      );
     }
   }
 }

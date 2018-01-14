@@ -18,6 +18,7 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env": {
         DEFAULT_CREDITS: JSON.stringify(process.env.DEFAULT_CREDITS || ""),
+        GOOGLE_ANALYTICS: JSON.stringify(process.env.GOOGLE_ANALYTICS || ""),
         LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
       }
     }),

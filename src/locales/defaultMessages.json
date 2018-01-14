@@ -2,6 +2,15 @@
   {
     "descriptors": [
       {
+        "defaultMessage": "photos",
+        "id": "gallery.photos_label"
+      }
+    ],
+    "path": "src/components/Gallery.json"
+  },
+  {
+    "descriptors": [
+      {
         "defaultMessage": "Introduction",
         "id": "general.introduction"
       }

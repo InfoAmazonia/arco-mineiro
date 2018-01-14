@@ -1,6 +1,7 @@
 import "intl";
 import React from "react";
 import ReactDom from "react-dom";
+import ReactGA from "react-ga";
 import { IntlProvider, addLocaleData } from "react-intl";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/es/integration/react";
@@ -82,4 +83,13 @@ if (process.env.LAUNCH_DATE) {
   });
 } else {
   init();
+}
+
+if (process.env.GOOGLE_ANALYTICS) {
+  ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  history.listen((location, action) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
 }
