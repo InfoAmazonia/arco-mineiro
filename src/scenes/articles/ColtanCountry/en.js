@@ -160,12 +160,14 @@ export default () => (
         >
           gate of the Empresa Mixta Minera Ecosocialista Parguaza
         </StoryMedia>, which is protected around the clock by the National
-        Guard. Army personnel is also present on their terrain. We introduce
-        ourselves around 1 PM in the afternoon and inquire about social
-        investments in nearby indigenous communities. “You need a permission
-        from the Ministry of Mines in Caracas to speak with us,” we are told by
-        Luisa Herminia Alcalá Otero, the company representative who meets us and
-        allow us to enter the company terrain.
+        Guard. Army personnel is also present on their terrain.
+      </Paragraph>
+      <Paragraph>
+        We introduce ourselves around 1 PM in the afternoon and inquire about
+        social investments in nearby indigenous communities. “You need a
+        permission from the Ministry of Mines in Caracas to speak with us,” we
+        are told by Luisa Herminia Alcalá Otero, the company representative who
+        meets us and allow us to enter the company terrain.
       </Paragraph>
       <FeaturedText>The National Guard does not allow us to leave</FeaturedText>
       <Paragraph>
@@ -274,7 +276,7 @@ export default () => (
       <Paragraph>
         “You [the leaders] are puppets, you don't have the capacity to say this
         to the company,” says Quiñones, while adding: “They focus on individual
-        gain, they are used.”
+        gain, they are used”.
       </Paragraph>
       <Paragraph>
         The indigenous youngster understands very well how the recently arrived
@@ -282,7 +284,7 @@ export default () => (
         newly created frictions cause unrest. “When you install a company, here,
         this will be the end of our culture, the end of our customs. And so, a
         complete transculturalisation. So, there are many preoccupied
-        communities that ask: ‘who will help us?’”
+        communities that ask: ‘who will help us?’.”
       </Paragraph>
     </Container>
   </article>

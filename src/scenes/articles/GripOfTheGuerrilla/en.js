@@ -55,7 +55,7 @@ export default () => (
           He explains
         </StoryMedia>: “The indigenous way of living has been affected by the
         presence of illegal armed groups and miners. They have been inserted in
-        mining economies.”
+        mining economies”.
       </Paragraph>
       <Paragraph>
         The gravity of the situation becomes apparent after learning about
@@ -239,7 +239,7 @@ export default () => (
           href={require("documents/DepartmentDefenseUS_Strategic-Critical-Materials-2015-Stockpile-Requirements.pdf")}
         >
           The U.S. Department of Defence recommended stockpiling coltan in 2015
-        </FileLink>, elevating the mineral to a national security issue
+        </FileLink>, elevating the mineral to a national security issue.
       </Paragraph>
       <Paragraph>
         As far back as the 1970’s,{" "}
@@ -255,7 +255,7 @@ export default () => (
         the Piaroa indigenous people, was investigated in 1989 and 1990 and
         received special attention because of the attractive deposits. These
         deposits are located in the most western point of the Bolívar state, in
-        the armpit of the Parguaza and the Orinoco river.{" "}
+        the armpit of the Parguaza and the Orinoco river.
       </Paragraph>
     </Container>
   </article>
