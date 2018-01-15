@@ -20,9 +20,9 @@ export default () => (
         familiar, mesmo antes de o sol nascer. Yonnier Rivera, o nosso motorista
         cubano, chega na hora com sua caminhonete pick-up branca e discute a
         logística do dia, enquanto esperamos por nossos outros dois companheiros
-        de viagem: Norayma Ángel, coordenador do Vicariato de Direitos Humanos
-        da Arquidiocese de Puerto Ayacucho, e Pedro Ortiz, um membro indígena da
-        Red de Defensores y Defensoras indígenas, uma rede de proteção indígena
+        de viagem: Noraima Ángel, coordenador de Direitos Humanos do Vicariato
+        de Puerto Ayacucho, e Pedro Ortiz, um membro indígena da Red de
+        Defensores y Defensoras indígenas, uma rede de proteção indígena
         local.{" "}
         <StoryMedia
           media={{
@@ -75,7 +75,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17444"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17444"
             }
           }}
         >
