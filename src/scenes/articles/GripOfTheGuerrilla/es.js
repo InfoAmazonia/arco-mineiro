@@ -81,10 +81,7 @@ export default () => (
         Yanomami estaban siendo asesinados alrededor de proyectos de minería
         ilegal. “Yo vi a algunos yanomamis que estaban marcados”.
       </Paragraph>
-      <FeaturedText>
-        No solo han sido esclavizados los indígenas, las jóvenes también han
-        sido forzadas en prostitución
-      </FeaturedText>
+
       <Paragraph>
         Alcalá explica que varios indígenas fueron marcados por mineros
         invasores brasileños, llamados <em>garimpeiros</em>, que esclavizaron a

@@ -79,11 +79,7 @@ export default () => (
         assassinados em torno de projetos de mineração ilegal. “Eu vi alguns
         Yanomami que foram marcados”.
       </Paragraph>
-      <FeaturedText>
-        Não só os indígenas foram escravizados para trabalhar, mas jovens
-        meninas indígenas também foram tiradas de suas comunidades e forçadas à
-        prostituição
-      </FeaturedText>
+
       <Paragraph>
         Alcalá explica que vários indígenas foram marcados por garimpeiros
         brasileiros, que os escravizaram nas minas. “Então, eles podem dizer:

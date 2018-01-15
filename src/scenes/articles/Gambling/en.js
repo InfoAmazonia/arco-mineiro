@@ -194,8 +194,20 @@ export default () => (
         what is happening with the project.”
       </Paragraph>
       <FeaturedText>
-        Two undebated risks of mining are deforestation and mercury
-        contamination.
+        Two undebated risks of mining are
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-1",
+            type: "embed",
+            data: {
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17456"
+            }
+          }}
+        >
+          deforestation
+        </StoryMedia>
+        and mercury contamination.
       </FeaturedText>
       <Paragraph>
         “As I interpret it, according to Venezuela’s environmental norms, this

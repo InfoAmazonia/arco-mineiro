@@ -60,11 +60,6 @@ export default () => (
         então, não parou de lutar com gangues e matar seus membros.
       </Paragraph>
 
-      <FeaturedText>
-        Uma visita a El Callao é mais do que suficiente para entender que
-        mineração ilegal e legal vão de mãos dadas.
-      </FeaturedText>
-
       <Paragraph>
         <StoryMedia
           media={{
@@ -593,10 +588,6 @@ export default () => (
         vivem os mineiros, ao lado dos poços de mineração cheios de água parada
         e contaminada.
       </Paragraph>
-
-      <FeaturedText>
-        Cerca de 91 por cento do ouro extraído na Venezuela é ilegal
-      </FeaturedText>
 
       <Paragraph>
         A situação em El Callao não é uma exceção. Cerca de 91 por cento do ouro

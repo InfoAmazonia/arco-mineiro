@@ -175,13 +175,18 @@ export default () => (
         responde Luisa Herminia Alcalá Otero, a representante da empresa que nos
         encontra e nos permite entrar no terreno da companhia.
       </Paragraph>
-      <FeaturedText>A Guarda Nacional não nos permite ir embora</FeaturedText>
+
       <Paragraph>
         Logo quando pensamos que seríamos expulsos aos empurrões por fazer
-        perguntas, parece que a nossa visita seria prolongada. A Guarda Nacional
-        não nos permite ir embora. Depois de algumas horas de espera enquanto
-        nossos documentos são inspecionados, entendemos que fomos detidos.
+        perguntas, parece que a nossa visita seria prolongada.
       </Paragraph>
+
+      <FeaturedText>
+       A Guarda Nacional não nos permite ir embora Depois de algumas horas de
+       espera enquanto nossos documentos são inspecionados, entendemos que fomos
+       detidos.
+      </FeaturedText>
+
       <Paragraph>
         Já é o fim da tarde, está quase anoitecendo, mas não sabemos ainda
         quanto tempo mais estaremos sob custódia. Os trabalhadores fazem fila
@@ -202,10 +207,7 @@ export default () => (
         Enquanto isso, somos levados para o quartel da Guarda Nacional e
         trancados com guardas armados em frente da porta.
       </Paragraph>
-      <FeaturedText>
-        Não só fomos trancados em uma empresa de mineração, mas nós também não
-        tivemos o direito de fazer um telefonema ou falar com um advogado
-      </FeaturedText>
+
       <Paragraph>
         À uma da madrugada ainda não está claro o que vai acontecer conosco
         enquanto somos interrogados. Não estamos autorizados a fazer quaisquer

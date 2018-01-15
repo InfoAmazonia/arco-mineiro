@@ -173,14 +173,18 @@ export default () => (
         are told by Luisa Herminia Alcalá Otero, the company representative who
         meets us and allow us to enter the company terrain.
       </Paragraph>
-      <FeaturedText>The National Guard does not allow us to leave</FeaturedText>
+
       <Paragraph>
         Just as we thought that we would be shoved off with a reprimand for
-        asking questions, it seems that our visit is an extended one. The
-        National Guard does not allow us to leave. It takes a few hours of
+        asking questions, it seems that our visit is an extended one.
+      </Paragraph>
+
+      <FeaturedText>
+        The National Guard does not allow us to leave. It takes a few hours of
         waiting, while our papers are inspected, to understand that we are being
         detained.
-      </Paragraph>
+      </FeaturedText>
+
       <Paragraph>
         It is the end of the afternoon, close to sunset, and we are unsure how
         long we will be held. Day laborers are lining up to hop on the bus that
@@ -200,10 +204,7 @@ export default () => (
         brought to the barracks of the National Guard and locked up with armed
         guards in front of the door.
       </Paragraph>
-      <FeaturedText>
-        Not only were we locked up in a mining company, we did we not receive
-        the right to make a phone call or to speak with a lawyer.
-      </FeaturedText>
+
       <Paragraph>
         At 1 AM in the morning it is still unclear what will happen with us
         while we are interviewed. We are not allowed to make any phone calls,

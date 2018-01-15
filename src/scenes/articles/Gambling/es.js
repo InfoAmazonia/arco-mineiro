@@ -195,7 +195,19 @@ export default () => (
         con el proyecto”.
       </Paragraph>
       <FeaturedText>
-        Dos riesgos que aún no se debaten sobre la minería son la deforestación
+        Dos riesgos que aún no se debaten sobre la minería son la
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-1",
+            type: "embed",
+            data: {
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17456"
+            }
+          }}
+        >
+          deforestación
+        </StoryMedia>
         y la contaminación por mercurio.
       </FeaturedText>
       <Paragraph>

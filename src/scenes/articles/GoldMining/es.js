@@ -60,11 +60,6 @@ export default () => (
         sus miembros desde entonces.
       </Paragraph>
 
-      <FeaturedText>
-        Una visita a El Callao basta para entender que la minería legal y la
-        ilegal van de la mano
-      </FeaturedText>
-
       <Paragraph>
         <StoryMedia
           media={{
@@ -592,10 +587,6 @@ export default () => (
         campamentos donde viven los mineros, cerca de los fosos llenos de agua
         estancada y contaminada.
       </Paragraph>
-
-      <FeaturedText>
-        Cerca de 91 por ciento del oro explotado en Venezuela es ilegal
-      </FeaturedText>
 
       <Paragraph>
         La situación en El Callao no es una excepción. Cerca de 91 por ciento

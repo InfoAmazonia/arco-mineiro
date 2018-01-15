@@ -194,8 +194,20 @@ export default () => (
         curiosas em saber o que está acontecendo com o projeto.”
       </Paragraph>
       <FeaturedText>
-        Dois riscos ainda não debatidos de mineração são o desmatamento e
-        contaminação por mercúrio.
+        Dois riscos ainda não debatidos de mineração são o
+        <StoryMedia
+          icon="map"
+          media={{
+            id: "map-1",
+            type: "embed",
+            data: {
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17456"
+            }
+          }}
+        >
+          desmatamento
+        </StoryMedia>
+        e contaminação por mercúrio.
       </FeaturedText>
       <Paragraph>
         “No meu entendimento, de acordo com as normas ambientais da Venezuela,

@@ -176,13 +176,17 @@ export default () => (
         compañía que salió a nuestro encuentro y nos permitió entrar en el
         terreno de la compañía.
       </Paragraph>
-      <FeaturedText>La Guardia Nacional no nos dejar ir</FeaturedText>
+
       <Paragraph>
         Justo cuando pensábamos que nos iban a sacar a empujones por hacer
-        preguntas, nuestra visita parece prolongarse. La Guardia Nacional no nos
-        dejar ir. Horas después, tras inspeccionar nuestros papeles, entendemos
-        que fuimos detenidos.
+        preguntas, nuestra visita parece prolongarse.
       </Paragraph>
+
+      <FeaturedText>
+       La Guardia Nacional no nos dejar ir. Horas después, tras inspeccionar
+       nuestros papeles, entendemos que fuimos detenidos.
+      </FeaturedText>
+
       <Paragraph>
         Al final de la tarde, cerca del anochecer, no sabíamos cuánto más íbamos
         a estar cautivos. Los trabajadores se alineaban para montarse en el
@@ -203,10 +207,7 @@ export default () => (
         ellos”. Mientras tanto, nos llevan a las tiendas de la Guardia Nacional
         y somos encerrados con castrenses armados en la entrada de la puerta.
       </Paragraph>
-      <FeaturedText>
-        No solo estamos encerrados en una compañía minera, sino que no se nos
-        deja recibir o hacer llamadas telefónicas ni hablar con un abogado
-      </FeaturedText>
+
       <Paragraph>
         A la 1:00 de la mañana mientras nos interrogan, aún no está claro qué
         pasará con nosotros. No se nos deja hacer ninguna llamada telefónica,

@@ -77,11 +77,7 @@ export default () => (
         were being killed around illegal mining projects. “I saw some Yanomami
         that were marked.”
       </Paragraph>
-      <FeaturedText>
-        Not only have the indigenous people been enslaved to work, but young
-        indigenous girls have also been taken from their communities and forced
-        into prostitution
-      </FeaturedText>
+      
       <Paragraph>
         Alcalá explains that various indigenous people had been branded by
         invading Brazilian miners, called <em>garimpeiros</em>, who enslaved
