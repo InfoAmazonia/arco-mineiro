@@ -49,6 +49,11 @@ module.exports = {
       ServiceWorker: {
         events: true
       },
+      caches: {
+        main: ["*.js", "*.css", "*.svg", "*.ttf", "*.woff", "*.woff2"],
+        additional: [":externals:", "*.jpg", "*.png"],
+        optional: ":rest:"
+      },
       cacheMaps: [
         {
           match: url => {
