@@ -64,7 +64,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17453"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17453"
             }
           }}
         >
@@ -164,7 +164,7 @@ export default () => (
         According to Yerena, “Mining damages the quality of the available water.
         The topic of hydroelectric potential in Guiana not only depends on the
         quantity of water, but also on the quality. It requires water with
-        little sediment,” he explains while referring to the Caroni river that
+        little sediment,” he explains while referring to the Caroní river that
         borders the mining region and increasingly becomes sedimented.
       </Paragraph>
       <Quote author="Edgar Yerena, biologist">
@@ -176,7 +176,7 @@ export default () => (
         over the long term, the environmental damages might far outweigh the
         revenues of the mining sector. Yerena adds: “The Venezuelan state has a
         history of not knowing how to manage mining. Why would they know how to
-        do so now?”
+        do so now?”.
       </Paragraph>
       <Paragraph>
         Not knowing is also a problem for environmental justice movements that
@@ -237,10 +237,10 @@ export default () => (
       <Paragraph>
         Its name, the Arco Minero, is also bothersome for Luzardo. He argues
         that the term ‘Mining Arc’ is linguistic reductionism. “You reduce
-        everything to Arco Minero,” he explains, “Already with the name you give
-        up the territory [to mining],” arguing that an ‘<em>
+        everything to Arco Minero,” he explains. “Already with the name you give
+        up the territory [to mining],” arguing that an <em>
           Arc of Biodiversity
-        </em>’ would be a better fit and would do more justice to the, on paper,
+        </em> would be a better fit and would do more justice to the, on paper,
         protected environmental areas.
       </Paragraph>
       <Paragraph>
@@ -262,7 +262,7 @@ export default () => (
         >
           sidelined the National Assembly
         </ExternalLink>{" "}
-        and all its decisions already from the 11th of January that year.
+        and all its decisions already from the 11th January 2017.
       </Paragraph>
       <Paragraph>
         Meanwhile, Venezuela’s political and economic crisis continues, driving

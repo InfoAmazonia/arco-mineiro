@@ -140,7 +140,7 @@ export default () => (
         Miners explain that only a minor portion of Venezuela’s gold production
         ends up at the BCV. Most of it is smuggled abroad by the army and
         organized crime. “Eight thousand kilos are nothing,” says retired
-        general Cliver Alcalá Cordones. “It goes to Aruba and Curacao.” About 80
+        general Clíver Alcalá Cordones. “It goes to Aruba and Curacao.” About 80
         per cent of Venezuela’s gold illegally leaves the country by airplanes
         transporting contraband, according to Alcalá.
       </Paragraph>
@@ -196,7 +196,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17464"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17464"
             }
           }}
         >
@@ -452,7 +452,7 @@ export default () => (
             id: "vr-1",
             type: "embed",
             data: {
-              src: "https://roundme.com/embed/222934/625485"
+              src: "https://roundme.com/embed/ZzUPHJB7RQlm7o4yp4BK"
             }
           }}
         >

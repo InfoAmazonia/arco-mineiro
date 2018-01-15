@@ -20,10 +20,10 @@ export default () => (
         already feels familiar, even before the sun has risen. Yonnier Rivera,
         our Cuban driver, arrives in time with his white pick-up truck and
         discusses the logistics of the day, as we wait for our other two travel
-        companions: Norayma Ángel, a human rights coordinator from the Human
-        Rights Vicarage of the Puerto Ayacucho Archdiocese, and Pedro Ortíz, an
-        indigenous member of Red de Defensores y Defensoras Indígenas, a local
-        indigenous protection network.{" "}
+        companions: Noraima Ángel, a human rights coordinator from Puerto
+        Ayacucho’s Vicarage, and Pedro Ortiz, an indigenous member of Red de
+        Defensores y Defensoras Indígenas, a local indigenous protection
+        network.{" "}
         <StoryMedia
           media={{
             id: "video-1",
@@ -63,7 +63,7 @@ export default () => (
         too much as we are more worried about the guerrilla presence in the
         region. As we enter Bolívar state, leaving Amazonas in the north, our
         vehicle makes a curve to the east slowly entering the Parguaza region.
-        As we drive along an area called Los Gallitos, Ortíz, from the local
+        As we drive along an area called Los Gallitos, Ortiz, from the local
         defence network, tells us that this is where the ELN guerrilla get their
         coltan.
       </Paragraph>
@@ -74,7 +74,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17444"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17444"
             }
           }}
         >
@@ -195,7 +195,7 @@ export default () => (
         National Guard and it is unclear if the armed men are present to prevent
         workers from stealing from the company, or to protect the project from
         the guerrillas. A National Guard who works in the mining camp comments
-        that there is ‘mutual respect’ when they encounter the guerrilla. “They
+        that there is “mutual respect” when they encounter the guerrilla. “They
         do not mess with us, and we do not mess with them.” Meanwhile we are
         brought to the barracks of the National Guard and locked up with armed
         guards in front of the door.

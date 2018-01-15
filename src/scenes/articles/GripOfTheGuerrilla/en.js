@@ -12,11 +12,11 @@ import FeaturedText from "components/blocks/FeaturedText";
 export default () => (
   <article>
     <Helmet>
-      <title>Amazonas and Western-Bolívar: in the grip of the guerrilla | Digging into the Mining Arc</title>
+      <title>Amazonas and Western-Bolívar: in the guerrillas’ grip | Digging into the Mining Arc</title>
     </Helmet>
     <Container>
       <Title as="h2">
-        Amazonas and Western-Bolívar: in the grip of the guerrilla
+        Amazonas and Western-Bolívar: in the guerrillas’ grip
       </Title>
       <Paragraph>
         The ones bearing the brunt of Venezuela’s mining bonanza are the{" "}
@@ -26,7 +26,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -72,7 +72,7 @@ export default () => (
         </ExternalLink>. “When we received the denouncement that they killed
         some Yanomami [indigenous people], I went to the Alto Orinoco, which is
         an extensive municipality,” says the retired major general from the
-        army, Cliver Alcalá Cordones. In 2012, the army began a three-week
+        army, Clíver Alcalá Cordones. In 2012, the army began a three-week
         operation after receiving a complaint that Yanomami indigenous people
         were being killed around illegal mining projects. “I saw some Yanomami
         that were marked.”
@@ -181,7 +181,7 @@ export default () => (
         FARC dissident groups that did not want to participate in the peace
         process came to Venezuela. They are involved in illicit economies and
         launder drug money through illegal mining activities involving the local
-        population. “The guerrilla forces USE the indigenous people to work in
+        population. “Guerrilla forces the indigenous people to work in
         the mines,” Alcalá explains.
       </Paragraph>
       <Paragraph>
@@ -220,7 +220,7 @@ export default () => (
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17453"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17453"
             }
           }}
         >

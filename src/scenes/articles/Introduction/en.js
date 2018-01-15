@@ -67,7 +67,7 @@ export default () => (
         The Venezuelan military also participates in the violence and is often
         involved in mining through associated gangs and its own operations.
         Venezuela’s armed forces gained power during the presidency of the late
-        Hugo Chávez. Cliver Alcalá Cordones, a Chávez loyalist who retired in
+        Hugo Chávez. Clíver Alcalá Cordones, a Chávez loyalist who retired in
         2013, was a Major General that held command in the mining regions. At a
         meeting in a hotel lobby in Bogotá, Colombia, he explains that Maduro is
         increasingly handing over power to the military and government sectors
@@ -116,7 +116,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17448"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17448"
             }
           }}
         >
@@ -150,7 +150,7 @@ export default () => (
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -319,7 +319,7 @@ export default () => (
             id: "map-3",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17449"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17449"
             }
           }}
         >
@@ -429,7 +429,7 @@ export default () => (
         >
           says Américo de Grazia
         </StoryMedia>, who belongs to the political opposition and is a deputy
-        in the government-side-lined parliament. De Grazia represents the state
+        in the government-sidelined parliament. De Grazia represents the state
         where most of the gold reserves are hidden, Bolívar, the state where
         most of the gold reserves are hidden. “[Illegal] mining has been
         criminalized for the public opinion, but their own clandestinity is
