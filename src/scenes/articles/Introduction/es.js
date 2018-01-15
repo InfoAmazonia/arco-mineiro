@@ -213,8 +213,8 @@ export default () => (
         los programas sociales del presidente Chávez desde 1999 hasta su muerte
         en 2013. Por desgracia, estos ingresos se agotaron después del{" "}
         <ExternalLink
-          href="https://www.nytimes.com/2017/05/06/world/americas/venezuela-unrest-protests.html"
-          language="en"
+          href="https://www.nytimes.com/es/2017/05/09/interpreter-venezuela-elites-supervivencia/"
+          language="es"
         >
           autoenriquecimiento de las élites del país
         </ExternalLink>{" "}
@@ -446,8 +446,8 @@ export default () => (
       <Paragraph>
         Venezuela tiene un número increíble de generales –{" "}
         <ExternalLink
-          href="https://www.nytimes.com/2017/08/08/world/americas/nicolas-maduro-venezuela-military.html"
-          language="en"
+          href="https://www.nytimes.com/es/2017/08/08/los-militares-venezolanos-se-dividen-ante-la-crisis-del-poder-chavismo-maduro-padrino/"
+          language="es"
         >
           cerca de dos mil
         </ExternalLink>{" "}
