@@ -143,7 +143,7 @@ export default () => (
         Los mineros explican que solo una menor porción de la producción de oro
         de Venezuela termina en las arcas del BCV. La mayoría es traficada para
         el extranjero por el ejército y por el crimen organizado. “Ocho mil
-        kilos no son nada”, afirma el general retirado Cliver Alcalá Cordones.
+        kilos no son nada”, afirma el general retirado Clíver Alcalá Cordones.
         “Se va a Aruba y a Curazao”. Cerca de 80 por ciento del oro de Venezuela
         se va ilegalmente del país en aviones de contrabando, de acuerdo con
         Alcalá.
@@ -200,7 +200,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17464"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17464"
             }
           }}
         >
@@ -221,7 +221,7 @@ export default () => (
         “Pequeñas bases todavía están activas entre la gente”. De acuerdo con el
         minero, las que están en El Perú son las más terribles. Los choques
         violentos ocurren con frecuencia. En septiembre, antes de nuestra visita
-        a El Perú, un sector que está bajo el dominio del gánster conocido como
+        a El Perú, un sector que está bajo el dominio del criminal conocido como
         “el Toto” –{" "}
         <ExternalLink
           href="http://www.eluniversal.com/noticias/sucesos/mueren-personas-durante-incursion-del-ejercito-mina-bolivar_669537"
@@ -395,10 +395,10 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Seguimos hablando en un bar cerrado para foráneos, mientras mineros y
-        alcohol pueden ser una combinación muy explosiva. Lizardi ordena más
-        cerveza y sigue su discurso sobre la falta de infraestructura estatal y
-        de medicinas, todo mientras los locales le entregan su oro al gobierno.
+        Seguimos hablando en un bar cerrado para foráneos; mineros y alcohol
+        pueden ser una combinación muy explosiva. Lizardi ordena más cerveza y
+        sigue su discurso sobre la falta de infraestructura estatal y de
+        medicinas, todo mientras los locales le entregan su oro al gobierno.
         “Gracias al minero, el que{" "}
         <StoryMedia
           media={{
@@ -554,7 +554,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        La oscura simbiosis entre la minería legal y la ilegal es casi obvio.
+        La oscura simbiosis entre la minería legal y la ilegal es casi obvia.
         Del otro lado del pueblo, somos llevados a una mina controlada por una
         banda armada llamada “Nacupay”. Antes de entrar, se nos dice que no
         tomemos “fotos de los hombres armados” ni de la maquinaria que usa el

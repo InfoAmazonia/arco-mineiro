@@ -20,8 +20,8 @@ export default () => (
         se siente familiar, aun antes de la salida del sol. Yonnier Rivera,
         nuestro conductor cubano, llega a tiempo con su pick-up blanca y discute
         la logística del día mientras esperamos por nuestros otros dos
-        acompañantes de viaje: Norayma Ángel, coordinador de derechos humanos de
-        la Vicaría de la Arquidiócesis de Puerto Ayacucho, y Pedro Ortiz, un
+        acompañantes de viaje: Noraima Ángel, coordinador de la Oficina de
+        Derechos Humanos del Vicariato de Puerto Ayacucho, y Pedro Ortiz, un
         indígena miembro de la organización local Red de Defensores y Defensoras
         Indígenas.{" "}
         <StoryMedia
@@ -64,7 +64,7 @@ export default () => (
         presencia guerrillera en la región. Cuando entramos en el estado
         Bolívar, dejando Amazonas por el norte, nuestro vehículo toma una curva
         al este lentamente y nos adentramos en la región Parguaza. Mientras
-        manejamos por una zona llamada Los Gallitos, Ortiz, de la red local de
+        manejamos por una zona llamada Los Gallitos, Ortíz, de la red local de
         defensores indígenas, comenta que el ELN saca el coltán de allí.
       </Paragraph>
       <Paragraph>
@@ -74,7 +74,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17444"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17444"
             }
           }}
         >

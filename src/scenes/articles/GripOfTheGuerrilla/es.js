@@ -29,7 +29,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -145,7 +145,7 @@ export default () => (
         Guarulla argumenta que su estado ha sido invadido: “Prácticamente, es la
         guerrilla quien ejerce el control aquí. La guerrilla con la ayuda de las
         Fuerzas Armadas venezolanas. Ellos reciben parte de las acciones”. Según
-        el exgobernador, la guerrilla soborna al ejército para fungir como
+        el ex-gobernador, la guerrilla soborna al ejército para fungir como
         autoridad que controla las operaciones mineras: “Así pueden funcionar en
         la zona”.
       </Paragraph>
@@ -226,7 +226,7 @@ export default () => (
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17453"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17453"
             }
           }}
         >

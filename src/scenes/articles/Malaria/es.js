@@ -215,7 +215,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/gW7Rf/1/"
+          src="https://datawrapper.dwcdn.net/mVmoH/1/"
           allowFullScreen
           frameBorder="0"
         />
