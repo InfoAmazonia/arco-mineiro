@@ -13,8 +13,12 @@ const map = {
 
 class GoldMining extends React.Component {
   render() {
-    // const { intl } = this.props;
-    const Article = map[window.locale];
+    let Article;
+    if (map[window.locale]) {
+      Article = map[window.locale];
+    } else {
+      Article = map["en"];
+    }
     return <Article />;
   }
 }
