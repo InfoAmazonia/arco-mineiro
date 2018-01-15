@@ -224,8 +224,8 @@ export default () => (
 
       <FeaturedText>
         Em uma última tentativa de injetar capital estrangeiro na economia
-        quebrada, o https://infoamazonia.org/embedo território nacional para
-        futuras operações de mineração em larga escala.
+        quebrada, o Presidente Maduro abriu até doze por cento do território
+        nacional para futuras operações de mineração em larga escala.
       </FeaturedText>
 
       <Paragraph>
