@@ -52,13 +52,14 @@ class Scene extends Component {
     this.removeSwipeListeners = swipe(findDOMNode(this), direction => {
       this.nextArticle(direction);
     });
-    twttr.widgets.load();
+    if (twttr) twttr.widgets.load();
   }
   componentDidUpdate(prevProps) {
     const { location } = this.props;
     if (
-      !prevProps.location.pathname ||
-      location.pathname !== prevProps.location.pathname
+      (!prevProps.location.pathname ||
+        location.pathname !== prevProps.location.pathname) &&
+      twttr
     ) {
       twttr.widgets.load();
     }

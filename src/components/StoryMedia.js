@@ -45,11 +45,11 @@ class StoryMedia extends Component {
     // Wait transition
     setTimeout(() => {
       this._updateMedia();
-      twttr.events.bind("rendered", this._updateMedia);
+      if (twttr) twttr.events.bind("rendered", this._updateMedia);
     }, 600);
   }
   componentWillUnmount() {
-    twttr.events.unbind("rendered", this._updateMedia);
+    if (twttr) twttr.events.unbind("rendered", this._updateMedia);
   }
   _getMediaId(media) {
     const { pathname } = this.props;
