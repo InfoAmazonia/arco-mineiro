@@ -33,12 +33,12 @@ export default () => (
         >
           cockfighting arena
         </StoryMedia>{" "}
-        while locals pay them a visit to ask for small collaborations, mediation
-        to settle conflicts or just to socialize. In Las Claritas, Bolívar
-        state, the armed gang that goes by the name of pranes not only controls
-        daily life, but is also in charge of the extensive illegal gold mines
-        around the village. Many of the locals who visit the cockfighting arena
-        leave unattended, a sign on the wall says: “<StoryMedia
+        while locals pay them a visit to ask for small financial contributions,
+        mediation to settle conflicts or just to socialize. In Las Claritas,
+        Bolívar state, the armed gang that goes by the name of pranes not only
+        controls daily life, but is also in charge of the extensive illegal gold
+        mines around the village. Many of the locals who visit the cockfighting
+        arena leave unattended, a sign on the wall says: “<StoryMedia
           media={{
             id: "image-2",
             type: "image",
@@ -47,7 +47,7 @@ export default () => (
             }
           }}
         >
-          [Financial] Collaborations suspended until further notice
+          [Financial] Contributions suspended until further notice
         </StoryMedia>.”
       </Paragraph>
       <Paragraph>
@@ -93,7 +93,7 @@ export default () => (
       </FeaturedText>
       <Paragraph>
         Unfortunately, this honour belongs to the past. While Venezuela has
-        shown that malaria can be successfully prevented and treated , few
+        shown that malaria can be successfully prevented and treated, few
         attempts have been made by the current government to counter the current
         epidemic.
       </Paragraph>

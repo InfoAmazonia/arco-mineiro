@@ -89,8 +89,8 @@ export default () => (
         En 1961, Venezuela fue premiada por la Organización Mundial de la Salud
         porque era el{" "}
         <ExternalLink
-          language="en"
-          href="https://www.nytimes.com/2016/08/15/world/venezuela-malaria-mines.html"
+          language="es"
+          href="https://www.nytimes.com/es/2016/08/16/la-malaria-sale-de-las-infernales-minas-ilegales-venezolanas-y-vuelve-a-esparcirse-por-el-pais/"
         >
           primer país en erradicar la malaria
         </ExternalLink>{" "}
@@ -215,7 +215,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/gW7Rf/1/"
+          src="https://datawrapper.dwcdn.net/mVmoH/1/"
           allowFullScreen
           frameBorder="0"
         />

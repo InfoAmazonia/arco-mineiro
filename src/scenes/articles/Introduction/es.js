@@ -48,7 +48,7 @@ export default () => (
           procesadas con mercurio
         </StoryMedia>. A poca distancia, aguardan unos soldados. Los militares
         nos escoltaron durante nuestra visita en los cerros cerca de El Callao,
-        uno de los muchos yacimientos fuertemente disputados en Venezuela. “En
+        uno de los muchos yacimientos más disputados en Venezuela. “En
         cualquier momento, podría ocurrir una balacera o una masacre. Todos los
         días eran así”, cuenta con entusiasmo otro minero sobre el violento
         proceder con el que grupos armados que disputaron esta misma mina.
@@ -61,8 +61,8 @@ export default () => (
         las balaceras nocturnas en los cerros que circundan el pueblo donde
         tiros son disparados ante cualquier luz de faro como si se tratase de un
         toque de queda impuesto por las bandas armadas. La mayoría de los
-        mineros no quieren ser nombrados ya que temen las reacciones de los
-        actores armados en la región.
+        mineros no quieren que sus nombres se mencionen ya que temen las
+        reacciones de los actores armados en la región.
       </Paragraph>
 
       <Paragraph>
@@ -70,7 +70,7 @@ export default () => (
         frecuentemente resulta de la explotación minera a través de bandas
         armadas y sus propias operaciones. Las Fuerzas Armadas venezolanas
         consiguieron mucho poder durante la presidencia del fallecido Hugo
-        Chávez. Cliver Alcalá Cordones, retirado en 2013 y leal a Chávez, fue un
+        Chávez. Clíver Alcalá Cordones, retirado en 2013 y leal a Chávez, fue un
         mayor general que comandó las regiones mineras. En una reunión en el
         lobby de un hotel en Bogotá, Colombia, explicó que Maduro sigue
         entregando poder a los militares y a sectores del gobierno que ahora
@@ -95,7 +95,7 @@ export default () => (
             }
           }}
         >
-          somos interrumpidos cada 30 minutos en alcabalas, puntos de control de
+          somos interrumpidos cada 30 minutos por alcabalas, puntos de control de
           la Guardia Nacional
         </StoryMedia>, encargada del orden público – pero entre más cerca de las
         minas, son los militares los que dominan la escena.
@@ -119,7 +119,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17448"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17448"
             }
           }}
         >
@@ -144,15 +144,15 @@ export default () => (
         Alexander Luzardo, exsenador con un doctorado en Derecho Político y
         Ambiental, ha estado directamente involucrado en la legislación
         ambiental de Venezuela. Él redactó los estándares ambientales para la
-        actual Constitución, de 1999. Con estos esquemas, delimitó la
-        significación para que Venezuela protegiese{" "}
+        actual Constitución, de 1999. Con estos esquemas, trazó cuán importante
+        es para Venezuela proteger{" "}
         <StoryMedia
           icon="map"
           media={{
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -202,7 +202,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/XrFhX/3/"
+          src="https://datawrapper.dwcdn.net/ufCCG/1/"
           allowFullScreen
           frameBorder="0"
         />
@@ -213,8 +213,8 @@ export default () => (
         los programas sociales del presidente Chávez desde 1999 hasta su muerte
         en 2013. Por desgracia, estos ingresos se agotaron después del{" "}
         <ExternalLink
-          href="https://www.nytimes.com/2017/05/06/world/americas/venezuela-unrest-protests.html"
-          language="en"
+          href="https://www.nytimes.com/es/2017/05/09/interpreter-venezuela-elites-supervivencia/"
+          language="es"
         >
           autoenriquecimiento de las élites del país
         </ExternalLink>{" "}
@@ -307,7 +307,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/p05MX/2/"
+          src="https://datawrapper.dwcdn.net/NEN5F/1/"
           allowFullScreen
           frameBorder="0"
         />
@@ -325,7 +325,7 @@ export default () => (
             id: "map-3",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17449"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17449"
             }
           }}
         >
@@ -421,9 +421,9 @@ export default () => (
 
       <Paragraph>
         Más de un año después de los anuncios de Maduro, hablar sobre quién
-        realmente controla la minería en el país sumido en crisis sigue un tabú.
-        “Detrás de la minería en Venezuela, siempre ha habido la opacidad de
-        factores militares”,{" "}
+        realmente controla la minería en el país sumido en crisis sigue siendo
+        un tabú. “Detrás de la minería en Venezuela, siempre ha habido la
+        opacidad de factores militares”,{" "}
         <StoryMedia
           media={{
             id: "video-3",
@@ -446,13 +446,13 @@ export default () => (
       <Paragraph>
         Venezuela tiene un número increíble de generales –{" "}
         <ExternalLink
-          href="https://www.nytimes.com/2017/08/08/world/americas/nicolas-maduro-venezuela-military.html"
-          language="en"
+          href="https://www.nytimes.com/es/2017/08/08/los-militares-venezolanos-se-dividen-ante-la-crisis-del-poder-chavismo-maduro-padrino/"
+          language="es"
         >
           cerca de dos mil
         </ExternalLink>{" "}
         – y las fuerzas armadas controlan el Arco Minero, como resaltan De
-        Grazia y Luzardo que argumentan que la dominación militar se extiende a
+        Grazia y Luzardo que argumentan que el domínio militar se extiende a
         la mayoría del sector minero. Ellos extorsionan a las bandas que operan
         las minas ilegales y controlan las rutas de exportación. La minería es
         una caja chica que se está institucionalizando lentamente. El año pasado

@@ -20,8 +20,8 @@ export default () => (
         se siente familiar, aun antes de la salida del sol. Yonnier Rivera,
         nuestro conductor cubano, llega a tiempo con su pick-up blanca y discute
         la logística del día mientras esperamos por nuestros otros dos
-        acompañantes de viaje: Norayma Ángel, coordinador de derechos humanos de
-        la Vicaría de la Arquidiócesis de Puerto Ayacucho, y Pedro Ortiz, un
+        acompañantes de viaje: Noraima Ángel, coordinador de la Oficina de
+        Derechos Humanos del Vicariato de Puerto Ayacucho, y Pedro Ortiz, un
         indígena miembro de la organización local Red de Defensores y Defensoras
         Indígenas.{" "}
         <StoryMedia
@@ -64,7 +64,7 @@ export default () => (
         presencia guerrillera en la región. Cuando entramos en el estado
         Bolívar, dejando Amazonas por el norte, nuestro vehículo toma una curva
         al este lentamente y nos adentramos en la región Parguaza. Mientras
-        manejamos por una zona llamada Los Gallitos, Ortiz, de la red local de
+        manejamos por una zona llamada Los Gallitos, Ortíz, de la red local de
         defensores indígenas, comenta que el ELN saca el coltán de allí.
       </Paragraph>
       <Paragraph>
@@ -74,7 +74,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17444"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17444"
             }
           }}
         >
@@ -176,13 +176,17 @@ export default () => (
         compañía que salió a nuestro encuentro y nos permitió entrar en el
         terreno de la compañía.
       </Paragraph>
-      <FeaturedText>La Guardia Nacional no nos dejar ir</FeaturedText>
+
       <Paragraph>
         Justo cuando pensábamos que nos iban a sacar a empujones por hacer
-        preguntas, nuestra visita parece prolongarse. La Guardia Nacional no nos
-        dejar ir. Horas después, tras inspeccionar nuestros papeles, entendemos
-        que fuimos detenidos.
+        preguntas, nuestra visita parece prolongarse.
       </Paragraph>
+
+      <FeaturedText>
+       La Guardia Nacional no nos dejar ir. Horas después, tras inspeccionar
+       nuestros papeles, entendemos que fuimos detenidos.
+      </FeaturedText>
+
       <Paragraph>
         Al final de la tarde, cerca del anochecer, no sabíamos cuánto más íbamos
         a estar cautivos. Los trabajadores se alineaban para montarse en el
@@ -203,10 +207,7 @@ export default () => (
         ellos”. Mientras tanto, nos llevan a las tiendas de la Guardia Nacional
         y somos encerrados con castrenses armados en la entrada de la puerta.
       </Paragraph>
-      <FeaturedText>
-        No solo estamos encerrados en una compañía minera, sino que no se nos
-        deja recibir o hacer llamadas telefónicas ni hablar con un abogado
-      </FeaturedText>
+
       <Paragraph>
         A la 1:00 de la mañana mientras nos interrogan, aún no está claro qué
         pasará con nosotros. No se nos deja hacer ninguna llamada telefónica,

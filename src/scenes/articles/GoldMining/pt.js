@@ -60,11 +60,6 @@ export default () => (
         então, não parou de lutar com gangues e matar seus membros.
       </Paragraph>
 
-      <FeaturedText>
-        Uma visita a El Callao é mais do que suficiente para entender que
-        mineração ilegal e legal vão de mãos dadas.
-      </FeaturedText>
-
       <Paragraph>
         <StoryMedia
           media={{
@@ -144,7 +139,7 @@ export default () => (
         Os mineiros explicam que apenas uma pequena parcela da produção de ouro
         da Venezuela termina no BCV. A maior parte é contrabandeada pelo
         exército e pelo crime organizado. “Oito mil quilos não são nada”, diz o
-        general aposentado Cliver Alcalá Cordones. “Ele vai para Aruba e
+        general aposentado Clíver Alcalá Cordones. “Ele vai para Aruba e
         Curaçao”. Cerca de 80 por cento do ouro da Venezuela deixa o país
         ilegalmente por aviões que transportam contrabando, de acordo com
         Alcalá.
@@ -201,7 +196,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17464"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17464"
             }
           }}
         >
@@ -222,7 +217,7 @@ export default () => (
         de antigas gangues. “Pequenas bases ainda estão ativas entre as
         pessoas”. De acordo com o mineiro, os de El Perú são os mais horríveis.
         Confrontos violentos ocorrem com frequência. Em setembro, antes da nossa
-        visita a El Perú – em um setor sob o comando de um gangster conhecido
+        visita a El Perú – em um setor sob o comando de um criminoso conhecido
         como “el Toto” –{" "}
         <ExternalLink
           href="http://www.eluniversal.com/noticias/sucesos/mueren-personas-durante-incursion-del-ejercito-mina-bolivar_669537"
@@ -593,10 +588,6 @@ export default () => (
         vivem os mineiros, ao lado dos poços de mineração cheios de água parada
         e contaminada.
       </Paragraph>
-
-      <FeaturedText>
-        Cerca de 91 por cento do ouro extraído na Venezuela é ilegal
-      </FeaturedText>
 
       <Paragraph>
         A situação em El Callao não é uma exceção. Cerca de 91 por cento do ouro

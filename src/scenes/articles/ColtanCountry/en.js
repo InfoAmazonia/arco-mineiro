@@ -20,10 +20,10 @@ export default () => (
         already feels familiar, even before the sun has risen. Yonnier Rivera,
         our Cuban driver, arrives in time with his white pick-up truck and
         discusses the logistics of the day, as we wait for our other two travel
-        companions: Norayma Ángel, a human rights coordinator from the Human
-        Rights Vicarage of the Puerto Ayacucho Archdiocese, and Pedro Ortíz, an
-        indigenous member of Red de Defensores y Defensoras Indígenas, a local
-        indigenous protection network.{" "}
+        companions: Noraima Ángel, a human rights coordinator from Puerto
+        Ayacucho’s Vicarage, and Pedro Ortiz, an indigenous member of Red de
+        Defensores y Defensoras Indígenas, a local indigenous protection
+        network.{" "}
         <StoryMedia
           media={{
             id: "video-1",
@@ -63,7 +63,7 @@ export default () => (
         too much as we are more worried about the guerrilla presence in the
         region. As we enter Bolívar state, leaving Amazonas in the north, our
         vehicle makes a curve to the east slowly entering the Parguaza region.
-        As we drive along an area called Los Gallitos, Ortíz, from the local
+        As we drive along an area called Los Gallitos, Ortiz, from the local
         defence network, tells us that this is where the ELN guerrilla get their
         coltan.
       </Paragraph>
@@ -74,7 +74,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17444"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17444"
             }
           }}
         >
@@ -173,14 +173,18 @@ export default () => (
         are told by Luisa Herminia Alcalá Otero, the company representative who
         meets us and allow us to enter the company terrain.
       </Paragraph>
-      <FeaturedText>The National Guard does not allow us to leave</FeaturedText>
+
       <Paragraph>
         Just as we thought that we would be shoved off with a reprimand for
-        asking questions, it seems that our visit is an extended one. The
-        National Guard does not allow us to leave. It takes a few hours of
+        asking questions, it seems that our visit is an extended one.
+      </Paragraph>
+
+      <FeaturedText>
+        The National Guard does not allow us to leave. It takes a few hours of
         waiting, while our papers are inspected, to understand that we are being
         detained.
-      </Paragraph>
+      </FeaturedText>
+
       <Paragraph>
         It is the end of the afternoon, close to sunset, and we are unsure how
         long we will be held. Day laborers are lining up to hop on the bus that
@@ -195,15 +199,12 @@ export default () => (
         National Guard and it is unclear if the armed men are present to prevent
         workers from stealing from the company, or to protect the project from
         the guerrillas. A National Guard who works in the mining camp comments
-        that there is ‘mutual respect’ when they encounter the guerrilla. “They
+        that there is “mutual respect” when they encounter the guerrilla. “They
         do not mess with us, and we do not mess with them.” Meanwhile we are
         brought to the barracks of the National Guard and locked up with armed
         guards in front of the door.
       </Paragraph>
-      <FeaturedText>
-        Not only were we locked up in a mining company, we did we not receive
-        the right to make a phone call or to speak with a lawyer.
-      </FeaturedText>
+
       <Paragraph>
         At 1 AM in the morning it is still unclear what will happen with us
         while we are interviewed. We are not allowed to make any phone calls,

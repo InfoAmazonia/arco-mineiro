@@ -15,7 +15,7 @@
         "id": "head.title"
       },
       {
-        "defaultMessage": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela",
+        "defaultMessage": "The destruction of 110 thousand square kilometres of forests in the largest mining project in Venezuela",
         "id": "head.description"
       },
       {
@@ -28,19 +28,19 @@
   {
     "descriptors": [
       {
-        "defaultMessage": "Introduction",
+        "defaultMessage": "Start",
         "id": "articles.introduction"
       },
       {
-        "defaultMessage": "Gold Mining",
+        "defaultMessage": "Ilegal",
         "id": "articles.gold_mining"
       },
       {
-        "defaultMessage": "Grip of the Guerrilla",
+        "defaultMessage": "Guerrilha",
         "id": "articles.grip_of_the_guerrilla"
       },
       {
-        "defaultMessage": "Coltan Country",
+        "defaultMessage": "Detained",
         "id": "articles.coltan_country"
       },
       {
@@ -48,7 +48,7 @@
         "id": "articles.malaria"
       },
       {
-        "defaultMessage": "Gambling",
+        "defaultMessage": "Environment",
         "id": "articles.gambling"
       }
     ],
@@ -143,7 +143,7 @@
         "id": "general.publishDate"
       },
       {
-        "defaultMessage": "The destruction of 44 thousand square miles of forests in the largest mining project in Venezuela",
+        "defaultMessage": "The destruction of 110 thousand square kilometres of forests in the largest mining project in Venezuela",
         "id": "general.tagline"
       },
       {

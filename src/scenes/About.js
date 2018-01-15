@@ -106,7 +106,7 @@ const About = ({ intl }) => {
               />
             </strong>
             <br />
-            Leonardo Suárez Montoya
+            Leonardo Suárez Montoya/Correo del Caroní
           </Paragraph>
           <Paragraph>
             <strong>
@@ -141,7 +141,7 @@ const About = ({ intl }) => {
             <br />
             Lexys Rendón<br />
             Maria de los Ángeles/Correo del Caroní<br />
-            Norayma Ángel/Human Rights Vicarage of the Puerto Ayacucho
+            Noraima Ángel/Vicariato de Puerto Ayacucho
             Archdiocese<br />
             Pedro Ortíz/Red de Defensores y Defensoras Indígenas<br />
             Yonnier Rivera
@@ -154,7 +154,7 @@ const About = ({ intl }) => {
               />
             </strong>
             <br />
-            El Espectador, Folha de S. Paulo, Mongabay, NRC and Trouw
+            El Espectador, Folha de S. Paulo, Mongabay, NRC, Trouw
           </Paragraph>
           <Paragraph>
             <strong>

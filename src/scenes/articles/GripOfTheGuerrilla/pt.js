@@ -28,7 +28,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -79,11 +79,7 @@ export default () => (
         assassinados em torno de projetos de mineração ilegal. “Eu vi alguns
         Yanomami que foram marcados”.
       </Paragraph>
-      <FeaturedText>
-        Não só os indígenas foram escravizados para trabalhar, mas jovens
-        meninas indígenas também foram tiradas de suas comunidades e forçadas à
-        prostituição
-      </FeaturedText>
+
       <Paragraph>
         Alcalá explica que vários indígenas foram marcados por garimpeiros
         brasileiros, que os escravizaram nas minas. “Então, eles podem dizer:
@@ -224,7 +220,7 @@ export default () => (
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17453"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17453"
             }
           }}
         >

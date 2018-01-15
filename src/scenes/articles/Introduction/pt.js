@@ -70,7 +70,7 @@ export default () => (
         Os militares venezuelanos também participam da violência e por vezes
         estão envolvidos na mineração através de gangues associadas e suas
         próprias operações. As forças armadas da Venezuela ganharam poder
-        durante a presidência do falecido Hugo Chávez. Cliver Alcalá Cordones,
+        durante a presidência do falecido Hugo Chávez. Clíver Alcalá Cordones,
         um apoiador de Chávez que se aposentou em 2013, era um major general que
         comandava as regiões mineiras. Em reunião em um lobby de hotel em
         Bogotá, na Colômbia, ele explica que Maduro está entregando cada vez
@@ -120,7 +120,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17448"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17448"
             }
           }}
         >
@@ -154,7 +154,7 @@ export default () => (
             id: "map-2",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17467"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17467"
             }
           }}
         >
@@ -203,7 +203,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/XrFhX/3/"
+          src="https://datawrapper.dwcdn.net/Ir8qx/1/"
           allowFullScreen
           frameBorder="0"
         />
@@ -224,7 +224,7 @@ export default () => (
 
       <FeaturedText>
         Em uma última tentativa de injetar capital estrangeiro na economia
-        quebrada, o presidente Maduro abriu até 12% do território nacional para
+        quebrada, o https://infoamazonia.org/embedo território nacional para
         futuras operações de mineração em larga escala.
       </FeaturedText>
 
@@ -305,7 +305,7 @@ export default () => (
         <iframe
           width="100%"
           height="300"
-          src="https://datawrapper.dwcdn.net/p05MX/2/"
+          src="https://datawrapper.dwcdn.net/RGFvJ/1/"
           allowFullScreen
           frameBorder="0"
         />
@@ -324,7 +324,7 @@ export default () => (
             id: "map-3",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/en/embed/?map_only=1&map_id=17449"
+              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17449"
             }
           }}
         >
