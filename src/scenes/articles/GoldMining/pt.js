@@ -39,7 +39,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Minerais locais dizem que trabalhar para Minerven costumava significar
+        Mineiros locais dizem que trabalhar para Minerven costumava significar
         status e que os empregados usavam uniformes de empresa com honra, mas as
         coisas mudaram nos últimos anos. A Minerven entrou em decadência.{" "}
         <StoryMedia
@@ -200,7 +200,7 @@ export default () => (
             }
           }}
         >
-          As vilas se tornam minas, e as minas se tornam aldeias
+          As vilas se tornam minas, e as minas se tornam vilas
         </StoryMedia>. As áreas de mineração em torno de El Callao são chamadas
         de Colômbia, Peru e Chile, juntamente com outros nomes que foram dados
         por empresas de mineração estrangeiras presentes no passado. No momento,
@@ -610,7 +610,7 @@ export default () => (
         agora funciona como uma fachada. “Lembro-me quando o Comandante Chávez
         falou sobre o Arco Minero [em 2011] e o estado de Bolívar deveria se
         tornar uma potência na Venezuela. Não dependeríamos do petróleo!”, diz o
-        jovem, que ficou desiludido com o Arco Minero. “Aqui, coisa estão
+        jovem, que ficou desiludido com o Arco Minero. “Aqui, coisas estão
         acontecendo e o Arco Minero tem funcionado para encobrir a corrupção
         dentro do governo”.
       </Paragraph>

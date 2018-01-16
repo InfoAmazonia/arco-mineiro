@@ -154,7 +154,7 @@ const About = ({ intl }) => {
               />
             </strong>
             <br />
-            El Espectador, Folha de S. Paulo, Mongabay, NRC, Trouw
+            Armando.info, El Espectador, Folha de S. Paulo, Mongabay, NRC, Trouw
           </Paragraph>
           <Paragraph>
             <strong>

@@ -62,7 +62,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17453"
+              src: "https://infoamazonia.org/pt/embed/?map_only=1&map_id=17453"
             }
           }}
         >
@@ -201,7 +201,7 @@ export default () => (
             id: "map-1",
             type: "embed",
             data: {
-              src: "https://infoamazonia.org/embed/?map_only=1&map_id=17456"
+              src: "https://infoamazonia.org/pt/embed/?map_only=1&map_id=17456"
             }
           }}
         >
