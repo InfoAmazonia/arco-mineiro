@@ -45,6 +45,11 @@ module.exports = {
         }
       ]
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve("src", "index.html"),
+      filename: "index.html",
+      inject: "body"
+    }),
     new OfflinePlugin({
       ServiceWorker: {
         events: true
@@ -76,11 +81,6 @@ module.exports = {
           requestTypes: ["navigate", "same-origin"]
         }
       ]
-    }),
-    new HTMLWebpackPlugin({
-      template: path.resolve("src", "index.html"),
-      filename: "index.html",
-      inject: "body"
     })
   ],
   module: {
