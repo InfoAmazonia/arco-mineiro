@@ -141,8 +141,7 @@ const About = ({ intl }) => {
             <br />
             Lexys Rendón<br />
             Maria de los Ángeles/Correo del Caroní<br />
-            Noraima Ángel/Vicariato de Puerto Ayacucho
-            Archdiocese<br />
+            Noraima Ángel/Vicariato de Puerto Ayacucho Archdiocese<br />
             Pedro Ortíz/Red de Defensores y Defensoras Indígenas<br />
             Yonnier Rivera
           </Paragraph>
@@ -156,22 +155,22 @@ const About = ({ intl }) => {
             <br />
             <a href="https://armando.info/Reportajes/Resume/2386">
               Armando.info
-            </a>,
+            </a>,{" "}
             <a href="https://www.elespectador.com/noticias/medio-ambiente/explorando-el-arco-minero-articulo-733555">
               El Espectador
-            </a>,
+            </a>,{" "}
             <a href="http://www1.folha.uol.com.br/ambiente/2018/01/1950328-mineracao-leva-violencia-e-malaria-a-venezuela.shtml">
               Folha de S. Paulo
-            </a>,
+            </a>,{" "}
             <a href="https://news.mongabay.com/2018/01/venezuelas-mining-arc-boom-sweeps-up-indigenous-people-and-cultures/">
               Mongabay
-            </a>,
+            </a>,{" "}
             <a href="https://www.nrc.nl/nieuws/2018/01/15/leger-smokkelt-naar-abc-eilanden-a1588361">
               NRC
-            </a>,
+            </a>,{" "}
             <a href="https://www.trouw.nl/home/venezolaans-leger-faciliteert-smokkel-naar-antillen~abe0a09b/">
               Trouw
-            </a>
+            </a>.
           </Paragraph>
           <Paragraph>
             <strong>
