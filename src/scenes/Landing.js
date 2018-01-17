@@ -9,7 +9,7 @@ import Countdown from "react-countdown-now";
 
 import SiteTitle from "components/SiteTitle";
 
-import { Link } from "react-router-dom";
+import Link from "components/Link";
 
 const launchDate = process.env.LAUNCH_DATE;
 

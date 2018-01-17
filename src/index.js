@@ -29,6 +29,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/es/integration/react";
 import createHistory from "history/createBrowserHistory";
 import { ConnectedRouter as Router } from "react-router-redux";
+import { Route } from "react-router-dom";
 import axios from "axios";
 
 import configureStore from "store";
@@ -52,8 +53,17 @@ window.location.search
     query[arr[0]] = arr[1];
   });
 
+const getLanguagePath = function() {
+  const path = window.location.pathname.split("/")[1];
+  if (window.locales.indexOf(path) !== -1) {
+    return path;
+  }
+  return false;
+};
+
 const language =
   query.lang ||
+  getLanguagePath() ||
   (navigator.languages && navigator.languages[0]) ||
   navigator.language ||
   navigator.userLanguage;
@@ -73,10 +83,16 @@ const findLocale = language => {
       locale = key;
     }
   }
-  return locale;
+  if (locales.indexOf(locale) !== -1) {
+    return locale;
+  } else {
+    return "en";
+  }
 };
 
 window.locale = findLocale(language);
+
+console.log(window.locale);
 
 const messages = localeData[locale] || localeData.en;
 
@@ -89,7 +105,7 @@ const init = () => {
       <PersistGate persistor={store.persistor} loading={null}>
         <IntlProvider locale={language} messages={messages}>
           <Router history={history}>
-            <Application />
+            <Route path="/(en|pt|es)?" component={Application} />
           </Router>
         </IntlProvider>
       </PersistGate>

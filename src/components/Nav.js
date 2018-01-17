@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
-import { NavLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { media } from 'styles/utils';
+import React, { Component } from "react";
+import styled from "styled-components";
+import { FormattedMessage } from "react-intl";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
+import { media } from "styles/utils";
+
+import NavLink from "components/NavLink";
 
 const Wrapper = styled.nav`
   font-family: "Cinzel", serif;
   font-weight: 600;
-  font-size: .4em;
+  font-size: 0.4em;
   text-align: center;
   background: #f7f7f7;
-  box-shadow: 0 .2rem .5rem rgba(0,0,0,0.05);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
   position: relative;
   z-index: 10;
   flex: 0 0 auto;
@@ -33,7 +35,7 @@ const Wrapper = styled.nav`
         z-index: 1;
         display: block;
         color: #aaa;
-        padding: .5rem;
+        padding: 0.5rem;
         text-transform: uppercase;
         white-space: nowrap;
         overflow: hidden;
@@ -47,7 +49,7 @@ const Wrapper = styled.nav`
           bottom: 0;
           height: 1px;
           background: #bbb;
-          transition: all .2s ease-in-out;
+          transition: all 0.2s ease-in-out;
           z-index: 2;
         }
         &:hover,
@@ -61,7 +63,7 @@ const Wrapper = styled.nav`
           .progress {
             height: 1px;
             background: #f09429;
-            box-shadow: 0 0 .5rem #f09429;
+            box-shadow: 0 0 0.5rem #f09429;
           }
         }
       }
@@ -71,46 +73,49 @@ const Wrapper = styled.nav`
     ol li a {
       padding: 1rem 0 1rem .5rem;
     }
-  `}
-  ${media.tablet`
+  `} ${media.tablet`
     font-size: .6em;
-  `}
-  ${media.desktop`
+  `} ${media.desktop`
     ol li a {
       padding: 1rem 0 1rem .5rem;
     }
-  `}
-  ${media.desktopHD`
+  `} ${media.desktopHD`
     font-size: .7em;
-  `}
-`
+  `};
+`;
 
 const mapStateToProps = (state, ownProps) => {
   return {
     scrolls: state.context.storyScroll,
     heights: state.context.storyHeight
-  }
-}
+  };
+};
 
 const ProgressBar = connect(mapStateToProps)(({ ...props }) => {
-  const { scrolls, heights, path } = props;
-  if(path) {
+  const { scrolls, heights } = props;
+  let { path } = props;
+  path = `/${locale}${path}`;
+  if (path) {
     let progress = 0;
-    if(scrolls[path] && heights[path]) {
-      progress = scrolls[path]/heights[path]*100;
+    if (scrolls[path] && heights[path]) {
+      progress = scrolls[path] / heights[path] * 100;
     }
     return (
-      <span className="progress" style={{
-        width: progress + '%'
-      }} />
-    )
+      <span
+        className="progress"
+        style={{
+          width: progress + "%"
+        }}
+      />
+    );
   } else {
     return null;
   }
-})
+});
 
 class ArticleNav extends Component {
-  render () {
+  render() {
+    console.log(this.props);
     return (
       <Wrapper>
         <ol>
@@ -118,7 +123,8 @@ class ArticleNav extends Component {
             <NavLink exact to="/story">
               <FormattedMessage
                 id="articles.introduction"
-                defaultMessage="Introduction" />
+                defaultMessage="Introduction"
+              />
               <ProgressBar path="/story" />
             </NavLink>
           </li>
@@ -126,7 +132,8 @@ class ArticleNav extends Component {
             <NavLink to="/story/gold-mining">
               <FormattedMessage
                 id="articles.gold_mining"
-                defaultMessage="Gold Mining" />
+                defaultMessage="Gold Mining"
+              />
               <ProgressBar path="/story/gold-mining" />
             </NavLink>
           </li>
@@ -134,7 +141,8 @@ class ArticleNav extends Component {
             <NavLink to="/story/grip-of-the-guerrilla">
               <FormattedMessage
                 id="articles.grip_of_the_guerrilla"
-                defaultMessage="Grip of the Guerrilla" />
+                defaultMessage="Grip of the Guerrilla"
+              />
               <ProgressBar path="/story/grip-of-the-guerrilla" />
             </NavLink>
           </li>
@@ -142,7 +150,8 @@ class ArticleNav extends Component {
             <NavLink to="/story/coltan-country">
               <FormattedMessage
                 id="articles.coltan_country"
-                defaultMessage="Coltan Country" />
+                defaultMessage="Coltan Country"
+              />
               <ProgressBar path="/story/coltan-country" />
             </NavLink>
           </li>
@@ -150,7 +159,8 @@ class ArticleNav extends Component {
             <NavLink to="/story/malaria">
               <FormattedMessage
                 id="articles.malaria"
-                defaultMessage="Malaria" />
+                defaultMessage="Malaria"
+              />
               <ProgressBar path="/story/malaria" />
             </NavLink>
           </li>
@@ -158,14 +168,15 @@ class ArticleNav extends Component {
             <NavLink to="/story/gambling">
               <FormattedMessage
                 id="articles.gambling"
-                defaultMessage="Gambling" />
+                defaultMessage="Gambling"
+              />
               <ProgressBar path="/story/gambling" />
             </NavLink>
           </li>
         </ol>
       </Wrapper>
-    )
+    );
   }
 }
 
-export default ArticleNav;
+export default withRouter(ArticleNav);

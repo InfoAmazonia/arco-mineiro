@@ -4,7 +4,9 @@ import { findDOMNode } from "react-dom";
 import { connect } from "react-redux";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { Redirect, Route, Link, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
+
+import Link from "components/Link";
 
 import { FormattedMessage } from "react-intl";
 
@@ -16,6 +18,7 @@ import { expandMedia } from "actions/media";
 import swipe from "utils/swipe";
 
 import Page from "components/Page";
+import Title from "components/blocks/Title";
 
 import Media from "components/Media";
 import Story from "components/Story";
@@ -79,7 +82,8 @@ class Scene extends Component {
   isLastArticle() {
     const { location } = this.props;
     const idx = articles.findIndex(article => {
-      return location.pathname == article;
+      const normalized = location.pathname.replace(/^\/(en|pt|es)/g, "");
+      return normalized == article;
     });
     if (idx == articles.length - 1) return true;
     return false;
@@ -88,7 +92,8 @@ class Scene extends Component {
     direction = direction || "left";
     const { location } = this.props;
     const idx = articles.findIndex(article => {
-      return location.pathname == article;
+      const normalized = location.pathname.replace(/^\/(en|pt|es)/g, "");
+      return normalized == article;
     });
     if (direction == "left" && idx < articles.length - 1) {
       this.setState({
@@ -148,9 +153,12 @@ class Scene extends Component {
                 <Route path={`${match.url}/gambling`} component={Gambling} />
                 <Route
                   render={() => (
-                    <Helmet>
-                      <meta name="prerender-status-code" content="404" />
-                    </Helmet>
+                    <div>
+                      <Helmet>
+                        <meta name="prerender-status-code" content="404" />
+                      </Helmet>
+                      <Title>404 Not Found</Title>
+                    </div>
                   )}
                 />
               </Switch>
@@ -177,8 +185,9 @@ class Scene extends Component {
               </Container>
             </footer>
           ) : null}
-          {redirect &&
-            redirect !== location.pathname && <Redirect to={redirect} />}
+          {redirect && redirect !== location.pathname ? (
+            <Redirect to={`/${locale}${redirect}`} />
+          ) : null}
         </Story>
         <Media media={media} preview={true} />
         {media.expanded && (

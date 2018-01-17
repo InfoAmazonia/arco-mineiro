@@ -7,6 +7,8 @@ import { withRouter, Route, Link, Switch } from "react-router-dom";
 
 import Head from "components/Head";
 
+import Page from "components/Page";
+import Title from "components/blocks/Title";
 import Landing from "scenes/Landing";
 import Story from "scenes/Story";
 import About from "scenes/About";
@@ -22,17 +24,17 @@ class Application extends Component {
   componentDidMount() {
     setTimeout(function() {
       window.prerenderReady = true;
-    }, 1000);
+    }, 500);
   }
   componentDidUpdate() {
     setTimeout(function() {
       window.prerenderReady = true;
-    }, 1000);
+    }, 500);
   }
   render() {
     const { location, match } = this.props;
     let key = 0;
-    if (location.pathname == "/") {
+    if (/^\/(en|pt|es)?\/?$/g.test(location.pathname)) {
       key = 1;
     }
     return (
@@ -41,15 +43,18 @@ class Application extends Component {
         <TransitionGroup>
           <CSSTransition key={key} classNames="route-transition" timeout={800}>
             <Switch location={location}>
-              <Route exact path="/" component={Landing} />
-              <Route path="/story" component={Story} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/share" component={Share} />
+              <Route exact path={`${match.url}/`} component={Landing} />
+              <Route exact path={`${match.url}/about`} component={About} />
+              <Route exact path={`${match.url}/share`} component={Share} />
+              <Route path={`${match.url}/story`} component={Story} />
               <Route
                 render={() => (
-                  <Helmet>
-                    <meta name="prerender-status-code" content="404" />
-                  </Helmet>
+                  <Page>
+                    <Helmet>
+                      <meta name="prerender-status-code" content="404" />
+                    </Helmet>
+                    <Title>404 Not Found</Title>
+                  </Page>
                 )}
               />
             </Switch>

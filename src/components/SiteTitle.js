@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
 import { media, color } from 'styles/utils';
-import { Link } from 'react-router-dom';
+import Link from 'components/Link';
 
 const logos = [
   require('images/logo_3.svg'),
