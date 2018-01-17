@@ -118,6 +118,9 @@ class Scene extends Component {
     const { location, match, media } = this.props;
     return (
       <Page>
+        <Helmet>
+          <meta property="og:type" content="article" />
+        </Helmet>
         <Story className="content">
           <TransitionGroup>
             <CSSTransition
