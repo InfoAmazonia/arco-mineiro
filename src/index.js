@@ -92,8 +92,6 @@ const findLocale = language => {
 
 window.locale = findLocale(language);
 
-console.log(window.locale);
-
 const messages = localeData[locale] || localeData.en;
 
 const store = configureStore();

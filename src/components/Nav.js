@@ -115,7 +115,6 @@ const ProgressBar = connect(mapStateToProps)(({ ...props }) => {
 
 class ArticleNav extends Component {
   render() {
-    console.log(this.props);
     return (
       <Wrapper>
         <ol>
