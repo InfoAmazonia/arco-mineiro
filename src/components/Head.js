@@ -35,8 +35,6 @@ class Head extends React.Component {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
         <link rel="canonical" href={`${url}${location.pathname}`} />
         <meta property="og:url" content={`${url}${location.pathname}`} />
         <meta
