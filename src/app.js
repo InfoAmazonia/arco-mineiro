@@ -20,10 +20,14 @@ window.prerenderReady = false;
 
 class Application extends Component {
   componentDidMount() {
-    window.prerenderReady = true;
+    setTimeout(function() {
+      window.prerenderReady = true;
+    }, 1000);
   }
   componentDidUpdate() {
-    window.prerenderReady = true;
+    setTimeout(function() {
+      window.prerenderReady = true;
+    }, 1000);
   }
   render() {
     const { location, match } = this.props;
