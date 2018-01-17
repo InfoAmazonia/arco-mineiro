@@ -70,13 +70,8 @@ module.exports = {
       cacheMaps: [
         {
           match: url => {
-            const offlinePaths = /(?:^\/c\/|^\/s\/|^\/admin)/;
             if (url.origin !== location.origin) return;
-            if (url.pathname.match(offlinePaths) !== null) {
-              return new URL("/", location);
-            } else {
-              return;
-            }
+            return new URL("/", location);
           },
           requestTypes: ["navigate", "same-origin"]
         }

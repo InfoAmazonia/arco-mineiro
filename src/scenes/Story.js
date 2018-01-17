@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import { findDOMNode } from "react-dom";
 import { connect } from "react-redux";
 
@@ -142,6 +143,13 @@ class Scene extends Component {
                 />
                 <Route path={`${match.url}/malaria`} component={Malaria} />
                 <Route path={`${match.url}/gambling`} component={Gambling} />
+                <Route
+                  render={() => (
+                    <Helmet>
+                      <meta name="prerender-status-code" content="404" />
+                    </Helmet>
+                  )}
+                />
               </Switch>
             </CSSTransition>
           </TransitionGroup>

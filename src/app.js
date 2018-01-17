@@ -43,8 +43,8 @@ class Application extends Component {
             <Switch location={location}>
               <Route exact path="/" component={Landing} />
               <Route path="/story" component={Story} />
-              <Route path="/about" component={About} />
-              <Route path="/share" component={Share} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/share" component={Share} />
               <Route
                 render={() => (
                   <Helmet>
