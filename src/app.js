@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -15,7 +16,15 @@ import "normalize.css";
 import "font-awesome/css/font-awesome.css";
 import "styles/global.css";
 
+window.prerenderReady = false;
+
 class Application extends Component {
+  componentDidMount() {
+    window.prerenderReady = true;
+  }
+  componentDidUpdate() {
+    window.prerenderReady = true;
+  }
   render() {
     const { location, match } = this.props;
     let key = 0;
@@ -32,6 +41,13 @@ class Application extends Component {
               <Route path="/story" component={Story} />
               <Route path="/about" component={About} />
               <Route path="/share" component={Share} />
+              <Route
+                render={() => (
+                  <Helmet>
+                    <meta name="prerender-status-code" content="404" />
+                  </Helmet>
+                )}
+              />
             </Switch>
           </CSSTransition>
         </TransitionGroup>
