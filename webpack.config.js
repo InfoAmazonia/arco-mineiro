@@ -5,7 +5,7 @@ const OfflinePlugin = require("offline-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+let config = {
   entry: {
     main: ["./src/index"]
   },
@@ -26,56 +26,6 @@ module.exports = {
         GOOGLE_ANALYTICS: JSON.stringify(process.env.GOOGLE_ANALYTICS || ""),
         LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
       }
-    }),
-    new FaviconsWebpackPlugin({
-      logo: path.resolve("src/images", "logo.png")
-    }),
-    new WebpackPwaManifest({
-      name: "Digging into the Mining Arc",
-      short_name: "Digging into the Mining Arc",
-      description:
-        "The destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
-      background_color: "#fff",
-      orientation: "portrait",
-      start_url: "/?launcher=true",
-      icons: [
-        {
-          src: path.resolve("src/images", "logo.png"),
-          sizes: [48, 96, 192, 256, 512]
-        }
-      ]
-    }),
-    new HTMLWebpackPlugin({
-      template: path.resolve("src", "index.html"),
-      filename: "index.html",
-      inject: "body"
-    }),
-    new OfflinePlugin({
-      ServiceWorker: {
-        events: true
-      },
-      caches: {
-        main: [
-          "index.html",
-          "*.js",
-          "*.css",
-          "*.svg",
-          "*.ttf",
-          "*.woff",
-          "*.woff2"
-        ],
-        additional: [":externals:", "*.jpg", "*.png"],
-        optional: ":rest:"
-      },
-      cacheMaps: [
-        {
-          match: url => {
-            if (url.origin !== location.origin) return;
-            return new URL("/", location);
-          },
-          requestTypes: ["navigate", "same-origin"]
-        }
-      ]
     })
   ],
   module: {
@@ -125,3 +75,65 @@ module.exports = {
     ]
   }
 };
+
+const favicons = new FaviconsWebpackPlugin({
+  logo: path.resolve("src/images", "logo.png")
+});
+
+const pwa = new WebpackPwaManifest({
+  name: "Digging into the Mining Arc",
+  short_name: "Digging into the Mining Arc",
+  description:
+    "The destruction of 110 thousand square kilometers of forests in the largest mining project in Venezuela",
+  background_color: "#fff",
+  orientation: "portrait",
+  start_url: "/?launcher=true",
+  icons: [
+    {
+      src: path.resolve("src/images", "logo.png"),
+      sizes: [48, 96, 192, 256, 512]
+    }
+  ]
+});
+
+const html = new HTMLWebpackPlugin({
+  template: path.resolve("src", "index.html"),
+  filename: "index.html",
+  inject: "body"
+});
+
+const offline = new OfflinePlugin({
+  ServiceWorker: {
+    events: true
+  },
+  caches: {
+    main: [
+      "index.html",
+      "*.js",
+      "*.css",
+      "*.svg",
+      "*.ttf",
+      "*.woff",
+      "*.woff2"
+    ],
+    additional: [":externals:", "*.jpg", "*.png"],
+    optional: ":rest:"
+  },
+  cacheMaps: [
+    {
+      match: url => {
+        if (url.origin !== location.origin) return;
+        return new URL("/", location);
+      },
+      requestTypes: ["navigate", "same-origin"]
+    }
+  ]
+});
+
+if (process.env.NODE_ENV == "production") {
+  config.plugins = config.plugins.concat([favicons, pwa, html, offline]);
+} else {
+  config.plugins = config.plugins.concat([html]);
+}
+
+module.exports = config;
