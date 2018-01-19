@@ -14,13 +14,13 @@ export default () => (
   <article>
     <Helmet>
       <title>
-        Malaria está mordiendo a través de las zonas mineras de Venezuela |
+        Malaria invade las zonas mineras de Venezuela |
         Explorando el Arco Minero
       </title>
     </Helmet>
     <Container>
       <Title as="h2">
-        Malaria está mordiendo a través de las zonas mineras de Venezuela
+        Malaria invade las zonas mineras de Venezuela
       </Title>
       <Paragraph>
         Un grupo de jóvenes con armas de fuego esperan frente a una{" "}
@@ -64,7 +64,7 @@ export default () => (
       <Paragraph>
         Después de una larga espera nos dicen que no podremos visitar las minas
         ese día, por una amplia variedad de razones que no nos quedan claras.
-        Decidimos ver la clínica local en Las Claritas y preguntar por la
+        Decidimos ir a la clínica local en Las Claritas y preguntar por la
         malaria, pero solo nos dejan preguntar y tomar fotografías si llevamos
         uno de los miembros de la banda armada con nosotros. La indiferencia que
         el joven criminal tiene por nuestro trabajo – “¿Están listos? Tengo
@@ -97,8 +97,8 @@ export default () => (
         en áreas densamente pobladas.
       </FeaturedText>
       <Paragraph>
-        Por desgracias, este honor pertenece al pasado. Aunque Venezuela ha
-        probado que la malaria puede ser prevenida con suceso y tratada, pocos
+        Por desgracia, este honor pertenece al pasado. Aunque Venezuela ha
+        probado que la malaria puede puede prevenirse y tratarse pocos
         han sido los intentos del gobierno para contrarrestar la epidemia
         actual.
       </Paragraph>
@@ -109,8 +109,8 @@ export default () => (
         perdido absolutamente el control sobre las epidemias.
       </Paragraph>
       <Paragraph>
-        El municipio Sifontes, donde pueblos mineros como Las Claritas y
-        Tumeremo están ubicados, tiene el índice más alto de malaria en el país.
+        El municipio Sifontes, donde hay pueblos mineros como Las Claritas y
+        Tumeremo, tiene el índice más alto de malaria en el país.
         No es una coincidencia que el paludismo ande campante en zonas de
         minería ilegal, cuando se sabe, además, que{" "}
         <ExternalLink
@@ -160,8 +160,8 @@ export default () => (
       <Paragraph>
         La malaria es una enfermedad infecciosa causada por un parásito que
         ocasiona severas fiebres, dolores de cabeza y musculares y
-        potencialmente puede resultar en la muerte. En solo el estado Bolívar,
-        habitado por 2.1 millones de personas, unas 206 mil personas se
+        potencialmente puede resultar en la muerte. Sólo en el estado Bolívar,
+        habitado por 2,1 millones de personas, unas 206 mil personas se
         infectaron de paludismo en los primeros diez meses de 2017. Amazonas, un
         estado de 180 mil habitantes, registró 42 mil casos de infección hasta
         septiembre de 2017, de acuerdo con una doctora en una clínica local.
@@ -202,9 +202,9 @@ export default () => (
         puede tomar entre cinco y diez días de barco. “No hay medicinas en zonas
         mineras”, relata. La gente que consigue los medicamentos, muchas veces
         los vende de nuevo por dosis, aun cuando ellos mismos tienen malaria.
-        Una dosis no te cura, sin embargo, y uno necesita terminar el
-        tratamiento completo, pero de acuerdo con la doctora la gente está
-        desesperada por el dinero efectivo y abusa de la ignorancia de otros.
+        Una sola dosis no cura, se necesita terminar el tratamiento completo,
+        pero de acuerdo con la doctora la gente está desesperada por el dinero
+        efectivo y abusa de la ignorancia de otros.
       </Paragraph>
       <Paragraph>
         En el vecino estado Bolívar, los mineros indican que las medicinas son
@@ -262,18 +262,18 @@ export default () => (
         >
           Eduardo Rodríguez
         </StoryMedia>, frente a una clínica en Tumeremo, en Bolívar. Este minero
-        ilegal se ha hecho la prueba de paludismo siete veces en los 18 últimos
-        meses, en seis de las cuales ha recibido un resultado “positivo”.
+        ilegal se ha hecho la prueba de paludismo siete veces en los últimos
+        18 meses, en seis de las cuales ha recibido un resultado “positivo”.
       </Paragraph>
       <Paragraph>
         La mayoría de los mineros no tienen la suerte de Eduardo Rodríguez,
-        entonces ellos sufren de continuas recaídas, incapaces de combatir el
+        pues sufren de continuas recaídas, incapaces de combatir el
         parásito. “Ya tuve malaria unas 50 veces”, dice un minero en El Callao.
         “Fue como orinar Coca-Cola”. Su cuerpo tembloroso permanece de pie
         frente a una choza en la selva, hecha de palos de madera y de lona de
         plástico que sirve de techo. Solo diez metros de distancia de su
-        alojamiento, otros mineros echan agua con una manguera una pendiente
-        fangosa para seguir procesando los sedimentos de oro.
+        alojamiento, otros mineros riegan una pendiente fangosa con una manguera
+        para seguir procesando los sedimentos de oro.
       </Paragraph>
       <Paragraph>
         “La frontera entre el mosquito y el hombre ya no existe”, explica un

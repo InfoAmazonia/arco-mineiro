@@ -141,7 +141,7 @@ const About = ({ intl }) => {
             <br />
             Lexys Rendón<br />
             Maria de los Ángeles/Correo del Caroní<br />
-            Noraima Ángel/Vicariato de Puerto Ayacucho Archdiocese<br />
+            Noraima Ángel/Vicariato de Puerto Ayacucho<br />
             Pedro Ortíz/Red de Defensores y Defensoras Indígenas<br />
             Yonnier Rivera
           </Paragraph>

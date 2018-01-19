@@ -35,11 +35,11 @@ export default () => (
         >
           comunidades nativas de los estados Amazonas y Bolívar
         </StoryMedia>{" "}
-        a quienes se les viene usurpando la economía minera tanto legal como la
-        ilícita. Grupos guerrilleros colombianos – referidos por los locales
-        como <em>patagomas</em> – están expandiendo sus operaciones mineras en
-        el occidente de Venezuela y recientemente anunciaron sus primeros
-        proyectos mineros en territorios indígenas.
+        a quienes se les viene usurpando las ganancias de economía minera tanto
+        legal como ilícita. Grupos guerrilleros colombianos – referidos por los
+        locales como <em>patagomas</em> – están expandiendo sus operaciones
+        mineras en el occidente de Venezuela y recientemente anunciaron sus
+        primeros proyectos mineros en territorios indígenas.
       </Paragraph>
       <Quote author="Liborio Guarulla, exgobernador del estado Amazonas">
         La forma indígena de vivir se ha visto afectada por la presencia de
