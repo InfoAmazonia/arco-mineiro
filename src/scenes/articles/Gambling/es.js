@@ -47,7 +47,7 @@ export default () => (
           pueblo de El Callao
         </StoryMedia>. Cubiertos de lodo, se deslizan en los fosos mineros
         mientras hacen un barrido de oro, cavan más buracos o usan las máquinas
-        ruidosas en los bordes del pozo minero para llenar sacos grandes can
+        ruidosas en los bordes del pozo minero para llenar sacos grandes con
         cantidades del lodo con oro que será más tarde procesado con mercurio.
         En ese mismo lugar, solía haber un bosque, pero muchas capas de
         vegetación han sido devastadas por la minería.
@@ -142,14 +142,14 @@ export default () => (
         natural”.
       </Paragraph>
       <FeaturedText>
-        Cerca de 75 por ciento del territorio en Bolívar están ambientalmente
-        protegidos, pero no contra el Arco Minero.
+        Cerca de 75 por ciento del territorio en Bolívar está ambientalmente
+        protegido, pero no contra el Arco Minero.
       </FeaturedText>
       <Paragraph>
         Estas tierras exuberantes están declaradas como parques nacionales,
-        monumentos naturales, zonas protegidas, reservas forestales. El Parque
+        monumentos naturales, zonas protegidas y reservas forestales. El Parque
         Nacional Canaima incluso ha sido reconocido por la Unesco como
-        patrimonio mundial. Todo este parece no importar. Estas reservas
+        patrimonio mundial. Todo esto parece no importar. Estas reservas
         forestales sufrirán especialmente de las consecuencias inmediatas de la
         extracción mineral en el Arco Minero.
       </Paragraph>

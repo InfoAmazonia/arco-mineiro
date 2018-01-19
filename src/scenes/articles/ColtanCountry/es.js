@@ -11,16 +11,16 @@ import Quote from "components/blocks/Quote";
 export default () => (
   <article>
     <Helmet>
-      <title>Nuevos visitantes en el país de coltán | Explorando el Arco Minero</title>
+      <title>Nuevos visitantes en el país del coltán | Explorando el Arco Minero</title>
     </Helmet>
     <Container>
-      <Title as="h2">Nuevos visitantes en el país de coltán</Title>
+      <Title as="h2">Nuevos visitantes en el país del coltán</Title>
       <Paragraph>
         <strong>Puerto Ayacucho</strong>. Son las seis de la mañana y el calor
         se siente familiar, aun antes de la salida del sol. Yonnier Rivera,
         nuestro conductor cubano, llega a tiempo con su pick-up blanca y discute
         la logística del día mientras esperamos por nuestros otros dos
-        acompañantes de viaje: Noraima Ángel, coordinador de la Oficina de
+        acompañantes de viaje: Noraima Ángel, coordinadora de la Oficina de
         Derechos Humanos del Vicariato de Puerto Ayacucho, y Pedro Ortiz, un
         indígena miembro de la organización local Red de Defensores y Defensoras
         Indígenas.{" "}
@@ -37,7 +37,7 @@ export default () => (
         </StoryMedia>{" "}
         Agua Mena y Tierra Blanca, en el vecino estado Bolívar. Los indígenas
         viven cerca del río Parguaza que se abre paso – lo que hemos aprendido
-        también nosotros – en el “país de coltán”.
+        también nosotros – en el “país del coltán”.
       </Paragraph>
       <Paragraph>
         El Parguaza es uno de los cientos de afluentes del Orinoco, el cuarto
@@ -63,7 +63,7 @@ export default () => (
         las vías no nos conciernen tanto ya que estamos más preocupados con la
         presencia guerrillera en la región. Cuando entramos en el estado
         Bolívar, dejando Amazonas por el norte, nuestro vehículo toma una curva
-        al este lentamente y nos adentramos en la región Parguaza. Mientras
+        al este lentamente y nos adentramos en la región de Parguaza. Mientras
         manejamos por una zona llamada Los Gallitos, Ortíz, de la red local de
         defensores indígenas, comenta que el ELN saca el coltán de allí.
       </Paragraph>
@@ -96,16 +96,16 @@ export default () => (
         >
           Los indígenas nos llevan al río Parguaza
         </StoryMedia>. Los niños de las comunidades indígenas locales se lanzan
-        alegremente al agua y en canoa en una corriente lenta. El sonido de los
-        golpes de la ropa mojado contra las piedras es producido por las mujeres
-        indígenas que lavan camisas a las orillas del río. Pocos hombres
+        alegremente al agua y pasean en canoa en una corriente lenta. El sonido
+        de los golpes de la ropa mojada contra las piedras es producido por las
+        mujeres indígenas que lavan camisas a las orillas del río. Pocos hombres
         indígenas son vistos ya que ellos cazan o trabajan la tierra lejos de la
         villa durante el día. El equilibrio entre naturaleza y civilización aún
         no es irreversiblemente perturbado, pero nuevos actores han entrado en
         escena.
       </Paragraph>
       <FeaturedText>
-        De las entrevistas con indígenas de la región Parguaza, antes de nuestra
+        De las entrevistas con indígenas de la región de Parguaza, antes de nuestra
         visita de campo, se hace claro que la guerrilla colombiana ha
         intensificado su presencia en territorios venezolanos desde hace tres
         años.
@@ -147,7 +147,7 @@ export default () => (
           20 toneladas mensuales y aumentar luego a 50 toneladas mensuales
         </ExternalLink>. Esta compañía es de capital conjunto de la estatal
         Corporación Venezolana de Minería (CVM) y de la privada Corporación
-        Faoz. Recibió la concesión de 10.201 hectáreas que además de coltán
+        Faoz. Recibió la concesión de 10.201 hectáreas que además del coltán
         contienen oro, diamantes, cuarzo y otros minerales. La compañía está
         construyendo una mina de coltán, ubicada cerca de la comunidad Agua
         Mena.
@@ -183,7 +183,7 @@ export default () => (
       </Paragraph>
 
       <FeaturedText>
-       La Guardia Nacional no nos dejar ir. Horas después, tras inspeccionar
+       La Guardia Nacional no nos deja ir. Horas después, tras inspeccionar
        nuestros papeles, entendemos que fuimos detenidos.
       </FeaturedText>
 
@@ -193,7 +193,7 @@ export default () => (
         autobús que los llevará de regreso a sus comunidades. Antes de que se
         vayan, sus bolsos son revisados por los militares. Como estamos rodeados
         por guardias armados, podemos observar a los trabajadores, que usan
-        ropas raídas, franelas de equipos de fútbol y bodas llenas de lodo.
+        ropas raídas, franelas de equipos de fútbol y botas llenas de lodo.
         Muchos de los indígenas nos dirigen una que otra mirada, mientras
         esperan que sus pertenencias sean requisadas.
       </Paragraph>
@@ -225,7 +225,7 @@ export default () => (
         pero obedecen órdenes de la compañía. A las 3:00 de la mañana nos piden
         alistarnos para el transporte. Dos camionetas pick-up nos llevarán a los
         cuatro, custodiados por castrenses armados, a Caicara del Orinoco, siete
-        horas más lejos en el país de coltán.
+        horas más lejos en el país del coltán.
       </Paragraph>
       <Paragraph>
         Sorprendentemente, 24 horas después de nuestra detención, nos liberan.

@@ -13,34 +13,33 @@ export default () => (
   <article>
     <Helmet>
       <title>
-        Malestar en la cuna de minas de oro de Venezuela | Explorando el Arco
+        Malestar en la cuna de las minas de oro de Venezuela | Explorando el Arco
         Minero
       </title>
     </Helmet>
     <Container>
-      <Title as="h2">Malestar en la cuna de minas de oro de Venezuela</Title>
+      <Title as="h2">Malestar en la cuna de las minas de oro de Venezuela</Title>
 
       <Paragraph>
         Venezuela no tiene un elaborado histórico de minería, a diferencia de
         sus vecinos Colombia y de Brasil. Pero si hay un lugar en el país que
-        respire tradición minera, ese es El Callao. La cara de este pueblo villa
+        respira tradición minera, ese es El Callao. La cara de este pueblo villa
         en el estado Bolívar cambió para siempre cuando en 1853 fue descubierto
-        el oro ahí e incluso se convirtió en el{" "}
+        el oro, convirtiendolo en el{" "}
         <ExternalLink
           href="https://www.britannica.com/place/El-Callao"
           language="en"
         >
-          principal productor mundial de oro en 1885
+          principal mundial de este rublo en 1885
         </ExternalLink>. Varias empresas extranjeras operaron en minas de la
-        zona, pero es Minerven, una compañía en 1970 y nacionalizada cuatro años
-        después, la que ha explotado más el oro de El Callao.
+        zona, pero es Minerven, una compañía fundada en 1970 y nacionalizada
+        cuatro años después, la que ha explotado más el oro de El Callao.
       </Paragraph>
 
-      <Paragraph>
-        Mineros locales afirman que trabajar para Minerven costumnaba significar
-        un estatus y que empleados usaban con honor el uniforme de la compañía,
-        pero las cosas han cambiado en los años recientes. Minerven se ha venido
-        abajo.{" "}
+      <Paragraph> Mineros locales afirman que trabajar para Minerven daba
+      estatus y que empleados usaban con honor el uniforme de la compañía, pero
+      las cosas han cambiado en los años recientes. Minerven se ha venido
+      abajo.{" "}
         <StoryMedia
           media={{
             id: "image-1",
@@ -70,7 +69,7 @@ export default () => (
             }
           }}
         >
-          La minería en El Callo pertenece al proyecto del Arco Minero
+          La minería en El Callao pertenece al proyecto del Arco Minero
         </StoryMedia>. Unas cuatro empresas mixtas reclaman su parte, pero una
         visita a El Callao basta para entender que la minería legal y la ilegal
         van de la mano.
@@ -80,7 +79,7 @@ export default () => (
         No solo es que la mayoría de la población la que está involucrada
         directa o indirectamente con el proceso rudimentario de extracción de
         oro, sino que la minería y la vida del pueblo están estrechamente
-        vinculadas. En cualquier parte de El Callo, probablemente no se consiga
+        vinculadas. En cualquier parte de El Callao, probablemente no se consiga
         caminar más de un minuto sin encontrar a un comerciante de oro, pero sí
         encontrar una panadería o un supermercado.
       </Paragraph>
@@ -135,7 +134,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Los mineros explican que solo una menor porción de la producción de oro
+        Los mineros explican que solo una menor parte de la producción de oro
         de Venezuela termina en las arcas del BCV. La mayoría es traficada para
         el extranjero por el ejército y por el crimen organizado. “Ocho mil
         kilos no son nada”, afirma el general retirado Clíver Alcalá Cordones.
@@ -145,9 +144,10 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Desde el siglo XIX, varias compañías internacionales de Francia, del
-        Reino Unido y de Rusia entraron en la región para minar las vetas ricas
-        en oro que no solo circundan al pueblo, sino corren justo debajo de él.{" "}
+        Desde el siglo XIX, varias compañías internacionales de Francia, Reino
+        Unido y Rusia entraron en la región para minar las vetas ricas en oro
+        que no solo circundan al pueblo, sino que están justo debajo de él.
+        Ahora,{" "}
         <StoryMedia
           media={{
             id: "image-4",
@@ -157,7 +157,7 @@ export default () => (
             }
           }}
         >
-          Los vecindarios cerca del centro se han convertido en minas
+          los vecindarios cerca del centro se han convertido en minas
         </StoryMedia>.
       </Paragraph>
 
@@ -229,7 +229,7 @@ export default () => (
 
       <Paragraph>
         Nuestra camioneta pick-up es conducida por el personal de Minerven y
-        deja El Callo para visitar las minas – no las controladas por Minerven,{" "}
+        deja El Callao para visitar las minas – no las controladas por Minerven,{" "}
         <StoryMedia
           media={{
             id: "galery-1",
@@ -308,7 +308,7 @@ export default () => (
 
       <FeaturedText>
         El personal de Minerven dice que más de 30 mil mineros trabajan en las
-        virutas de oro de El Callo y en las áreas adyacentes.
+        virutas de oro de El Callao y en las áreas adyacentes.
       </FeaturedText>
 
       <Paragraph>
@@ -371,7 +371,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        La violencia y la pobreza hacen de El Callo un lugar difícil para vivir.
+        La violencia y la pobreza hacen de El Callao un lugar difícil para vivir.
         “El minero todavía es un sucio que camina en las calles. Gana 300 mil
         bolívares, bebe cerveza y al próximo día no tiene nada y necesita{" "}
         <StoryMedia
@@ -570,7 +570,7 @@ export default () => (
       </Paragraph>
 
       <Paragraph>
-        Solo estamos autorizados a fotografiar a los{" "}
+        Solo estamos autorizados para fotografiar a los{" "}
         <StoryMedia
           media={{
             id: "video-5",
