@@ -102,6 +102,12 @@ const html = new HTMLWebpackPlugin({
   inject: "body"
 });
 
+const html404 = new HTMLWebpackPlugin({
+  template: path.resolve("src", "index.html"),
+  filename: "404.html",
+  inject: "body"
+});
+
 const offline = new OfflinePlugin({
   ServiceWorker: {
     events: true
@@ -122,7 +128,11 @@ const offline = new OfflinePlugin({
   cacheMaps: [
     {
       match: url => {
+        const extension = url.pathname.split(".").pop();
+        // Different origin
         if (url.origin !== location.origin) return;
+        // PDF files
+        if (extension == "pdf") return;
         return new URL("/", location);
       },
       requestTypes: ["navigate", "same-origin"]
@@ -133,7 +143,7 @@ const offline = new OfflinePlugin({
 if (process.env.NODE_ENV == "production") {
   config.plugins = config.plugins.concat([favicons, pwa, html, offline]);
 } else {
-  config.plugins = config.plugins.concat([html]);
+  config.plugins = config.plugins.concat([html, html404, offline]);
 }
 
 module.exports = config;
