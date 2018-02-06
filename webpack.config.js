@@ -143,7 +143,7 @@ const offline = new OfflinePlugin({
 if (process.env.NODE_ENV == "production") {
   config.plugins = config.plugins.concat([favicons, pwa, html, offline]);
 } else {
-  config.plugins = config.plugins.concat([html, html404, offline]);
+  config.plugins = config.plugins.concat([html, html404]);
 }
 
 module.exports = config;
