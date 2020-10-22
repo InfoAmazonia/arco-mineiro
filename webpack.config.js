@@ -4,6 +4,7 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 const OfflinePlugin = require("offline-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 let config = {
   entry: {
@@ -26,7 +27,17 @@ let config = {
         GOOGLE_ANALYTICS: JSON.stringify(process.env.GOOGLE_ANALYTICS || ""),
         LAUNCH_DATE: JSON.stringify(process.env.LAUNCH_DATE || "")
       }
-    })
+    }),
+    new CopyPlugin([{
+      context: 'src/',
+      from: 'CNAME',
+      to: ''
+    },{
+      context: 'src/',
+      from: '404.html',
+      to: ''
+    }
+  ])
   ],
   module: {
     loaders: [
